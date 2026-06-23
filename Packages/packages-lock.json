@@ -1,0 +1,519 @@
+{
+  "dependencies": {
+    "com.deucarian.attacks": {
+      "version": "https://github.com/Deucarian/Attacks.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0",
+        "com.deucarian.combat": "0.1.0"
+      },
+      "hash": "802ce4c76d6e09f22c2fbb10ecc5321bf462516c"
+    },
+    "com.deucarian.auto-defense": {
+      "version": "https://github.com/Deucarian/Auto-Defense.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0",
+        "com.deucarian.encounters": "0.1.0",
+        "com.deucarian.combat": "0.1.0",
+        "com.deucarian.defense-games": "0.1.0",
+        "com.deucarian.world-spawning": "0.2.0",
+        "com.deucarian.world-navigation": "0.1.0",
+        "com.deucarian.attacks": "0.1.0",
+        "com.deucarian.projectiles": "0.2.0",
+        "com.deucarian.weapon-systems": "0.1.0"
+      },
+      "hash": "a6a4416d4430f8b3793242502e912654f08b0d56"
+    },
+    "com.deucarian.auto-defense-suite": {
+      "version": "https://github.com/Deucarian/Auto-Defense-Suite.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0",
+        "com.deucarian.persistence": "0.1.0",
+        "com.deucarian.progression": "0.1.0",
+        "com.deucarian.combat": "0.1.0",
+        "com.deucarian.encounters": "0.1.0",
+        "com.deucarian.world-spawning": "0.2.0",
+        "com.deucarian.world-navigation": "0.1.0",
+        "com.deucarian.defense-games": "0.1.0",
+        "com.deucarian.attacks": "0.1.0",
+        "com.deucarian.projectiles": "0.2.0",
+        "com.deucarian.weapon-systems": "0.1.0",
+        "com.deucarian.auto-defense": "0.1.0",
+        "com.deucarian.run-upgrades": "0.1.0",
+        "com.deucarian.idle-progression": "0.1.0"
+      },
+      "hash": "fac0e4778cdadb2add865be55c47e988b4a78a95"
+    },
+    "com.deucarian.combat": {
+      "version": "https://github.com/Deucarian/Combat.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0"
+      },
+      "hash": "b1a04e4a67a3819a5f6e093d48443a2853084573"
+    },
+    "com.deucarian.defense-games": {
+      "version": "https://github.com/Deucarian/Defense-Games.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0",
+        "com.deucarian.encounters": "0.1.0",
+        "com.deucarian.combat": "0.1.0",
+        "com.deucarian.world-spawning": "0.2.0",
+        "com.deucarian.world-navigation": "0.1.0"
+      },
+      "hash": "5350e8aa43a451df6eb7e7df2eda81154575cf26"
+    },
+    "com.deucarian.editor": {
+      "version": "https://github.com/Deucarian/Editor.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "2ff4fac15e46bfbd35111fd4687e06c09b1cb7c2"
+    },
+    "com.deucarian.encounters": {
+      "version": "https://github.com/Deucarian/Encounters.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0"
+      },
+      "hash": "a3d6ca463d104797ecfe608a355eefd1c300a29f"
+    },
+    "com.deucarian.gameplay-foundation": {
+      "version": "https://github.com/Deucarian/Gameplay-Foundation.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "5e98c91cd14ff1bd35b691660258bb38a1286497"
+    },
+    "com.deucarian.idle-progression": {
+      "version": "https://github.com/Deucarian/Idle-Progression.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0",
+        "com.deucarian.progression": "0.1.0"
+      },
+      "hash": "4481256ab9de49a1205714f770527191a0a98ffd"
+    },
+    "com.deucarian.logging": {
+      "version": "https://github.com/Deucarian/Logging.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.editor": "1.0.0"
+      },
+      "hash": "9a4e4ef2f0746e1bb4d7cf98453f498ba267b0c1"
+    },
+    "com.deucarian.package-installer": {
+      "version": "https://github.com/Deucarian/Package-Installer.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.editor": "1.0.0",
+        "com.deucarian.logging": "1.0.1"
+      },
+      "hash": "db98b6be7c7177bab38dbbe70b04bd6b2540736b"
+    },
+    "com.deucarian.persistence": {
+      "version": "https://github.com/Deucarian/Persistence.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "hash": "6d3e3a9f2d7a42acca7036af1165c4bcf4e34bb7"
+    },
+    "com.deucarian.progression": {
+      "version": "https://github.com/Deucarian/Progression.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0"
+      },
+      "hash": "b14ab3ddda813d25ee91af2aea0e253105dd7942"
+    },
+    "com.deucarian.projectiles": {
+      "version": "https://github.com/Deucarian/Projectiles.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0",
+        "com.deucarian.combat": "0.1.0",
+        "com.deucarian.attacks": "0.1.0",
+        "com.deucarian.world-navigation": "0.1.0",
+        "com.deucarian.world-spawning": "0.2.0"
+      },
+      "hash": "f0cdc843e873ede90ff1387f041c339345d89fa7"
+    },
+    "com.deucarian.run-upgrades": {
+      "version": "https://github.com/Deucarian/Run-Upgrades.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0"
+      },
+      "hash": "8c55aec6864bac0146b5c7e2d1fdab7d7fd7e74d"
+    },
+    "com.deucarian.template.game.idle-auto-defense": {
+      "version": "https://github.com/Deucarian/Template-Game-Idle-Auto-Defense.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.auto-defense-suite": "0.1.0"
+      },
+      "hash": "f34107ae0060fa542457a83ed7d9722c50ccc94e"
+    },
+    "com.deucarian.test-automation": {
+      "version": "https://github.com/Deucarian/Test-Automation.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "434f0c0f36f4d9bf1f546749c7bc542a3451ea41"
+    },
+    "com.deucarian.weapon-systems": {
+      "version": "https://github.com/Deucarian/Weapon-Systems.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0",
+        "com.deucarian.attacks": "0.1.0",
+        "com.deucarian.projectiles": "0.2.0"
+      },
+      "hash": "303ce59fc13a0f7f6752ae9aa6e3669ed6be1922"
+    },
+    "com.deucarian.world-navigation": {
+      "version": "https://github.com/Deucarian/World-Navigation.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0",
+        "com.deucarian.world-spawning": "0.2.0"
+      },
+      "hash": "abdcbeab2451cf87541e88b229db4dfbd3cc30a1"
+    },
+    "com.deucarian.world-spawning": {
+      "version": "https://github.com/Deucarian/World-Spawning.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.deucarian.gameplay-foundation": "0.1.0"
+      },
+      "hash": "6e1833201529806a4f4b13a0cb71b2170054abff"
+    },
+    "com.unity.ext.nunit": {
+      "version": "2.0.5",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.multiplayer.center": {
+      "version": "1.0.1",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+      }
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.test-framework": {
+      "version": "1.6.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.ext.nunit": "2.0.3",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      }
+    },
+    "com.unity.modules.accessibility": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.adaptiveperformance": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.subsystems": "1.0.0"
+      }
+    },
+    "com.unity.modules.ai": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.androidjni": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.animation": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.assetbundle": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.audio": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.cloth": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      }
+    },
+    "com.unity.modules.director": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.animation": "1.0.0"
+      }
+    },
+    "com.unity.modules.hierarchycore": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.imageconversion": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.imgui": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.jsonserialize": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.particlesystem": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.physics": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.physics2d": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.screencapture": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.imageconversion": "1.0.0"
+      }
+    },
+    "com.unity.modules.subsystems": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.jsonserialize": "1.0.0"
+      }
+    },
+    "com.unity.modules.terrain": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.terrainphysics": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.terrain": "1.0.0"
+      }
+    },
+    "com.unity.modules.tilemap": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics2d": "1.0.0"
+      }
+    },
+    "com.unity.modules.ui": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.uielements": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.hierarchycore": "1.0.0",
+        "com.unity.modules.physics": "1.0.0"
+      }
+    },
+    "com.unity.modules.umbra": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.unityanalytics": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      }
+    },
+    "com.unity.modules.unitywebrequest": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.unitywebrequestassetbundle": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.assetbundle": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0"
+      }
+    },
+    "com.unity.modules.unitywebrequestaudio": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.audio": "1.0.0"
+      }
+    },
+    "com.unity.modules.unitywebrequesttexture": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0"
+      }
+    },
+    "com.unity.modules.unitywebrequestwww": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.unitywebrequestassetbundle": "1.0.0",
+        "com.unity.modules.unitywebrequestaudio": "1.0.0",
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.assetbundle": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0"
+      }
+    },
+    "com.unity.modules.vectorgraphics": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0"
+      }
+    },
+    "com.unity.modules.vehicles": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      }
+    },
+    "com.unity.modules.video": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0"
+      }
+    },
+    "com.unity.modules.vr": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.xr": "1.0.0"
+      }
+    },
+    "com.unity.modules.wind": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.xr": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.subsystems": "1.0.0"
+      }
+    }
+  }
+}

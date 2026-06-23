@@ -1,0 +1,23 @@
+{
+  "name": "Moss.IdleAutoDefense.PlayModeTests",
+  "rootNamespace": "Moss.IdleAutoDefense.PlayModeTests",
+  "references": [
+    "Moss.IdleAutoDefense",
+    "Deucarian.TemplateGameIdleAutoDefense",
+    "Deucarian.IdleProgression"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}

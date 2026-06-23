@@ -1,0 +1,24 @@
+{
+  "name": "Moss.IdleAutoDefense.EditModeTests",
+  "rootNamespace": "Moss.IdleAutoDefense.Tests",
+  "references": [
+    "Moss.IdleAutoDefense",
+    "Deucarian.TemplateGameIdleAutoDefense"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}
