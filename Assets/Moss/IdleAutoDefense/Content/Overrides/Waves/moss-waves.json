@@ -1,10 +1,25 @@
 {
-  "sourceTemplateDefault": "DefaultWaves/basic-encounter.json",
-  "overrideStatus": "placeholder-for-phase-2h",
+  "sourceTemplateDefault": "DefaultWaves/stages-and-encounters.json",
+  "overrideStatus": "mirrors-phase-2i-template-default-content",
   "encounters": [
     {
-      "id": "encounter.moss.basic",
-      "startsFrom": "basic-idle-auto-defense-template",
+      "id": "encounter.moss.first-orbit",
+      "startsFrom": "encounter.template.first-orbit",
+      "editFirst": ["channels", "spawnCounts", "initialDelayTicks", "intervalTicks", "enemyIds"]
+    },
+    {
+      "id": "encounter.moss.pressure-ring",
+      "startsFrom": "encounter.template.pressure-ring",
+      "editFirst": ["channels", "spawnCounts", "initialDelayTicks", "intervalTicks", "enemyIds"]
+    },
+    {
+      "id": "encounter.moss.boss-pulse",
+      "startsFrom": "encounter.template.boss-pulse",
+      "editFirst": ["channels", "spawnCounts", "initialDelayTicks", "intervalTicks", "enemyIds"]
+    },
+    {
+      "id": "encounter.moss.endless-placeholder",
+      "startsFrom": "encounter.template.endless-placeholder",
       "editFirst": ["channels", "spawnCounts", "initialDelayTicks", "intervalTicks"]
     }
   ]

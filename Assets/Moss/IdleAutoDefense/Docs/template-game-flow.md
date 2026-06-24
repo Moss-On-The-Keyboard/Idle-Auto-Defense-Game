@@ -8,7 +8,7 @@ Boot
 -> resolve monetization availability
 -> apply offline reward
 -> optionally offer rewarded 2x offline reward
--> start run
+-> select/start stage run
 -> spawn waves
 -> auto weapons fire
 -> upgrade draft moments
@@ -30,7 +30,7 @@ Packages/com.deucarian.template.game.idle-auto-defense/Documentation~/default-co
 Packages/com.deucarian.template.game.idle-auto-defense/Documentation~/override-guide.md
 ```
 
-Moss should customize content and balance before forking this flow. A future flow fork should be intentional and documented with the product reason.
+Moss should customize content and balance before forking this flow. Phase 2I mirrors the template's First Orbit, Pressure Ring, Boss Pulse, Endless placeholder, enemy archetypes, module list, upgrade catalog, progression unlocks, and research-like defaults into product-owned override files. A future flow fork should be intentional and documented with the product reason.
 
 Moss monetization work in Phase 2H is limited to product-owned override config and docs. Mock/no-op monetization behavior remains in `com.deucarian.monetization` and the reusable template package; no real ad SDKs or billing SDKs are added to Moss.
 

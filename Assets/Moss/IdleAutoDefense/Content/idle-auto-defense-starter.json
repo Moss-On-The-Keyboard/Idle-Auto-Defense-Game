@@ -1,8 +1,8 @@
 {
   "objective": {
     "id": "template-core",
-    "maximumHealth": 28,
-    "lives": 3,
+    "maximumHealth": 42,
+    "lives": 4,
     "contactRadius": 0.45
   },
   "spawnRing": {
@@ -14,25 +14,59 @@
       "perimeter-west"
     ]
   },
+  "stages": [
+    "stage.moss.first-orbit",
+    "stage.moss.pressure-ring",
+    "stage.moss.boss-pulse",
+    "stage.moss.endless-placeholder"
+  ],
+  "enemies": [
+    "enemy.moss.swarm",
+    "enemy.moss.runner",
+    "enemy.moss.tank",
+    "enemy.moss.shielded",
+    "enemy.moss.elite",
+    "enemy.moss.boss"
+  ],
   "weapons": [
     {
-      "id": "weapon.template.direct",
+      "id": "weapon.moss.pulse-cannon",
       "mode": "direct"
     },
     {
-      "id": "weapon.template.projectile",
+      "id": "weapon.moss.shard-launcher",
       "mode": "projectile"
+    },
+    {
+      "id": "weapon.moss.arc-emitter",
+      "mode": "chain-beam-placeholder",
+      "supportedInRuntime": false
+    },
+    {
+      "id": "weapon.moss.orbital-shot",
+      "mode": "delayed-area-placeholder",
+      "supportedInRuntime": false
     }
   ],
   "upgrades": [
-    "upgrade.template.direct.damage",
-    "upgrade.template.projectile.speed",
-    "upgrade.template.objective.repair",
-    "upgrade.template.enemy.pacing"
+    "upgrade.moss.damage-up",
+    "upgrade.moss.fire-rate-up",
+    "upgrade.moss.projectile-count-up",
+    "upgrade.moss.projectile-speed-up",
+    "upgrade.moss.objective-max-health-up",
+    "upgrade.moss.objective-repair",
+    "upgrade.moss.shield-restore-intent",
+    "upgrade.moss.enemy-reward-up",
+    "upgrade.moss.offline-gain-up",
+    "upgrade.moss.reroll-bonus",
+    "upgrade.moss.crit-chance-intent",
+    "upgrade.moss.crit-damage-intent",
+    "upgrade.moss.direct-specialization",
+    "upgrade.moss.projectile-specialization"
   ],
   "offlineReward": {
     "maxHours": 8,
-    "creditsPerSecond": 0.25,
-    "partsEveryMinutes": 5
+    "creditsPerSecond": 0.35,
+    "partsEveryMinutes": 4
   }
 }

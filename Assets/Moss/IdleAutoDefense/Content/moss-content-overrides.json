@@ -6,8 +6,9 @@
     "Documentation~/default-content-and-balance.md",
     "Documentation~/override-guide.md"
   ],
-  "overrideStatus": "placeholder-for-phase-2h",
+  "overrideStatus": "mirrors-phase-2i-template-default-content",
   "overrideFiles": {
+    "stages": "Overrides/Stages/moss-stages.json",
     "enemies": "Overrides/Enemies/moss-enemies.json",
     "weapons": "Overrides/Weapons/moss-weapons.json",
     "waves": "Overrides/Waves/moss-waves.json",

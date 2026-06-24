@@ -47,13 +47,46 @@ namespace Moss.IdleAutoDefense.Tests
             AssertFileContains("Assets/Moss/IdleAutoDefense/Docs/template-game-flow.md", "Documentation~/canonical-game-flow.md");
             AssertFileContains("Assets/Moss/IdleAutoDefense/Docs/default-content-overrides.md", "Overrides/Enemies/moss-enemies.json");
             AssertFileContains("Assets/Moss/IdleAutoDefense/Content/moss-content-overrides.json", "overrideStatus");
-            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Enemies/moss-enemies.json", "enemy.moss.basic");
-            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Weapons/moss-weapons.json", "weapon.moss.projectile");
-            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Waves/moss-waves.json", "encounter.moss.basic");
-            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Upgrades/moss-upgrades.json", "upgrade.moss.direct.damage");
+            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Stages/moss-stages.json", "stage.moss.boss-pulse");
+            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Enemies/moss-enemies.json", "enemy.moss.boss");
+            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Weapons/moss-weapons.json", "weapon.moss.shard-launcher");
+            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Waves/moss-waves.json", "encounter.moss.boss-pulse");
+            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Upgrades/moss-upgrades.json", "upgrade.moss.projectile-specialization");
             AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Progression/moss-progression.json", "moss-idle-auto-defense-profile");
             AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Monetization/moss-monetization-overrides.json", "moss.rewarded.double-offline-reward");
             AssertFileContains("Assets/Moss/IdleAutoDefense/Docs/monetization-overrides.md", "no real ad SDKs");
+        }
+
+        [Test]
+        public void MossOverrideStructureMirrorsTemplateDefaults()
+        {
+            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/moss-content-overrides.json", "Overrides/Stages/moss-stages.json");
+            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/idle-auto-defense-starter.json", "stage.moss.first-orbit");
+            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/idle-auto-defense-starter.json", "weapon.moss.arc-emitter");
+
+            string mossStages = File.ReadAllText("Assets/Moss/IdleAutoDefense/Content/Overrides/Stages/moss-stages.json");
+            AssertContainsAll(mossStages, "stage.template.first-orbit", "stage.template.pressure-ring", "stage.template.boss-pulse", "stage.template.endless-placeholder");
+
+            string mossWeapons = File.ReadAllText("Assets/Moss/IdleAutoDefense/Content/Overrides/Weapons/moss-weapons.json");
+            AssertContainsAll(mossWeapons, "weapon.template.pulse-cannon", "weapon.template.shard-launcher", "weapon.template.arc-emitter", "weapon.template.orbital-shot");
+
+            string mossUpgrades = File.ReadAllText("Assets/Moss/IdleAutoDefense/Content/Overrides/Upgrades/moss-upgrades.json");
+            AssertContainsAll(
+                mossUpgrades,
+                "upgrade.template.damage-up",
+                "upgrade.template.fire-rate-up",
+                "upgrade.template.projectile-count-up",
+                "upgrade.template.projectile-speed-up",
+                "upgrade.template.objective-max-health-up",
+                "upgrade.template.objective-repair",
+                "upgrade.template.shield-restore-intent",
+                "upgrade.template.enemy-reward-up",
+                "upgrade.template.offline-gain-up",
+                "upgrade.template.reroll-bonus",
+                "upgrade.template.crit-chance-intent",
+                "upgrade.template.crit-damage-intent",
+                "upgrade.template.direct-specialization",
+                "upgrade.template.projectile-specialization");
         }
 
         [Test]
@@ -87,6 +120,12 @@ namespace Moss.IdleAutoDefense.Tests
         {
             Assert.IsTrue(File.Exists(path), "Expected file to exist: " + path);
             StringAssert.Contains(expected, File.ReadAllText(path));
+        }
+
+        private static void AssertContainsAll(string actual, params string[] expected)
+        {
+            for (int i = 0; i < expected.Length; i++)
+                StringAssert.Contains(expected[i], actual);
         }
 
         private static void AssertContainsPlacement(string expectedId, MossMonetizationPlacement[] placements)

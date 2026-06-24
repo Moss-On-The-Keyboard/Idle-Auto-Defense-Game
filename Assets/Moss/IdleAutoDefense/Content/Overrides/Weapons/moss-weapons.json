@@ -1,16 +1,28 @@
 {
   "sourceTemplateDefault": "DefaultWeapons/default-weapons.json",
-  "overrideStatus": "placeholder-for-phase-2h",
+  "overrideStatus": "mirrors-phase-2i-template-default-content",
   "weapons": [
     {
-      "id": "weapon.moss.direct",
-      "startsFrom": "weapon.template.direct",
+      "id": "weapon.moss.pulse-cannon",
+      "startsFrom": "weapon.template.pulse-cannon",
       "editFirst": ["attackId", "damage", "mountOffset", "prefab"]
     },
     {
-      "id": "weapon.moss.projectile",
-      "startsFrom": "weapon.template.projectile",
+      "id": "weapon.moss.shard-launcher",
+      "startsFrom": "weapon.template.shard-launcher",
       "editFirst": ["projectileId", "projectileSpeed", "mountOffset", "prefab"]
+    },
+    {
+      "id": "weapon.moss.arc-emitter",
+      "startsFrom": "weapon.template.arc-emitter",
+      "supportedInRuntime": false,
+      "editFirst": ["displayName", "futureReason"]
+    },
+    {
+      "id": "weapon.moss.orbital-shot",
+      "startsFrom": "weapon.template.orbital-shot",
+      "supportedInRuntime": false,
+      "editFirst": ["displayName", "futureReason"]
     }
   ]
 }
