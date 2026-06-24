@@ -113,6 +113,13 @@
       },
       "hash": "9a4e4ef2f0746e1bb4d7cf98453f498ba267b0c1"
     },
+    "com.deucarian.monetization": {
+      "version": "https://github.com/Deucarian/Monetization.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "7721592d13276fa745fc5819175e130c3ba28ec4"
+    },
     "com.deucarian.package-installer": {
       "version": "https://github.com/Deucarian/Package-Installer.git#main",
       "depth": 0,
@@ -121,7 +128,7 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.logging": "1.0.1"
       },
-      "hash": "db98b6be7c7177bab38dbbe70b04bd6b2540736b"
+      "hash": "9a0c57d85d2eb82ce68cd53ef9dbd41c8dc564a2"
     },
     "com.deucarian.persistence": {
       "version": "https://github.com/Deucarian/Persistence.git#main",
@@ -168,9 +175,10 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.deucarian.auto-defense-suite": "0.1.0"
+        "com.deucarian.auto-defense-suite": "0.1.0",
+        "com.deucarian.monetization": "0.1.0"
       },
-      "hash": "f34107ae0060fa542457a83ed7d9722c50ccc94e"
+      "hash": "1f621ae564f0252aa12549304c1574177d149320"
     },
     "com.deucarian.test-automation": {
       "version": "https://github.com/Deucarian/Test-Automation.git#main",

@@ -2,6 +2,7 @@
   "dependencies": {
     "com.deucarian.editor": "https://github.com/Deucarian/Editor.git#main",
     "com.deucarian.logging": "https://github.com/Deucarian/Logging.git#main",
+    "com.deucarian.monetization": "https://github.com/Deucarian/Monetization.git#main",
     "com.deucarian.package-installer": "https://github.com/Deucarian/Package-Installer.git#main",
     "com.deucarian.test-automation": "https://github.com/Deucarian/Test-Automation.git#main",
     "com.unity.test-framework": "1.5.1",
