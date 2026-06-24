@@ -1,0 +1,16 @@
+{
+  "sourceTemplateDefault": "DefaultWeapons/default-weapons.json",
+  "overrideStatus": "placeholder-for-phase-2h",
+  "weapons": [
+    {
+      "id": "weapon.moss.direct",
+      "startsFrom": "weapon.template.direct",
+      "editFirst": ["attackId", "damage", "mountOffset", "prefab"]
+    },
+    {
+      "id": "weapon.moss.projectile",
+      "startsFrom": "weapon.template.projectile",
+      "editFirst": ["projectileId", "projectileSpeed", "mountOffset", "prefab"]
+    }
+  ]
+}

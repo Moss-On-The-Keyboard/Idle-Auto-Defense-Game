@@ -1,0 +1,30 @@
+{
+  "sourceTemplateDefault": "DefaultProgression/currencies-rewards-saves.json",
+  "overrideStatus": "placeholder-for-phase-2h",
+  "progression": {
+    "currencies": [
+      {
+        "id": "currency.moss.credits",
+        "startsFrom": "currency.template.credits"
+      },
+      {
+        "id": "currency.moss.parts",
+        "startsFrom": "currency.template.parts"
+      }
+    ],
+    "saveDocuments": [
+      {
+        "id": "moss-idle-auto-defense-profile",
+        "startsFrom": "idle-auto-defense-template-profile"
+      },
+      {
+        "id": "moss-idle-auto-defense-run",
+        "startsFrom": "idle-auto-defense-template-run"
+      },
+      {
+        "id": "moss-idle-auto-defense-settings",
+        "startsFrom": "idle-auto-defense-template-settings"
+      }
+    ]
+  }
+}

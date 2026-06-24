@@ -16,6 +16,8 @@ The game is a normal Unity project, not a reusable UPM package. Deucarian packag
 - `Assets/Moss/IdleAutoDefense/Scripts` contains Moss-owned runtime bootstrap code.
 - `Assets/Moss/IdleAutoDefense/Scenes` contains the current smoke scene.
 - `Assets/Moss/IdleAutoDefense/Content` contains copied starter tuning data from the template sample.
+- `Assets/Moss/IdleAutoDefense/Content/Overrides` contains product-owned placeholder override files for the next content pass.
+- `Assets/Moss/IdleAutoDefense/Docs` documents the template flow contract and Moss override path.
 - `Assets/Moss/IdleAutoDefense/Tests` contains EditMode and PlayMode smoke tests.
 
 ## Current Scope

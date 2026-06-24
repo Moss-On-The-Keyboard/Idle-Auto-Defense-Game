@@ -1,0 +1,22 @@
+{
+  "game": "Moss Idle Auto Defense",
+  "sourceTemplate": "com.deucarian.template.game.idle-auto-defense",
+  "sourceTemplateDocs": [
+    "Documentation~/canonical-game-flow.md",
+    "Documentation~/default-content-and-balance.md",
+    "Documentation~/override-guide.md"
+  ],
+  "overrideStatus": "placeholder-for-phase-2h",
+  "overrideFiles": {
+    "enemies": "Overrides/Enemies/moss-enemies.json",
+    "weapons": "Overrides/Weapons/moss-weapons.json",
+    "waves": "Overrides/Waves/moss-waves.json",
+    "upgrades": "Overrides/Upgrades/moss-upgrades.json",
+    "progression": "Overrides/Progression/moss-progression.json"
+  },
+  "guardrails": [
+    "Edit Moss content files first.",
+    "Keep reusable systems in Deucarian packages.",
+    "Fork the canonical flow only for intentional product needs."
+  ]
+}

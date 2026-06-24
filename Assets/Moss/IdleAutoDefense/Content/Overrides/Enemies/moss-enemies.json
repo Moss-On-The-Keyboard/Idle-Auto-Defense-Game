@@ -1,0 +1,11 @@
+{
+  "sourceTemplateDefault": "DefaultEnemies/basic-idle-enemy.json",
+  "overrideStatus": "placeholder-for-phase-2h",
+  "enemies": [
+    {
+      "id": "enemy.moss.basic",
+      "startsFrom": "enemy.template.basic",
+      "editFirst": ["health", "moveSpeed", "contactDamage", "prefab"]
+    }
+  ]
+}

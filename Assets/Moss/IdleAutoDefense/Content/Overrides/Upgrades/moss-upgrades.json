@@ -1,0 +1,16 @@
+{
+  "sourceTemplateDefault": "DefaultUpgrades/common-run-upgrades.json",
+  "overrideStatus": "placeholder-for-phase-2h",
+  "upgrades": [
+    {
+      "id": "upgrade.moss.direct.damage",
+      "startsFrom": "upgrade.template.direct.damage",
+      "editFirst": ["effectId", "target", "amount", "maxRank"]
+    },
+    {
+      "id": "upgrade.moss.projectile.speed",
+      "startsFrom": "upgrade.template.projectile.speed",
+      "editFirst": ["effectId", "target", "amount", "maxRank"]
+    }
+  ]
+}
