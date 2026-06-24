@@ -1,7 +1,9 @@
+using System;
 using System.IO;
 using Deucarian.TemplateGameIdleAutoDefense;
 using Moss.IdleAutoDefense;
 using NUnit.Framework;
+using UnityEngine;
 
 namespace Moss.IdleAutoDefense.Tests
 {
@@ -50,6 +52,24 @@ namespace Moss.IdleAutoDefense.Tests
             AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Waves/moss-waves.json", "encounter.moss.basic");
             AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Upgrades/moss-upgrades.json", "upgrade.moss.direct.damage");
             AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Overrides/Progression/moss-progression.json", "moss-idle-auto-defense-profile");
+            AssertFileContains("Assets/Moss/IdleAutoDefense/Content/Monetization/moss-monetization-overrides.json", "moss.rewarded.double-offline-reward");
+            AssertFileContains("Assets/Moss/IdleAutoDefense/Docs/monetization-overrides.md", "no real ad SDKs");
+        }
+
+        [Test]
+        public void MossMockMonetizationConfigLoads()
+        {
+            string json = File.ReadAllText("Assets/Moss/IdleAutoDefense/Content/Monetization/moss-monetization-overrides.json");
+            MossMonetizationConfig config = JsonUtility.FromJson<MossMonetizationConfig>(json);
+
+            Assert.AreEqual("mock", config.provider);
+            Assert.IsFalse(config.realSdksIncluded);
+            AssertContainsPlacement("moss.rewarded.double-run-reward", config.rewardedPlacements);
+            AssertContainsPlacement("moss.rewarded.reroll-upgrade-draft", config.rewardedPlacements);
+            AssertContainsPlacement("moss.rewarded.revive-after-failure", config.rewardedPlacements);
+            AssertContainsPlacement("moss.rewarded.double-offline-reward", config.rewardedPlacements);
+            AssertContainsPlacement("moss.interstitial.after-run-completion", config.interstitialPlacements);
+            AssertContainsPlaceholder("moss.iap.no-forced-ads", config.iapPlaceholders);
         }
 
         [Test]
@@ -67,6 +87,63 @@ namespace Moss.IdleAutoDefense.Tests
         {
             Assert.IsTrue(File.Exists(path), "Expected file to exist: " + path);
             StringAssert.Contains(expected, File.ReadAllText(path));
+        }
+
+        private static void AssertContainsPlacement(string expectedId, MossMonetizationPlacement[] placements)
+        {
+            Assert.IsNotNull(placements);
+            for (int i = 0; i < placements.Length; i++)
+            {
+                if (placements[i].id == expectedId)
+                    return;
+            }
+
+            Assert.Fail("Expected placement to exist: " + expectedId);
+        }
+
+        private static void AssertContainsPlaceholder(string expectedId, MossPurchasePlaceholder[] placeholders)
+        {
+            Assert.IsNotNull(placeholders);
+            for (int i = 0; i < placeholders.Length; i++)
+            {
+                if (placeholders[i].id == expectedId)
+                    return;
+            }
+
+            Assert.Fail("Expected placeholder to exist: " + expectedId);
+        }
+
+        [Serializable]
+        private sealed class MossMonetizationConfig
+        {
+            public string provider;
+            public bool realSdksIncluded;
+            public MossMonetizationPlacement[] rewardedPlacements;
+            public MossMonetizationPlacement[] interstitialPlacements;
+            public MossPurchasePlaceholder[] iapPlaceholders;
+        }
+
+        [Serializable]
+        private sealed class MossMonetizationPlacement
+        {
+            public string id;
+            public string sourceTemplateId;
+            public string productDecision;
+            public string cooldownGroup;
+            public int cooldownSeconds;
+            public int sessionCap;
+            public bool transitionOnly;
+            public bool blockedDuringCombat;
+            public bool blockedBeforeFirstTerminalRun;
+            public bool blockedByNoAdsEntitlement;
+        }
+
+        [Serializable]
+        private sealed class MossPurchasePlaceholder
+        {
+            public string id;
+            public string sourceTemplateId;
+            public string productDecision;
         }
     }
 }

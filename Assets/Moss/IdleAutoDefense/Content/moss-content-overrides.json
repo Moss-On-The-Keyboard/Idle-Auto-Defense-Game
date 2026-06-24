@@ -12,7 +12,8 @@
     "weapons": "Overrides/Weapons/moss-weapons.json",
     "waves": "Overrides/Waves/moss-waves.json",
     "upgrades": "Overrides/Upgrades/moss-upgrades.json",
-    "progression": "Overrides/Progression/moss-progression.json"
+    "progression": "Overrides/Progression/moss-progression.json",
+    "monetization": "Monetization/moss-monetization-overrides.json"
   },
   "guardrails": [
     "Edit Moss content files first.",

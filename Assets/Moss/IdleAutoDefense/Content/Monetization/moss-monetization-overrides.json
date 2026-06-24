@@ -1,0 +1,87 @@
+{
+  "game": "Moss Idle Auto Defense",
+  "sourceTemplatePackage": "com.deucarian.template.game.idle-auto-defense",
+  "sourceTemplateContent": "Samples~/BasicIdleAutoDefenseGame/Content/DefaultMonetization/mock-placements.json",
+  "provider": "mock",
+  "realSdksIncluded": false,
+  "rewardedPlacements": [
+    {
+      "id": "moss.rewarded.double-run-reward",
+      "sourceTemplateId": "template.rewarded.double-run-reward",
+      "productDecision": "Offer after rewards are applied; Moss copy and balance still pending.",
+      "cooldownSeconds": 10,
+      "sessionCap": 6
+    },
+    {
+      "id": "moss.rewarded.revive-after-failure",
+      "sourceTemplateId": "template.rewarded.revive-after-failure",
+      "productDecision": "Keep one revive per failed run while combat UX is still template-owned.",
+      "cooldownSeconds": 30,
+      "sessionCap": 1
+    },
+    {
+      "id": "moss.rewarded.reroll-upgrade-draft",
+      "sourceTemplateId": "template.rewarded.reroll-upgrade-draft",
+      "productDecision": "Allow optional rerolls at draft moments only.",
+      "cooldownSeconds": 20,
+      "sessionCap": 8
+    },
+    {
+      "id": "moss.rewarded.double-offline-reward",
+      "sourceTemplateId": "template.rewarded.double-offline-reward",
+      "productDecision": "Offer after offline reward calculation before starting the next run.",
+      "cooldownSeconds": 10,
+      "sessionCap": 6
+    },
+    {
+      "id": "moss.rewarded.small-currency-bonus",
+      "sourceTemplateId": "template.rewarded.small-currency-bonus",
+      "productDecision": "Keep as an optional tuning placeholder; no production economy value yet.",
+      "cooldownSeconds": 20,
+      "sessionCap": 5
+    }
+  ],
+  "interstitialPlacements": [
+    {
+      "id": "moss.interstitial.after-run-completion",
+      "sourceTemplateId": "template.interstitial.after-run-completion",
+      "productDecision": "Transition-only after completion, never during combat.",
+      "cooldownGroup": "moss.interstitial.global",
+      "cooldownSeconds": 120,
+      "sessionCap": 3,
+      "transitionOnly": true,
+      "blockedDuringCombat": true,
+      "blockedBeforeFirstTerminalRun": true,
+      "blockedByNoAdsEntitlement": true
+    },
+    {
+      "id": "moss.interstitial.after-run-failure",
+      "sourceTemplateId": "template.interstitial.after-run-failure",
+      "productDecision": "Transition-only after failure, never during combat.",
+      "cooldownGroup": "moss.interstitial.global",
+      "cooldownSeconds": 120,
+      "sessionCap": 3,
+      "transitionOnly": true,
+      "blockedDuringCombat": true,
+      "blockedBeforeFirstTerminalRun": true,
+      "blockedByNoAdsEntitlement": true
+    }
+  ],
+  "iapPlaceholders": [
+    {
+      "id": "moss.iap.no-forced-ads",
+      "sourceTemplateId": "template.iap.no-forced-ads",
+      "productDecision": "Placeholder entitlement only; no billing SDK."
+    },
+    {
+      "id": "moss.iap.starter-pack",
+      "sourceTemplateId": "template.iap.starter-pack",
+      "productDecision": "Placeholder offer only; content and pricing not defined."
+    },
+    {
+      "id": "moss.iap.currency-pack",
+      "sourceTemplateId": "template.iap.currency-pack",
+      "productDecision": "Placeholder offer only; economy not production-tuned."
+    }
+  ]
+}

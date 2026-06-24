@@ -4,17 +4,22 @@ Moss currently follows the Deucarian template canonical flow:
 
 ```text
 Boot
--> Load sample profile/save
--> Apply offline reward
--> Show/start run state
--> Start run
--> Spawn waves
--> Auto weapons fire
--> Run upgrade draft moments
--> Win/fail
--> Apply rewards
--> Save
--> Restart/return
+-> load profile/save
+-> resolve monetization availability
+-> apply offline reward
+-> optionally offer rewarded 2x offline reward
+-> start run
+-> spawn waves
+-> auto weapons fire
+-> upgrade draft moments
+-> optional rewarded reroll
+-> win/fail
+-> optional rewarded revive on failure
+-> apply rewards
+-> optional rewarded double reward
+-> optional interstitial at transition if pacing allows
+-> save
+-> restart/return
 ```
 
 Canonical template docs:
@@ -26,6 +31,8 @@ Packages/com.deucarian.template.game.idle-auto-defense/Documentation~/override-g
 ```
 
 Moss should customize content and balance before forking this flow. A future flow fork should be intentional and documented with the product reason.
+
+Moss monetization work in Phase 2H is limited to product-owned override config and docs. Mock/no-op monetization behavior remains in `com.deucarian.monetization` and the reusable template package; no real ad SDKs or billing SDKs are added to Moss.
 
 The current product-owned bootstrap is:
 

@@ -23,6 +23,7 @@ Then edit the focused override files:
 - `Overrides/Waves/moss-waves.json`
 - `Overrides/Upgrades/moss-upgrades.json`
 - `Overrides/Progression/moss-progression.json`
+- `Monetization/moss-monetization-overrides.json`
 
 ## Override Enemies
 
@@ -44,6 +45,10 @@ Copy values from the template `DefaultUpgrades` pack, then rename upgrade, effec
 
 Copy values from the template `DefaultProgression` pack, then rename currencies, save documents, operations, tracks, and unlocks. Moss should own product save DTOs before shipping real content.
 
+## Override Monetization
+
+Copy values from the template `DefaultMonetization` pack, then rename rewarded, interstitial, and placeholder IAP IDs into the `moss.*` namespace. Keep Phase 2H on mock/no-op providers only. Real provider adapters should be added through reusable Deucarian integration packages later.
+
 ## Keep In Deucarian Packages
 
-Do not copy reusable package source into Moss. Keep runtime systems, catalogs, adapters, persistence, progression, spawning, navigation, projectiles, weapons, and upgrades in Deucarian packages.
+Do not copy reusable package source into Moss. Keep runtime systems, catalogs, adapters, persistence, progression, spawning, navigation, projectiles, weapons, upgrades, and monetization abstractions in Deucarian packages.
