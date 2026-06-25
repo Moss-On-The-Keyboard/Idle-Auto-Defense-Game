@@ -6,7 +6,7 @@ Moss was bootstrapped from the Deucarian Idle Auto Defense template sample. The 
 Assets/Moss/IdleAutoDefense/Content
 ```
 
-The first Moss content pass should edit the product-owned override files here instead of changing Deucarian package source.
+The first Moss content pass now lives as authored ScriptableObject content under `Assets/GameContent/MossOnTheKeyboard`. Keep these JSON files as historical bootstrap/reference material unless a specific legacy-flow test still needs them.
 
 ## Edit First
 

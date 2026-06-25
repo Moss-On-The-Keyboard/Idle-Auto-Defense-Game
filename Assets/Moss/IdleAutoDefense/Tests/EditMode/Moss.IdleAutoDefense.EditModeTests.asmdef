@@ -3,7 +3,11 @@
   "rootNamespace": "Moss.IdleAutoDefense.Tests",
   "references": [
     "Moss.IdleAutoDefense",
-    "Deucarian.TemplateGameIdleAutoDefense"
+    "Deucarian.TemplateGameIdleAutoDefense",
+    "Deucarian.GameContentAuthoring.Editor",
+    "Deucarian.Attacks.Authoring",
+    "Deucarian.WeaponSystems.Authoring",
+    "Deucarian.RunUpgrades.Authoring"
   ],
   "includePlatforms": [
     "Editor"

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4271c0a9f9d4f2d9a7288adf9e82965, type: 3}
+  m_Name: contentset.moss-on-the-keyboard.starter-run_GameContentSet
+  m_EditorClassIdentifier: Deucarian.TemplateGameIdleAutoDefense::Deucarian.TemplateGameIdleAutoDefense.GameContentSetAsset
+  _id: contentset.moss-on-the-keyboard.starter-run
+  _displayName: Moss Starter Run
+  _description: A playable Moss On The Keyboard starter recipe assembled from authored
+    attacks, enemies, waves, weapons, and upgrades.
+  _icon: {fileID: 0}
+  _banner: {fileID: 2800000, guid: 86159464fe19653468d4387f86782849, type: 2}
+  _startingWeapon: {fileID: 11400000, guid: ef27a6ddafba9f043a583043150717a9, type: 2}
+  _availableWeapons:
+  - {fileID: 11400000, guid: ef27a6ddafba9f043a583043150717a9, type: 2}
+  - {fileID: 11400000, guid: b31c25c467e8fd94e9a1856546c8808a, type: 2}
+  - {fileID: 11400000, guid: 89818bd6092cde6429436b47f8acce2b, type: 2}
+  _enemyPool:
+  - {fileID: 11400000, guid: bcf371a13a7faaf4686773afaad79af3, type: 2}
+  - {fileID: 11400000, guid: 21872993e34ddad4eb7cd15e932d88e0, type: 2}
+  - {fileID: 11400000, guid: 4ac6d34aa3fde3141b43826419c4d7f7, type: 2}
+  _waveSet:
+  - {fileID: 11400000, guid: 24a00086090c41c42ba7c9c760796146, type: 2}
+  - {fileID: 11400000, guid: 13bb59f44317f8b45affcbe9270b0d4b, type: 2}
+  _upgradePool:
+  - {fileID: 11400000, guid: ee73faf34e322f2419ce581c585cfc29, type: 2}
+  - {fileID: 11400000, guid: b603472a90f2d3341ae7eaf58d5e74f9, type: 2}
+  - {fileID: 11400000, guid: 07a64f536f98d9647801938598b2a7b4, type: 2}
+  - {fileID: 11400000, guid: d46075db44d58284e999dc7d888ba4b1, type: 2}
+  _startingCredits: 85
+  _startingParts: 6
+  _rewardMultiplier: 1.15
+  _difficultyMultiplier: 1.05
+  _sessionLengthTicks: 240
+  _endless: 0
+  _tags:
+  - moss
+  - starter
+  - keyboard

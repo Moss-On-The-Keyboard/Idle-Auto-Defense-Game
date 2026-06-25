@@ -7,7 +7,7 @@ namespace Moss.IdleAutoDefense.Editor
 {
     public static class MossIdleAutoDefenseDevMenu
     {
-        private const string MenuRoot = "Tools/Moss/Idle Auto Defense/";
+        private const string MenuRoot = "Tools/Deucarian/Moss Idle Auto Defense/";
         private const string SmokeScenePath = "Assets/Moss/IdleAutoDefense/Scenes/MossIdleAutoDefense.unity";
 
         [MenuItem(MenuRoot + "Open Smoke Scene", priority = 10)]

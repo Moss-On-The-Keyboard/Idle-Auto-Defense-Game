@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3218465909995473210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf2b621876344ef814eb57794522f31, type: 3}
+  m_Name: weapon.moss.keycap-spore-wand_WeaponDefinition_Presentation
+  m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponPresentationDefinitionAsset
+  _prefab: {fileID: 1009898237780900690, guid: 1b57f4e5c4e8b4f4a857c5777caee6c4, type: 3}
+  _placementAudio: {fileID: 0}
+  _placementVfxPrefab: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb11a2021784ce7b1791e8823066da2, type: 3}
+  m_Name: weapon.moss.keycap-spore-wand_WeaponDefinition
+  m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponDefinitionAsset
+  _id: weapon.moss.keycap-spore-wand
+  _displayName: Keycap Spore Wand
+  _icon: {fileID: 0}
+  _tags:
+  - moss
+  - starter
+  _upgradeGroupId: moss-spores
+  _stats: {fileID: 4528233716586639350}
+  _presentation: {fileID: -3218465909995473210}
+  _balancingNotes: Moss starter weapon tuning.
+--- !u!114 &4528233716586639350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61efcddf778f45b185cb5235ab0f4fe4, type: 3}
+  m_Name: weapon.moss.keycap-spore-wand_WeaponDefinition_Stats
+  m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponStatsDefinitionAsset
+  _fireMode: 0
+  _attack: {fileID: 11400000, guid: 9b9b5e59650c55942b1479495fafabc2, type: 2}
+  _projectileDefinitionId:
+  _cooldownTicks: 18
+  _range: 4.5
+  _burstCount: 1
+  _volleyCount: 1
+  _spreadDegrees: 0
+  _buildCost: 20
+  _targetingRoleId: nearest
+  _muzzleRoleId: primary

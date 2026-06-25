@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3606412126032699802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61efcddf778f45b185cb5235ab0f4fe4, type: 3}
+  m_Name: weapon.moss.cursor-beam_WeaponDefinition_Stats
+  m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponStatsDefinitionAsset
+  _fireMode: 0
+  _attack: {fileID: 11400000, guid: 77b8a67cb140df14385fa9a366012ca2, type: 2}
+  _projectileDefinitionId:
+  _cooldownTicks: 10
+  _range: 8
+  _burstCount: 1
+  _volleyCount: 1
+  _spreadDegrees: 0
+  _buildCost: 35
+  _targetingRoleId: nearest
+  _muzzleRoleId: primary
+--- !u!114 &-562501707887537264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf2b621876344ef814eb57794522f31, type: 3}
+  m_Name: weapon.moss.cursor-beam_WeaponDefinition_Presentation
+  m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponPresentationDefinitionAsset
+  _prefab: {fileID: 3071343268222446903, guid: 34664e5da456ad44fb5ecae3c9c22d65, type: 3}
+  _placementAudio: {fileID: 0}
+  _placementVfxPrefab: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb11a2021784ce7b1791e8823066da2, type: 3}
+  m_Name: weapon.moss.cursor-beam_WeaponDefinition
+  m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponDefinitionAsset
+  _id: weapon.moss.cursor-beam
+  _displayName: Cursor Beam
+  _icon: {fileID: 0}
+  _tags:
+  - moss
+  - starter
+  _upgradeGroupId: cursor-tools
+  _stats: {fileID: -3606412126032699802}
+  _presentation: {fileID: -562501707887537264}
+  _balancingNotes: Moss starter weapon tuning.

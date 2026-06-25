@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1606101025565614318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 279b315f82534792b0738c5f816e85ed, type: 3}
+  m_Name: upgrade.moss.spore-pressure_RunUpgradeDefinition_Economy
+  m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeEconomyDefinitionAsset
+  _rarity: 1
+  _weight: 8
+  _maxRank: 3
+  _costs: 0a000000120000001b000000
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93de16d0cab74525af394d506739d60d, type: 3}
+  m_Name: upgrade.moss.spore-pressure_RunUpgradeDefinition
+  m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeDefinitionAsset
+  _id: upgrade.moss.spore-pressure
+  _displayName: Spore Pressure
+  _icon: {fileID: 0}
+  _description: Spore Pop gains a little extra bite.
+  _tags:
+  - moss
+  - starter
+  _economy: {fileID: -1606101025565614318}
+  _effects: {fileID: 3508912054173881946}
+--- !u!114 &3508912054173881946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44148c094a23470ba0fb80cc62020baa, type: 3}
+  m_Name: upgrade.moss.spore-pressure_RunUpgradeDefinition_Effects
+  m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeEffectsDefinitionAsset
+  _effects:
+  - _targetKind: 0
+    _modifierType: 0
+    _amount: 2
+    _attack: {fileID: 11400000, guid: 9b9b5e59650c55942b1479495fafabc2, type: 2}
+    _weapon: {fileID: 0}
+    _enemy: {fileID: 0}
+    _targetIdOverride:
+    _effectIdOverride:
+  - _targetKind: 5
+    _modifierType: 2
+    _amount: 1
+    _attack: {fileID: 0}
+    _weapon: {fileID: 0}
+    _enemy: {fileID: 0}
+    _targetIdOverride: weapon.moss.keycap-spore-wand
+    _effectIdOverride: template.enemy.spawn_delay_ticks
+  _prerequisites: []
+  _exclusions: []

@@ -1,14 +1,25 @@
 using System;
 using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text.RegularExpressions;
+using Deucarian.GameContentAuthoring.Editor;
 using Deucarian.TemplateGameIdleAutoDefense;
 using Moss.IdleAutoDefense;
 using NUnit.Framework;
+using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace Moss.IdleAutoDefense.Tests
 {
     public sealed class MossIdleAutoDefenseEditModeTests
     {
+        private const string ScenePath = "Assets/Moss/IdleAutoDefense/Scenes/MossIdleAutoDefense.unity";
+        private const string ContentRoot = "Assets/GameContent/MossOnTheKeyboard";
+        private const string StarterPackPath = ContentRoot + "/ContentPacks/contentpack.moss-on-the-keyboard.starter/contentpack.moss-on-the-keyboard.starter_ContentPack.asset";
+        private const string StarterSetPath = ContentRoot + "/ContentSets/contentset.moss-on-the-keyboard.starter-run/contentset.moss-on-the-keyboard.starter-run_GameContentSet.asset";
+
         [Test]
         public void BootstrapUsesTemplateController()
         {
@@ -37,8 +48,129 @@ namespace Moss.IdleAutoDefense.Tests
         [Test]
         public void SmokeSceneAndStarterContentAreProjectOwned()
         {
-            Assert.IsTrue(File.Exists("Assets/Moss/IdleAutoDefense/Scenes/MossIdleAutoDefense.unity"));
+            Assert.IsTrue(File.Exists(ScenePath));
             Assert.IsTrue(File.Exists("Assets/Moss/IdleAutoDefense/Content/idle-auto-defense-starter.json"));
+            Assert.IsTrue(File.Exists(StarterPackPath));
+            Assert.IsTrue(File.Exists(StarterSetPath));
+        }
+
+        [Test]
+        public void EditorMenuPathsUseDeucarianToolsRoot()
+        {
+            foreach (string script in Directory.GetFiles("Assets", "*.cs", SearchOption.AllDirectories))
+            {
+                string source = File.ReadAllText(script);
+                foreach (Match match in Regex.Matches(source, "\\[MenuItem\\(\\s*\"([^\"]+)\""))
+                {
+                    string menuPath = match.Groups[1].Value;
+                    Assert.IsTrue(menuPath.StartsWith("Tools/Deucarian/", StringComparison.Ordinal), script + " uses invalid menu path: " + menuPath);
+                    Assert.IsFalse(menuPath.StartsWith("Deucarian/", StringComparison.Ordinal), script + " creates a top-level Deucarian menu: " + menuPath);
+                    Assert.IsFalse(menuPath.StartsWith("Moss/", StringComparison.Ordinal) || menuPath.StartsWith("Tools/Moss/", StringComparison.Ordinal), script + " creates a Moss-root menu: " + menuPath);
+                }
+            }
+        }
+
+        [Test]
+        public void MossStarterContentPackIsReadyAndConnected()
+        {
+            GameContentPackAsset pack = AssetDatabase.LoadAssetAtPath<GameContentPackAsset>(StarterPackPath);
+            Assert.IsNotNull(pack);
+            Assert.AreEqual("contentpack.moss-on-the-keyboard.starter", pack.Id);
+
+            GameContentPackValidationReport report = GameContentPackValidator.Validate(pack);
+            Assert.IsTrue(report.IsValid, FormatPackIssues(report));
+            Assert.AreEqual(0, report.WarningCount, FormatPackIssues(report));
+
+            GameContentPackDependencySummary dependencies = GameContentPackValidator.CollectDependencies(pack);
+            Assert.AreEqual(1, dependencies.ContentSetCount);
+            Assert.AreEqual(3, dependencies.AttackCount);
+            Assert.AreEqual(3, dependencies.EnemyCount);
+            Assert.AreEqual(2, dependencies.WaveCount);
+            Assert.AreEqual(3, dependencies.WeaponCount);
+            Assert.AreEqual(4, dependencies.UpgradeCount);
+        }
+
+        [Test]
+        public void ContentLibraryMarksMossStarterPackReady()
+        {
+            GameContentLibraryReport report = GameContentLibraryService.Scan("Assets/GameContent");
+
+            Assert.AreEqual(0, report.BlockerCount, FormatLibraryIssues(report));
+            Assert.AreEqual(0, report.WarningCount, FormatLibraryIssues(report));
+            Assert.That(report.Items.Select(item => item.Id), Does.Contain("contentpack.moss-on-the-keyboard.starter"));
+            Assert.That(report.Items.Select(item => item.Id), Does.Contain("contentset.moss-on-the-keyboard.starter-run"));
+            Assert.AreEqual(1, report.ReadyContentPackCount);
+            Assert.AreEqual(1, report.ReadyContentSetCount);
+        }
+
+        [Test]
+        public void GameContentAuthoringProvidersAreAvailable()
+        {
+            string[] providerNames = GameContentAuthoringProviderRegistry.Providers
+                .Select(provider => provider.DisplayName)
+                .ToArray();
+
+            Assert.That(providerNames, Does.Contain("Attack"));
+            Assert.That(providerNames, Does.Contain("Enemy"));
+            Assert.That(providerNames, Does.Contain("Wave"));
+            Assert.That(providerNames, Does.Contain("Tower / Weapon"));
+            Assert.That(providerNames, Does.Contain("Upgrade"));
+            Assert.That(providerNames, Does.Contain("Game / Run Content Set"));
+            Assert.That(providerNames, Does.Contain("Content Library"));
+            Assert.That(providerNames, Does.Contain("Content Pack"));
+        }
+
+        [Test]
+        public void SmokeSceneAssignsMossStarterContentPack()
+        {
+            GameContentPackAsset pack = AssetDatabase.LoadAssetAtPath<GameContentPackAsset>(StarterPackPath);
+            GameContentSetAsset set = AssetDatabase.LoadAssetAtPath<GameContentSetAsset>(StarterSetPath);
+            UnityEngine.SceneManagement.Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
+            MossIdleAutoDefenseGameBootstrap controller = UnityEngine.Object.FindFirstObjectByType<MossIdleAutoDefenseGameBootstrap>();
+
+            Assert.IsNotNull(controller);
+            var serialized = new SerializedObject(controller);
+            Assert.AreSame(pack, serialized.FindProperty("_contentPack").objectReferenceValue);
+            Assert.AreSame(set, serialized.FindProperty("_contentSet").objectReferenceValue);
+            Assert.IsFalse(scene.isDirty, "Opening the smoke scene for validation should not dirty it.");
+        }
+
+        [Test]
+        public void AssignedMossStarterPackRunsWithoutFallback()
+        {
+            GameContentPackAsset pack = AssetDatabase.LoadAssetAtPath<GameContentPackAsset>(StarterPackPath);
+            GameContentSetAsset set = AssetDatabase.LoadAssetAtPath<GameContentSetAsset>(StarterSetPath);
+            GameObject host = new GameObject("moss-authored-content-smoke");
+            host.SetActive(false);
+            var controller = host.AddComponent<MossIdleAutoDefenseGameBootstrap>();
+            SetTemplateContent(controller, pack, set);
+            host.SetActive(true);
+            controller.RestartRun();
+            UnityEngine.SceneManagement.Scene activeScene = EditorSceneManager.GetActiveScene();
+
+            try
+            {
+                for (int i = 0; i < 80; i++)
+                    controller.Step(1, 0.05f);
+
+                Assert.IsTrue(controller.UsingAssignedContentPack, controller.AssignedContentPackStatus);
+                Assert.IsTrue(controller.UsingAssignedContentSet, controller.AssignedContentSetStatus);
+                Assert.AreEqual(0, controller.InvalidAssignedContentPackIssueCount);
+                Assert.AreEqual(0, controller.InvalidAssignedContentSetIssueCount);
+                Assert.That(
+                    controller.SpawnedCount,
+                    Is.GreaterThan(0),
+                    "Expected authored waves to spawn. Selected upgrades: " + controller.SelectedUpgradeCount
+                    + ", spawn delay ticks: " + controller.EnemySpawnDelayTicks
+                    + ", unsupported upgrade intents: " + controller.UnsupportedUpgradeIntentCount
+                    + ", runtime state: " + controller.RuntimeStateName);
+                Assert.AreEqual("Running", controller.RuntimeStateName, controller.StatusSummary);
+                Assert.IsFalse(activeScene.isDirty, "Authored content runtime smoke should not dirty the active scene.");
+            }
+            finally
+            {
+                UnityEngine.Object.DestroyImmediate(host);
+            }
         }
 
         [Test]
@@ -116,6 +248,16 @@ namespace Moss.IdleAutoDefense.Tests
             }
         }
 
+        private static void SetTemplateContent(IdleAutoDefenseTemplateController controller, GameContentPackAsset pack, GameContentSetAsset set)
+        {
+            FieldInfo packField = typeof(IdleAutoDefenseTemplateController).GetField("_contentPack", BindingFlags.Instance | BindingFlags.NonPublic);
+            FieldInfo setField = typeof(IdleAutoDefenseTemplateController).GetField("_contentSet", BindingFlags.Instance | BindingFlags.NonPublic);
+            Assert.IsNotNull(packField);
+            Assert.IsNotNull(setField);
+            packField.SetValue(controller, pack);
+            setField.SetValue(controller, set);
+        }
+
         private static void AssertFileContains(string path, string expected)
         {
             Assert.IsTrue(File.Exists(path), "Expected file to exist: " + path);
@@ -150,6 +292,16 @@ namespace Moss.IdleAutoDefense.Tests
             }
 
             Assert.Fail("Expected placeholder to exist: " + expectedId);
+        }
+
+        private static string FormatPackIssues(GameContentPackValidationReport report)
+        {
+            return string.Join(Environment.NewLine, report.Issues.Select(issue => issue.Path + ": " + issue.Message));
+        }
+
+        private static string FormatLibraryIssues(GameContentLibraryReport report)
+        {
+            return string.Join(Environment.NewLine, report.AllIssues.Select(issue => issue.Path + ": " + issue.Message));
         }
 
         [Serializable]

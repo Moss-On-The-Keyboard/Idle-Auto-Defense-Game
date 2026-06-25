@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7968575124911821428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13c7e381e9749df98db17e92868760a, type: 3}
+  m_Name: attack.moss.seeker_AttackDefinition_Delivery
+  m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackDeliveryDefinitionAsset
+  _mode: 0
+  _projectileDefinitionId: projectile.moss.seeker
+  _projectileSpawnableId: spawnable.moss.seeker
+  _projectilePrefab: {fileID: 2724378630219484614, guid: 35111d001e93dcf40af1b320655553bb, type: 3}
+  _projectileSpeed: 7.8
+  _projectileLifetimeTicks: 150
+  _homing: 1
+  _homingTurnRate: 230
+  _pierceCount: 1
+  _radius: 0.45
+  _beamVfxPrefab: {fileID: 0}
+  _impactVfxPrefab: {fileID: 0}
+  _maxHits: 1
+  _tickIntervalSeconds: 0.5
+--- !u!114 &-5218522153407135890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4d8869868f4959a817914076c6a18c, type: 3}
+  m_Name: attack.moss.seeker_AttackDefinition_Targeting
+  m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackTargetingDefinitionAsset
+  _mode: 2
+  _maxTargets: 1
+  _requiresLineOfSight: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026a24230b52426782291341bd80e8a7, type: 3}
+  m_Name: attack.moss.seeker_AttackDefinition
+  m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackDefinitionAsset
+  _id: attack.moss.seeker
+  _displayName: Moss Seeker
+  _icon: {fileID: 0}
+  _tags:
+  - moss
+  - projectile
+  - homing
+  _mechanics: {fileID: 202469333335069918}
+  _targeting: {fileID: -5218522153407135890}
+  _delivery: {fileID: -7968575124911821428}
+  _statusEffects: {fileID: 4191526317902191653}
+  _presentation: {fileID: 3042394962972731017}
+  _upgradeHookId: attack.moss.seeker.upgrade-hook
+  _balancingNotes: A homing moss mote that keeps pressure on tough cable enemies.
+--- !u!114 &202469333335069918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3531ee9c59b94756ab9c7f02896330e0, type: 3}
+  m_Name: attack.moss.seeker_AttackDefinition_Mechanics
+  m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackMechanicsDefinitionAsset
+  _cooldownTicks: 26
+  _range: 7.5
+  _damageAmount: 10
+  _damageTypeId: damage.moss.seek
+--- !u!114 &3042394962972731017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e0f27f283a4a63aa906af7fc6ff693, type: 3}
+  m_Name: attack.moss.seeker_AttackDefinition_Presentation
+  m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackPresentationDefinitionAsset
+  _events:
+  - _eventKind: 1
+    _audioClip: {fileID: 8300000, guid: 629ca48061a5d2242bc6c03c22a2ead5, type: 3}
+    _vfxPrefab: {fileID: 2724378630219484614, guid: 35111d001e93dcf40af1b320655553bb, type: 3}
+    _spawnPointRole: 1
+    _attachToSpawnPoint: 0
+  - _eventKind: 2
+    _audioClip: {fileID: 8300000, guid: 2fc967eb0737e2f42a73b8930c90c01b, type: 3}
+    _vfxPrefab: {fileID: 9168668805684798927, guid: fd23368956e857f4f8ae0e047f2b703c, type: 3}
+    _spawnPointRole: 3
+    _attachToSpawnPoint: 0
+--- !u!114 &4191526317902191653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a9ccb92a384ce2bd704aff62c4dc40, type: 3}
+  m_Name: attack.moss.seeker_AttackDefinition_StatusEffects
+  m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackStatusEffectsDefinitionAsset
+  _statusEffects:
+  - _statusId: status.moss.sticky-spores
+    _durationTicks: 90
+    _tickRateTicks: 0
+    _strength: 0.22
+    _maxStacks: 2
+    _stackingPolicy: 0
+    _modifierStatId: moss.sticky
+    _effectNote: Sticky spores slow or soften targets when supported by runtime hooks.

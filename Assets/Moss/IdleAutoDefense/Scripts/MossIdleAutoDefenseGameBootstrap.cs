@@ -16,9 +16,11 @@ namespace Moss.IdleAutoDefense
 
         private void OnGUI()
         {
-            GUILayout.BeginArea(new Rect(12f, 12f, 396f, 218f), GUI.skin.box);
+            GUILayout.BeginArea(new Rect(12f, 12f, 420f, 264f), GUI.skin.box);
             GUILayout.Label("Moss Idle Auto Defense");
             GUILayout.Label(StatusSummary);
+            GUILayout.Label(string.IsNullOrWhiteSpace(AssignedContentPackStatus) ? "Pack: resolving" : "Pack: " + AssignedContentPackStatus);
+            GUILayout.Label(string.IsNullOrWhiteSpace(AssignedContentSetStatus) ? "Set: resolving" : "Set: " + AssignedContentSetStatus);
             GUILayout.Label("Credits: " + (OfflineRewardCredits + EncounterRewardCredits) + "  Parts: " + (OfflineRewardParts + EncounterRewardParts));
             GUILayout.Label("Save: " + _lastSaveMessage);
 
@@ -29,7 +31,7 @@ namespace Moss.IdleAutoDefense
                 ResetMossSave();
             GUILayout.EndHorizontal();
 
-            GUILayout.Label("Project content: Assets/Moss/IdleAutoDefense");
+            GUILayout.Label("Authored content: Assets/GameContent/MossOnTheKeyboard");
             GUILayout.EndArea();
         }
 
