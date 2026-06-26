@@ -16,10 +16,10 @@ MonoBehaviour:
   _projectileDefinitionId: projectile.moss.seeker
   _projectileSpawnableId: spawnable.moss.seeker
   _projectilePrefab: {fileID: 2724378630219484614, guid: 35111d001e93dcf40af1b320655553bb, type: 3}
-  _projectileSpeed: 7.8
-  _projectileLifetimeTicks: 150
+  _projectileSpeed: 8.6
+  _projectileLifetimeTicks: 170
   _homing: 1
-  _homingTurnRate: 230
+  _homingTurnRate: 260
   _pierceCount: 1
   _radius: 0.45
   _beamVfxPrefab: {fileID: 0}
@@ -66,7 +66,7 @@ MonoBehaviour:
   _statusEffects: {fileID: 4191526317902191653}
   _presentation: {fileID: 3042394962972731017}
   _upgradeHookId: attack.moss.seeker.upgrade-hook
-  _balancingNotes: A homing moss mote that keeps pressure on tough cable enemies.
+  _balancingNotes: Slower cadence homing mote that chases cable beetles and rewards projectile upgrades.
 --- !u!114 &202469333335069918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,9 +79,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3531ee9c59b94756ab9c7f02896330e0, type: 3}
   m_Name: attack.moss.seeker_AttackDefinition_Mechanics
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackMechanicsDefinitionAsset
-  _cooldownTicks: 26
-  _range: 7.5
-  _damageAmount: 10
+  _cooldownTicks: 24
+  _range: 8
+  _damageAmount: 12
   _damageTypeId: damage.moss.seek
 --- !u!114 &3042394962972731017
 MonoBehaviour:
@@ -122,7 +122,7 @@ MonoBehaviour:
   - _statusId: status.moss.sticky-spores
     _durationTicks: 90
     _tickRateTicks: 0
-    _strength: 0.22
+    _strength: 0.28
     _maxStacks: 2
     _stackingPolicy: 0
     _modifierStatId: moss.sticky

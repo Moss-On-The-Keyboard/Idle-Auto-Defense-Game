@@ -15,12 +15,12 @@ MonoBehaviour:
   _fireMode: 1
   _attack: {fileID: 11400000, guid: 378a05c37052b444a8cbb513ca0bced3, type: 2}
   _projectileDefinitionId: projectile.moss.seeker
-  _cooldownTicks: 24
-  _range: 7.5
+  _cooldownTicks: 22
+  _range: 8
   _burstCount: 1
   _volleyCount: 1
   _spreadDegrees: 8
-  _buildCost: 42
+  _buildCost: 40
   _targetingRoleId: nearest
   _muzzleRoleId: primary
 --- !u!114 &11400000
@@ -44,7 +44,7 @@ MonoBehaviour:
   _upgradeGroupId: moss-seekers
   _stats: {fileID: -2642356630443683572}
   _presentation: {fileID: 8458064537270244645}
-  _balancingNotes: Moss starter weapon tuning.
+  _balancingNotes: Late starter sprout for homing pressure against cable beetles and stragglers.
 --- !u!114 &8458064537270244645
 MonoBehaviour:
   m_ObjectHideFlags: 0

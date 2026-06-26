@@ -20,6 +20,19 @@ The scene `Assets/Moss/IdleAutoDefense/Scenes/MossIdleAutoDefense.unity` has the
 
 Game-specific work in this proof is limited to authored content, placeholder prefabs/materials/audio, the thin Moss bootstrap/save shell, and project documentation. Reusable gameplay behavior remains in the Deucarian template and gameplay packages.
 
+## Current Starter Loop
+
+The starter loop is tuned to feel like a compact moss-on-keyboard skirmish:
+
+- `Desk Dust` opens gently with fast Dust Mites and a delayed Sticky Crumb check.
+- `Keyboard Bloom` begins sooner and adds a clear ramp: more Dust Mites, more Sticky Crumbs, then two slow Cable Beetles.
+- `Keycap Spore Wand` is the readable opener with short-range Spore Pop area pressure.
+- `Cursor Beam` is a bright teal precision weapon against fast targets.
+- `Moss Seeker Sprout` adds homing pressure and makes the late wave feel different.
+- `Faster Typing`, `Spore Pressure`, `Longer Reach`, and `Sticky Spores` have lower early costs and use supported template effects so selections are noticeable in the smoke loop.
+
+The intended validation state is `0 blockers`, `0 warnings`, one ready content pack, one ready content set, and no authored-content fallback.
+
 ## How To Inspect Or Change It
 
 1. Open `Tools/Deucarian/Game Content Authoring`.
@@ -51,3 +64,4 @@ Current limitations:
 - Placeholder prefabs are primitive Unity meshes intended for validation, not final art.
 - Audio clips are short generated tones used to prove optional audio references serialize and preview.
 - The older JSON override content remains as historical bootstrap material; the `Assets/GameContent` pack is the source of truth for the concrete playable recipe.
+- True weapon fire-rate/range upgrade application is still a reusable template/package follow-up. Current Moss upgrades use supported hooks such as direct damage, projectile speed, rewards, and spawn pacing instead of local gameplay forks.

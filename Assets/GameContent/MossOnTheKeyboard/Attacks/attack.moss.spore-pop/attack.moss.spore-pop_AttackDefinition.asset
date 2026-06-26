@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3531ee9c59b94756ab9c7f02896330e0, type: 3}
   m_Name: attack.moss.spore-pop_AttackDefinition_Mechanics
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackMechanicsDefinitionAsset
-  _cooldownTicks: 18
-  _range: 4.5
-  _damageAmount: 7.5
+  _cooldownTicks: 16
+  _range: 4.8
+  _damageAmount: 8.25
   _damageTypeId: damage.moss.spores
 --- !u!114 &11400000
 MonoBehaviour:
@@ -41,7 +41,7 @@ MonoBehaviour:
   _statusEffects: {fileID: 8376386597485915594}
   _presentation: {fileID: 8887833115406407573}
   _upgradeHookId: attack.moss.spore-pop.upgrade-hook
-  _balancingNotes: A soft area burst that rewards close-range keyboard-moss play.
+  _balancingNotes: Starter area pop tuned to clear small dust groups without erasing tougher crumbs.
 --- !u!114 &6357491099917603585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,10 +63,10 @@ MonoBehaviour:
   _homing: 0
   _homingTurnRate: 180
   _pierceCount: 0
-  _radius: 2.2
+  _radius: 2.5
   _beamVfxPrefab: {fileID: 0}
   _impactVfxPrefab: {fileID: 0}
-  _maxHits: 6
+  _maxHits: 7
   _tickIntervalSeconds: 0.5
 --- !u!114 &8376386597485915594
 MonoBehaviour:
@@ -84,7 +84,7 @@ MonoBehaviour:
   - _statusId: status.moss.sporing
     _durationTicks: 72
     _tickRateTicks: 12
-    _strength: 0.3
+    _strength: 0.35
     _maxStacks: 2
     _stackingPolicy: 2
     _modifierStatId: moss.spore-pressure

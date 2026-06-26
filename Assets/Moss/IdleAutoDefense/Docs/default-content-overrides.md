@@ -8,6 +8,8 @@ Assets/Moss/IdleAutoDefense/Content
 
 The first Moss content pass now lives as authored ScriptableObject content under `Assets/GameContent/MossOnTheKeyboard`. That authored content pack is the active playable recipe. Keep these JSON files as historical bootstrap/reference material unless a specific legacy-flow test still needs them.
 
+The current playable starter loop was tuned in authored assets, not these legacy JSON files. Use the JSON only as historical reference for the original template mirror.
+
 ## Edit Authored Assets First
 
 For the current game setup, start in:
@@ -17,6 +19,14 @@ Assets/GameContent/MossOnTheKeyboard
 ```
 
 Use `Tools/Deucarian/Game Content Authoring` > `Content Library` to inspect and validate the Moss starter pack after editing attacks, enemies, waves, weapons, or upgrades.
+
+Expected starter-loop checks:
+
+- `contentpack.moss-on-the-keyboard.starter` resolves with no Content Library warnings.
+- `contentset.moss-on-the-keyboard.starter-run` resolves with the Keycap Spore Wand starter weapon.
+- `Desk Dust` stays understandable in the first 30 seconds.
+- `Keyboard Bloom` ramps with visible Dust Mite, Sticky Crumb, and Cable Beetle differences.
+- Placeholder visuals remain distinct: small green Dust Mite, muted crumb block, dark Cable Beetle, teal cursor beam, and green moss seeker.
 
 ## Legacy JSON Reference
 

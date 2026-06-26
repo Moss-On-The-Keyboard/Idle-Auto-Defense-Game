@@ -44,7 +44,7 @@ MonoBehaviour:
   - tank
   _stats: {fileID: 4368296172841078933}
   _presentation: {fileID: -5123996334743860151}
-  _balancingNotes: Chunky cable beetle pressure unit.
+  _balancingNotes: Slow armored pressure unit for the late starter ramp.
 --- !u!114 &4368296172841078933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,9 +57,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec0d7eef89a4810ab6a49c7ab0374fb, type: 3}
   m_Name: enemy.moss.cable-beetle_EnemyDefinition_Stats
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyStatsDefinitionAsset
-  _maximumHealth: 34
-  _moveSpeed: 1.25
-  _rewardValue: 8
-  _contactDamage: 6
+  _maximumHealth: 40
+  _moveSpeed: 1.05
+  _rewardValue: 10
+  _contactDamage: 7
   _damageTypeId: damage.moss.contact
-  _collisionRadius: 0.48
+  _collisionRadius: 0.52

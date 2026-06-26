@@ -15,7 +15,8 @@ MonoBehaviour:
   _id: upgrade.moss.faster-typing
   _displayName: Faster Typing
   _icon: {fileID: 0}
-  _description: 'The keyboard finds its rhythm: Keycap Spore Wand fires faster.'
+  _description: The keyboard finds its rhythm and buys more breathing room between
+    enemy pulses.
   _tags:
   - moss
   - starter
@@ -34,21 +35,13 @@ MonoBehaviour:
   m_Name: upgrade.moss.faster-typing_RunUpgradeDefinition_Effects
   m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeEffectsDefinitionAsset
   _effects:
-  - _targetKind: 1
-    _modifierType: 1
-    _amount: 1.12
+  - _targetKind: 5
+    _modifierType: 2
+    _amount: 2
     _attack: {fileID: 0}
     _weapon: {fileID: 11400000, guid: ef27a6ddafba9f043a583043150717a9, type: 2}
     _enemy: {fileID: 0}
     _targetIdOverride:
-    _effectIdOverride:
-  - _targetKind: 5
-    _modifierType: 2
-    _amount: 1
-    _attack: {fileID: 0}
-    _weapon: {fileID: 0}
-    _enemy: {fileID: 0}
-    _targetIdOverride: weapon.moss.keycap-spore-wand
     _effectIdOverride: template.enemy.spawn_delay_ticks
   _prerequisites: []
   _exclusions: []
@@ -67,4 +60,4 @@ MonoBehaviour:
   _rarity: 0
   _weight: 8
   _maxRank: 3
-  _costs: 080000000c00000012000000
+  _costs: 060000000a00000010000000

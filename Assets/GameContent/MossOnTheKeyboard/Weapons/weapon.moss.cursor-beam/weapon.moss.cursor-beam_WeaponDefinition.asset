@@ -15,12 +15,12 @@ MonoBehaviour:
   _fireMode: 0
   _attack: {fileID: 11400000, guid: 77b8a67cb140df14385fa9a366012ca2, type: 2}
   _projectileDefinitionId:
-  _cooldownTicks: 10
-  _range: 8
+  _cooldownTicks: 9
+  _range: 8.5
   _burstCount: 1
   _volleyCount: 1
   _spreadDegrees: 0
-  _buildCost: 35
+  _buildCost: 30
   _targetingRoleId: nearest
   _muzzleRoleId: primary
 --- !u!114 &-562501707887537264
@@ -59,4 +59,4 @@ MonoBehaviour:
   _upgradeGroupId: cursor-tools
   _stats: {fileID: -3606412126032699802}
   _presentation: {fileID: -562501707887537264}
-  _balancingNotes: Moss starter weapon tuning.
+  _balancingNotes: Mid-run precision beam that gives the player a clear answer to fast dust mites.

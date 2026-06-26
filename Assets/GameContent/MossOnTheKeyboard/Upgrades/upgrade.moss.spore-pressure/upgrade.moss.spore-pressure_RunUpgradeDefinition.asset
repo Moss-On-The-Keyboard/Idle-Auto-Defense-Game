@@ -15,7 +15,7 @@ MonoBehaviour:
   _rarity: 1
   _weight: 8
   _maxRank: 3
-  _costs: 0a000000120000001b000000
+  _costs: 080000000d00000014000000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,7 +31,8 @@ MonoBehaviour:
   _id: upgrade.moss.spore-pressure
   _displayName: Spore Pressure
   _icon: {fileID: 0}
-  _description: Spore Pop gains a little extra bite.
+  _description: Spore Pop pressure helps finish damaged targets and slightly slows
+    the desk-rush cadence.
   _tags:
   - moss
   - starter
@@ -52,7 +53,7 @@ MonoBehaviour:
   _effects:
   - _targetKind: 0
     _modifierType: 0
-    _amount: 2
+    _amount: 1.5
     _attack: {fileID: 11400000, guid: 9b9b5e59650c55942b1479495fafabc2, type: 2}
     _weapon: {fileID: 0}
     _enemy: {fileID: 0}

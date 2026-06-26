@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec0d7eef89a4810ab6a49c7ab0374fb, type: 3}
   m_Name: enemy.moss.dust-mite_EnemyDefinition_Stats
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyStatsDefinitionAsset
-  _maximumHealth: 8
-  _moveSpeed: 2.8
+  _maximumHealth: 7
+  _moveSpeed: 3.15
   _rewardValue: 2
-  _contactDamage: 2
+  _contactDamage: 1.5
   _damageTypeId: damage.moss.contact
-  _collisionRadius: 0.22
+  _collisionRadius: 0.2
 --- !u!114 &-4001359616732421809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,4 +62,4 @@ MonoBehaviour:
   - swarm
   _stats: {fileID: -8124376842614646472}
   _presentation: {fileID: -4001359616732421809}
-  _balancingNotes: Small fast dust nibblers.
+  _balancingNotes: Tiny fast opener enemy; dies quickly but teaches that leaks can happen.

@@ -48,7 +48,7 @@ MonoBehaviour:
   _statusEffects: {fileID: 7300176575299566297}
   _presentation: {fileID: -6010074514451192746}
   _upgradeHookId: attack.moss.cursor-ray.upgrade-hook
-  _balancingNotes: A crisp hitscan beam that clips fast desk intruders.
+  _balancingNotes: Fast teal beam for clipping dust mites and finishing weakened crumbs.
 --- !u!114 &59697402617101996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,9 +61,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3531ee9c59b94756ab9c7f02896330e0, type: 3}
   m_Name: attack.moss.cursor-ray_AttackDefinition_Mechanics
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackMechanicsDefinitionAsset
-  _cooldownTicks: 12
-  _range: 8
-  _damageAmount: 5.5
+  _cooldownTicks: 10
+  _range: 8.5
+  _damageAmount: 5
   _damageTypeId: damage.moss.light
 --- !u!114 &4984814541100826988
 MonoBehaviour:
@@ -86,10 +86,10 @@ MonoBehaviour:
   _homing: 0
   _homingTurnRate: 180
   _pierceCount: 0
-  _radius: 1.5
+  _radius: 1.6
   _beamVfxPrefab: {fileID: 6536816860403935885, guid: 21bdc037a17d28541a3adde2efd5723b, type: 3}
   _impactVfxPrefab: {fileID: 7774430495117954515, guid: 820a2901691b1a047b6a2a5c05af467d, type: 3}
-  _maxHits: 2
+  _maxHits: 3
   _tickIntervalSeconds: 0.5
 --- !u!114 &5727318171836660315
 MonoBehaviour:

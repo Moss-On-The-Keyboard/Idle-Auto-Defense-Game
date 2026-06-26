@@ -15,7 +15,7 @@ MonoBehaviour:
   _rarity: 0
   _weight: 8
   _maxRank: 3
-  _costs: 090000000e00000015000000
+  _costs: 080000000c00000012000000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,7 +31,8 @@ MonoBehaviour:
   _id: upgrade.moss.longer-reach
   _displayName: Longer Reach
   _icon: {fileID: 0}
-  _description: Cursor Beam reaches across more of the desk.
+  _description: Cursor Beam calibration keeps moss projectiles moving and gives the
+    player a wider-feeling safety window.
   _tags:
   - moss
   - starter
@@ -50,9 +51,9 @@ MonoBehaviour:
   m_Name: upgrade.moss.longer-reach_RunUpgradeDefinition_Effects
   m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeEffectsDefinitionAsset
   _effects:
-  - _targetKind: 3
-    _modifierType: 0
-    _amount: 0.75
+  - _targetKind: 2
+    _modifierType: 1
+    _amount: 0.18
     _attack: {fileID: 0}
     _weapon: {fileID: 11400000, guid: b31c25c467e8fd94e9a1856546c8808a, type: 2}
     _enemy: {fileID: 0}

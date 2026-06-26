@@ -36,7 +36,7 @@ MonoBehaviour:
   _upgradeGroupId: moss-spores
   _stats: {fileID: 4528233716586639350}
   _presentation: {fileID: -3218465909995473210}
-  _balancingNotes: Moss starter weapon tuning.
+  _balancingNotes: Cheap opener that teaches short-range spore pops before the second wave ramps.
 --- !u!114 &4528233716586639350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,11 +52,11 @@ MonoBehaviour:
   _fireMode: 0
   _attack: {fileID: 11400000, guid: 9b9b5e59650c55942b1479495fafabc2, type: 2}
   _projectileDefinitionId:
-  _cooldownTicks: 18
-  _range: 4.5
+  _cooldownTicks: 16
+  _range: 4.8
   _burstCount: 1
   _volleyCount: 1
   _spreadDegrees: 0
-  _buildCost: 20
+  _buildCost: 18
   _targetingRoleId: nearest
   _muzzleRoleId: primary

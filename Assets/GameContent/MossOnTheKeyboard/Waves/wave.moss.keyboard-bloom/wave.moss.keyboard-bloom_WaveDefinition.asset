@@ -19,7 +19,7 @@ MonoBehaviour:
   - starter
   _schedule: {fileID: 5917154871780251520}
   _entries: {fileID: 2101970209641795454}
-  _balancingNotes: First concrete Moss wave tuning.
+  _balancingNotes: Clear second-wave ramp: dust pressure, sticky blockers, then cable beetle finishers.
 --- !u!114 &2101970209641795454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,24 +34,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.WaveEntriesDefinitionAsset
   _entries:
   - _enemy: {fileID: 11400000, guid: bcf371a13a7faaf4686773afaad79af3, type: 2}
-    _count: 4
+    _count: 7
     _batchSize: 1
     _initialDelayTicks: 0
-    _intervalTicks: 9
+    _intervalTicks: 11
     _spawnChannelId: perimeter-north
     _scalingTier: 1
   - _enemy: {fileID: 11400000, guid: 21872993e34ddad4eb7cd15e932d88e0, type: 2}
-    _count: 3
+    _count: 4
     _batchSize: 1
-    _initialDelayTicks: 18
-    _intervalTicks: 14
+    _initialDelayTicks: 22
+    _intervalTicks: 18
     _spawnChannelId: perimeter-east
     _scalingTier: 1
   - _enemy: {fileID: 11400000, guid: 4ac6d34aa3fde3141b43826419c4d7f7, type: 2}
-    _count: 1
+    _count: 2
     _batchSize: 1
-    _initialDelayTicks: 42
-    _intervalTicks: 26
+    _initialDelayTicks: 58
+    _intervalTicks: 42
     _spawnChannelId: perimeter-south
     _scalingTier: 2
 --- !u!114 &5917154871780251520
@@ -66,4 +66,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a478d28694840118d949b58fc76b5c6, type: 3}
   m_Name: wave.moss.keyboard-bloom_WaveDefinition_Schedule
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.WaveScheduleDefinitionAsset
-  _startTick: 140
+  _startTick: 120

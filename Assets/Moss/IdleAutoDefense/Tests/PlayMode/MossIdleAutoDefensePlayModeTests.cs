@@ -4,6 +4,7 @@ using Deucarian.IdleProgression;
 using Moss.IdleAutoDefense;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
 namespace Moss.IdleAutoDefense.PlayModeTests
@@ -42,6 +43,33 @@ namespace Moss.IdleAutoDefense.PlayModeTests
             Assert.IsTrue(MossIdleAutoDefenseSave.Reset());
 
             UnityEngine.Object.Destroy(host);
+        }
+
+        [UnityTest]
+        public IEnumerator MossSampleSceneUsesAssignedPackWithoutFallback()
+        {
+            SceneManager.LoadScene("MossIdleAutoDefense", LoadSceneMode.Single);
+            yield return null;
+
+            MossIdleAutoDefenseGameBootstrap controller = UnityEngine.Object.FindFirstObjectByType<MossIdleAutoDefenseGameBootstrap>();
+            Assert.IsNotNull(controller);
+            controller.enabled = false;
+
+            Scene scene = SceneManager.GetActiveScene();
+            Assert.IsFalse(scene.isDirty, "Loading the Moss sample scene for validation should not dirty it.");
+
+            for (int i = 0; i < 80; i++)
+                controller.Step(1, 0.05f);
+
+            Assert.IsTrue(controller.UsingAssignedContentPack, controller.AssignedContentPackStatus);
+            Assert.IsTrue(controller.UsingAssignedContentSet, controller.AssignedContentSetStatus);
+            Assert.AreEqual(0, controller.InvalidAssignedContentPackIssueCount);
+            Assert.AreEqual(0, controller.InvalidAssignedContentSetIssueCount);
+            Assert.That(controller.SpawnedCount, Is.GreaterThan(0), controller.StatusSummary);
+            Assert.AreEqual("Running", controller.RuntimeStateName, controller.StatusSummary);
+            Assert.IsFalse(scene.isDirty, "Moss sample scene play smoke should not dirty the scene.");
+
+            MossIdleAutoDefenseSave.Reset();
         }
     }
 }

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.TemplateGameIdleAutoDefense::Deucarian.TemplateGameIdleAutoDefense.GameContentPackAsset
   _id: contentpack.moss-on-the-keyboard.starter
   _displayName: Moss On The Keyboard Starter Pack
-  _description: Concrete first-game content pack proving that template gameplay can
-    be reskinned through authored assets.
+  _description: Concrete first-game content pack with a tuned moss-and-keyboard starter
+    loop, distinct enemy roles, authored waves, placeholder visuals, and safe optional
+    audio.
   _version: 0.1.0
   _author: Moss On The Keyboard
   _icon: {fileID: 0}
