@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c225f16410054f9d9d60394d24bc3412, type: 3}
   m_Name: enemy.moss.cable-beetle_EnemyDefinition_Presentation
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyPresentationDefinitionAsset
-  _prefab: {fileID: 4309212708221493457, guid: 3af3a7f42c010b141ac868dabd2fd8f4, type: 3}
+  _prefab: {fileID: 387979901263704152, guid: e4d9b7946426d0c46ba28fcc0c1bd63f, type: 3}
   _events:
   - _eventKind: 0
-    _audioClip: {fileID: 0}
-    _vfxPrefab: {fileID: 4831071809872800588, guid: 6199fb75d2083ab42844e98d906ab2fa, type: 3}
+    _audioClip: {fileID: 8300000, guid: 183684bdebf6bdf4f91d66877c2af23d, type: 3}
+    _vfxPrefab: {fileID: 2621225940443689472, guid: bdf70d1d5d7104e42bf61daa6db0250d, type: 3}
   - _eventKind: 1
-    _audioClip: {fileID: 0}
-    _vfxPrefab: {fileID: 0}
+    _audioClip: {fileID: 8300000, guid: a495899f9ec97814a88782e6b6540543, type: 3}
+    _vfxPrefab: {fileID: 3702225529201761958, guid: 3999989fad7554945967e95a24c164e0, type: 3}
   - _eventKind: 2
-    _audioClip: {fileID: 0}
-    _vfxPrefab: {fileID: 0}
+    _audioClip: {fileID: 8300000, guid: 031a8bddfe062154f826eb208b62e461, type: 3}
+    _vfxPrefab: {fileID: 3087965539903170157, guid: 1305d5cbe002e6240a17cc8cf73d5437, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyDefinitionAsset
   _id: enemy.moss.cable-beetle
   _displayName: Cable Beetle
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: f6d3cf5c264be534da2c727d6695f76d, type: 3}
   _role: 2
   _tags:
   - moss
@@ -57,9 +57,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec0d7eef89a4810ab6a49c7ab0374fb, type: 3}
   m_Name: enemy.moss.cable-beetle_EnemyDefinition_Stats
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyStatsDefinitionAsset
-  _maximumHealth: 40
-  _moveSpeed: 1.05
+  _maximumHealth: 28
+  _moveSpeed: 0.65
   _rewardValue: 10
-  _contactDamage: 7
+  _contactDamage: 3
   _damageTypeId: damage.moss.contact
   _collisionRadius: 0.52

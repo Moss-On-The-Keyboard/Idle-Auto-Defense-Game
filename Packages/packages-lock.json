@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.deucarian.attacks": {
-      "version": "https://github.com/Deucarian/Attacks.git#main",
+      "version": "https://github.com/Deucarian/Attacks.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -9,7 +9,7 @@
         "com.deucarian.combat": "0.1.0",
         "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "cbf486280fd359c66aee8ec574fc34c9b0738d08"
+      "hash": "f9487740da68a43bf297febb49d2dcd20f5fcea4"
     },
     "com.deucarian.auto-defense": {
       "version": "https://github.com/Deucarian/Auto-Defense.git#main",
@@ -101,16 +101,17 @@
       "source": "git",
       "dependencies": {
         "com.deucarian.common": "0.1.0",
-        "com.deucarian.editor": "1.0.0"
+        "com.deucarian.editor": "1.0.0",
+        "com.deucarian.gameplay-foundation": "0.1.0"
       },
-      "hash": "5b1557dfaf5dc22f897026b9dd6c752da2bce3d2"
+      "hash": "995e7490e7c688f55d5387cec0fd0dcb597c18ca"
     },
     "com.deucarian.gameplay-foundation": {
       "version": "https://github.com/Deucarian/Gameplay-Foundation.git#main",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "5e98c91cd14ff1bd35b691660258bb38a1286497"
+      "hash": "dfdfd383129fbf5f528be439686fca89760993f3"
     },
     "com.deucarian.idle-progression": {
       "version": "https://github.com/Deucarian/Idle-Progression.git#main",
@@ -139,14 +140,14 @@
       "hash": "7721592d13276fa745fc5819175e130c3ba28ec4"
     },
     "com.deucarian.package-installer": {
-      "version": "https://github.com/Deucarian/Package-Installer.git#main",
+      "version": "https://github.com/Deucarian/Package-Installer.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.logging": "1.0.1"
       },
-      "hash": "972f0bbf8a38f75718088393f48e9e6c22367ce2"
+      "hash": "452f99f630feb4ac848b422680d21b3230be85d0"
     },
     "com.deucarian.persistence": {
       "version": "https://github.com/Deucarian/Persistence.git#main",
@@ -180,7 +181,7 @@
       "hash": "f0cdc843e873ede90ff1387f041c339345d89fa7"
     },
     "com.deucarian.run-upgrades": {
-      "version": "https://github.com/Deucarian/Run-Upgrades.git#main",
+      "version": "https://github.com/Deucarian/Run-Upgrades.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -189,18 +190,19 @@
         "com.deucarian.weapon-systems": "0.1.0",
         "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "4222f1c6b1606e256f34d521146dbde522149637"
+      "hash": "6ef5a69b60f3f731387089a5d4d44da92f00bb1a"
     },
     "com.deucarian.template.game.idle-auto-defense": {
-      "version": "https://github.com/Deucarian/Template-Game-Idle-Auto-Defense.git#main",
+      "version": "https://github.com/Deucarian/Template-Game-Idle-Auto-Defense.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.deucarian.auto-defense-suite": "0.1.0",
         "com.deucarian.game-content-authoring": "0.1.0",
+        "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.monetization": "0.1.0"
       },
-      "hash": "a83c97d634ebb6c2bc9b405d162aa9182198cbdb"
+      "hash": "df5868de3e736616a2a4a09e8ff1c0f704921019"
     },
     "com.deucarian.test-automation": {
       "version": "https://github.com/Deucarian/Test-Automation.git#main",
@@ -210,7 +212,7 @@
       "hash": "434f0c0f36f4d9bf1f546749c7bc542a3451ea41"
     },
     "com.deucarian.weapon-systems": {
-      "version": "https://github.com/Deucarian/Weapon-Systems.git#main",
+      "version": "https://github.com/Deucarian/Weapon-Systems.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -219,7 +221,7 @@
         "com.deucarian.projectiles": "0.2.0",
         "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "d18be83c3119b4bcf193caa2c2cfc72e291d9aa0"
+      "hash": "936afd3b82f8180a4624fee4881d72caa24574d0"
     },
     "com.deucarian.world-navigation": {
       "version": "https://github.com/Deucarian/World-Navigation.git#main",

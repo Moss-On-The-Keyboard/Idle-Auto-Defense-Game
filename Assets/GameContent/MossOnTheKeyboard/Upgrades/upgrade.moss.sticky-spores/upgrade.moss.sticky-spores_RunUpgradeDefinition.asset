@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeDefinitionAsset
   _id: upgrade.moss.sticky-spores
   _displayName: Sticky Spores
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 5b7d56b13284210418db1fcf1b261603, type: 3}
   _description: Moss Seeker leaves stickier spores that slow the next enemy pulse.
   _tags:
   - moss

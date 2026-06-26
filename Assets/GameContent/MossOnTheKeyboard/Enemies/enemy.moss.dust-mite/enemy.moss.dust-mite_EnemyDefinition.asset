@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec0d7eef89a4810ab6a49c7ab0374fb, type: 3}
   m_Name: enemy.moss.dust-mite_EnemyDefinition_Stats
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyStatsDefinitionAsset
-  _maximumHealth: 7
-  _moveSpeed: 3.15
+  _maximumHealth: 5
+  _moveSpeed: 1.1
   _rewardValue: 2
-  _contactDamage: 1.5
+  _contactDamage: 0.5
   _damageTypeId: damage.moss.contact
   _collisionRadius: 0.2
 --- !u!114 &-4001359616732421809
@@ -30,17 +30,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c225f16410054f9d9d60394d24bc3412, type: 3}
   m_Name: enemy.moss.dust-mite_EnemyDefinition_Presentation
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyPresentationDefinitionAsset
-  _prefab: {fileID: 3123246266151064626, guid: d44d1bbf5a6e10e438aee8cd056c3357, type: 3}
+  _prefab: {fileID: 6736481045698664911, guid: 0dbaf12d28a6d694ab5b55ac6143e46a, type: 3}
   _events:
   - _eventKind: 0
-    _audioClip: {fileID: 0}
-    _vfxPrefab: {fileID: 3117861862127279404, guid: f393d78f37c9b2840a96d5446cba3e80, type: 3}
+    _audioClip: {fileID: 8300000, guid: 183684bdebf6bdf4f91d66877c2af23d, type: 3}
+    _vfxPrefab: {fileID: 2621225940443689472, guid: bdf70d1d5d7104e42bf61daa6db0250d, type: 3}
   - _eventKind: 1
-    _audioClip: {fileID: 0}
-    _vfxPrefab: {fileID: 0}
+    _audioClip: {fileID: 8300000, guid: a495899f9ec97814a88782e6b6540543, type: 3}
+    _vfxPrefab: {fileID: 3702225529201761958, guid: 3999989fad7554945967e95a24c164e0, type: 3}
   - _eventKind: 2
-    _audioClip: {fileID: 0}
-    _vfxPrefab: {fileID: 0}
+    _audioClip: {fileID: 8300000, guid: 031a8bddfe062154f826eb208b62e461, type: 3}
+    _vfxPrefab: {fileID: 3087965539903170157, guid: 1305d5cbe002e6240a17cc8cf73d5437, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,11 +55,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyDefinitionAsset
   _id: enemy.moss.dust-mite
   _displayName: Dust Mite
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 399e44e450adfdc4d806eaa2d7d2638d, type: 3}
   _role: 3
   _tags:
   - moss
   - swarm
   _stats: {fileID: -8124376842614646472}
   _presentation: {fileID: -4001359616732421809}
-  _balancingNotes: Tiny fast opener enemy; dies quickly but teaches that leaks can happen.
+  _balancingNotes: Tiny fast opener enemy; dies quickly but teaches that leaks can
+    happen.

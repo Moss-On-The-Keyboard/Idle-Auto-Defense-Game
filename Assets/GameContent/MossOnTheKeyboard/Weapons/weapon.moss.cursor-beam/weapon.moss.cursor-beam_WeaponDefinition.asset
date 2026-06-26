@@ -15,12 +15,12 @@ MonoBehaviour:
   _fireMode: 0
   _attack: {fileID: 11400000, guid: 77b8a67cb140df14385fa9a366012ca2, type: 2}
   _projectileDefinitionId:
-  _cooldownTicks: 9
+  _cooldownTicks: 8
   _range: 8.5
   _burstCount: 1
   _volleyCount: 1
   _spreadDegrees: 0
-  _buildCost: 30
+  _buildCost: 22
   _targetingRoleId: nearest
   _muzzleRoleId: primary
 --- !u!114 &-562501707887537264
@@ -35,9 +35,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf2b621876344ef814eb57794522f31, type: 3}
   m_Name: weapon.moss.cursor-beam_WeaponDefinition_Presentation
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponPresentationDefinitionAsset
-  _prefab: {fileID: 3071343268222446903, guid: 34664e5da456ad44fb5ecae3c9c22d65, type: 3}
-  _placementAudio: {fileID: 0}
-  _placementVfxPrefab: {fileID: 0}
+  _prefab: {fileID: 7240765087437714225, guid: c5cffbd54e60d6448bb3ad4f3683cd30, type: 3}
+  _placementAudio: {fileID: 8300000, guid: e820a300439a7c546bd4110ce517cbfb, type: 3}
+  _placementVfxPrefab: {fileID: 7787985798929444802, guid: 02e2e827967b2074394a2621fa86f559, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,11 +52,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponDefinitionAsset
   _id: weapon.moss.cursor-beam
   _displayName: Cursor Beam
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 71505419ca95c6d4cb47168e4e4422ed, type: 3}
   _tags:
   - moss
   - starter
   _upgradeGroupId: cursor-tools
   _stats: {fileID: -3606412126032699802}
   _presentation: {fileID: -562501707887537264}
-  _balancingNotes: Mid-run precision beam that gives the player a clear answer to fast dust mites.
+  _balancingNotes: Mid-run precision beam that gives the player a clear answer to
+    fast dust mites.

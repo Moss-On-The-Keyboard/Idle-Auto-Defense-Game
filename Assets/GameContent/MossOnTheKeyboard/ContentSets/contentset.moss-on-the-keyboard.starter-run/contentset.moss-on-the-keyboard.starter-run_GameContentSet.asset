@@ -14,34 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.TemplateGameIdleAutoDefense::Deucarian.TemplateGameIdleAutoDefense.GameContentSetAsset
   _id: contentset.moss-on-the-keyboard.starter-run
   _displayName: Moss Starter Run
-  _description: A short Moss On The Keyboard starter loop with dust mites, sticky
-    crumbs, cable beetles, spore pops, cursor beams, and homing moss seekers.
-  _icon: {fileID: 0}
-  _banner: {fileID: 2800000, guid: 86159464fe19653468d4387f86782849, type: 2}
+  _description: A complete Moss On The Keyboard starter loop with projectile spores,
+    cursor beams, homing seekers, sticky blooms, readable enemies, six waves, and
+    placeholder presentation assets.
+  _icon: {fileID: 21300000, guid: 33ed7a1c8e158f84ca6fe2eaa2573700, type: 3}
+  _banner: {fileID: 2800000, guid: e587684a50caee444adb16f56352f514, type: 3}
   _startingWeapon: {fileID: 11400000, guid: ef27a6ddafba9f043a583043150717a9, type: 2}
   _availableWeapons:
   - {fileID: 11400000, guid: ef27a6ddafba9f043a583043150717a9, type: 2}
   - {fileID: 11400000, guid: b31c25c467e8fd94e9a1856546c8808a, type: 2}
   - {fileID: 11400000, guid: 89818bd6092cde6429436b47f8acce2b, type: 2}
+  - {fileID: 11400000, guid: f688867d061cf5441a15a52191546207, type: 2}
   _enemyPool:
   - {fileID: 11400000, guid: bcf371a13a7faaf4686773afaad79af3, type: 2}
   - {fileID: 11400000, guid: 21872993e34ddad4eb7cd15e932d88e0, type: 2}
   - {fileID: 11400000, guid: 4ac6d34aa3fde3141b43826419c4d7f7, type: 2}
+  - {fileID: 11400000, guid: 8075b9ec58413774caf5406642d60cf2, type: 2}
   _waveSet:
   - {fileID: 11400000, guid: 24a00086090c41c42ba7c9c760796146, type: 2}
   - {fileID: 11400000, guid: 13bb59f44317f8b45affcbe9270b0d4b, type: 2}
+  - {fileID: 11400000, guid: 837cf48e15dd87c438a59905010cb986, type: 2}
+  - {fileID: 11400000, guid: 2873ec23862ae7e4d948b6fcc19ad236, type: 2}
+  - {fileID: 11400000, guid: 050768ad298c2294a9d7298ff4212bac, type: 2}
+  - {fileID: 11400000, guid: d6e3058627e44a146a88636258c249c9, type: 2}
   _upgradePool:
   - {fileID: 11400000, guid: ee73faf34e322f2419ce581c585cfc29, type: 2}
   - {fileID: 11400000, guid: b603472a90f2d3341ae7eaf58d5e74f9, type: 2}
   - {fileID: 11400000, guid: 07a64f536f98d9647801938598b2a7b4, type: 2}
   - {fileID: 11400000, guid: d46075db44d58284e999dc7d888ba4b1, type: 2}
-  _startingCredits: 105
+  - {fileID: 11400000, guid: 3c702bd8ef5f30a478aea195a504e300, type: 2}
+  - {fileID: 11400000, guid: 7131dc8ed084cf44285a92f1070e7787, type: 2}
+  _startingCredits: 160
   _startingParts: 8
   _rewardMultiplier: 1.2
   _difficultyMultiplier: 1
-  _sessionLengthTicks: 240
+  _sessionLengthTicks: 650
   _endless: 0
   _tags:
   - moss
   - starter
   - keyboard
+  - placeholder-complete

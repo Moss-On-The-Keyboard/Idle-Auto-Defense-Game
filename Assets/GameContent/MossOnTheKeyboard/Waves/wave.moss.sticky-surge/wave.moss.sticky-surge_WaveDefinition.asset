@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa87710cdb441ed8533723f70869576, type: 3}
+  m_Name: wave.moss.sticky-surge_WaveDefinition
+  m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.WaveDefinitionAsset
+  _id: wave.moss.sticky-surge
+  _displayName: Sticky Surge
+  _tags:
+  - starter
+  - placeholder
+  _schedule: {fileID: 11400000, guid: 691b74d481ce6d14583fc72e80d6ca58, type: 2}
+  _entries: {fileID: 11400000, guid: 20bc2c9cccaa74948bb5cd907b406ef6, type: 2}
+  _balancingNotes: Generated placeholder starter-round wave.

@@ -15,7 +15,7 @@ MonoBehaviour:
   _mode: 0
   _projectileDefinitionId: projectile.moss.seeker
   _projectileSpawnableId: spawnable.moss.seeker
-  _projectilePrefab: {fileID: 2724378630219484614, guid: 35111d001e93dcf40af1b320655553bb, type: 3}
+  _projectilePrefab: {fileID: 6446025857789258042, guid: adce02c55bea4184fa2b22fc257362ef, type: 3}
   _projectileSpeed: 8.6
   _projectileLifetimeTicks: 170
   _homing: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   _pierceCount: 1
   _radius: 0.45
   _beamVfxPrefab: {fileID: 0}
-  _impactVfxPrefab: {fileID: 0}
+  _impactVfxPrefab: {fileID: 8873468157448080144, guid: 091626e204415494abf113ae5ad23f8c, type: 3}
   _maxHits: 1
   _tickIntervalSeconds: 0.5
 --- !u!114 &-5218522153407135890
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackDefinitionAsset
   _id: attack.moss.seeker
   _displayName: Moss Seeker
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 900ea36bfd918694388db4d0b6ff9df6, type: 3}
   _tags:
   - moss
   - projectile
@@ -66,7 +66,8 @@ MonoBehaviour:
   _statusEffects: {fileID: 4191526317902191653}
   _presentation: {fileID: 3042394962972731017}
   _upgradeHookId: attack.moss.seeker.upgrade-hook
-  _balancingNotes: Slower cadence homing mote that chases cable beetles and rewards projectile upgrades.
+  _balancingNotes: Slower cadence homing mote that chases cable beetles and rewards
+    projectile upgrades.
 --- !u!114 &202469333335069918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,9 +80,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3531ee9c59b94756ab9c7f02896330e0, type: 3}
   m_Name: attack.moss.seeker_AttackDefinition_Mechanics
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackMechanicsDefinitionAsset
-  _cooldownTicks: 24
+  _cooldownTicks: 18
   _range: 8
-  _damageAmount: 12
+  _damageAmount: 20
   _damageTypeId: damage.moss.seek
 --- !u!114 &3042394962972731017
 MonoBehaviour:
@@ -96,14 +97,29 @@ MonoBehaviour:
   m_Name: attack.moss.seeker_AttackDefinition_Presentation
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackPresentationDefinitionAsset
   _events:
+  - _eventKind: 0
+    _audioClip: {fileID: 8300000, guid: b220e6177fda3b6418080f29d93e20af, type: 3}
+    _vfxPrefab: {fileID: 69531563939888414, guid: e75352a70e1a69c40af4ec6cacdde87c, type: 3}
+    _spawnPointRole: 0
+    _attachToSpawnPoint: 0
   - _eventKind: 1
-    _audioClip: {fileID: 8300000, guid: 629ca48061a5d2242bc6c03c22a2ead5, type: 3}
-    _vfxPrefab: {fileID: 2724378630219484614, guid: 35111d001e93dcf40af1b320655553bb, type: 3}
+    _audioClip: {fileID: 8300000, guid: e74a3562443a7d340bb94ad50e613841, type: 3}
+    _vfxPrefab: {fileID: 69531563939888414, guid: e75352a70e1a69c40af4ec6cacdde87c, type: 3}
     _spawnPointRole: 1
     _attachToSpawnPoint: 0
   - _eventKind: 2
-    _audioClip: {fileID: 8300000, guid: 2fc967eb0737e2f42a73b8930c90c01b, type: 3}
-    _vfxPrefab: {fileID: 9168668805684798927, guid: fd23368956e857f4f8ae0e047f2b703c, type: 3}
+    _audioClip: {fileID: 8300000, guid: cf07bee3496b367478424d0d5aab97e3, type: 3}
+    _vfxPrefab: {fileID: 8873468157448080144, guid: 091626e204415494abf113ae5ad23f8c, type: 3}
+    _spawnPointRole: 3
+    _attachToSpawnPoint: 0
+  - _eventKind: 3
+    _audioClip: {fileID: 8300000, guid: e74a3562443a7d340bb94ad50e613841, type: 3}
+    _vfxPrefab: {fileID: 8873468157448080144, guid: 091626e204415494abf113ae5ad23f8c, type: 3}
+    _spawnPointRole: 2
+    _attachToSpawnPoint: 0
+  - _eventKind: 4
+    _audioClip: {fileID: 8300000, guid: cf07bee3496b367478424d0d5aab97e3, type: 3}
+    _vfxPrefab: {fileID: 8873468157448080144, guid: 091626e204415494abf113ae5ad23f8c, type: 3}
     _spawnPointRole: 3
     _attachToSpawnPoint: 0
 --- !u!114 &4191526317902191653

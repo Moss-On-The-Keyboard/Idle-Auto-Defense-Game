@@ -1,10 +1,14 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using Deucarian.GameContentAuthoring.Editor;
 using Deucarian.TemplateGameIdleAutoDefense;
+using Deucarian.Attacks.Authoring;
+using Deucarian.RunUpgrades.Authoring;
+using Deucarian.WeaponSystems.Authoring;
 using Moss.IdleAutoDefense;
 using NUnit.Framework;
 using UnityEditor;
@@ -83,11 +87,65 @@ namespace Moss.IdleAutoDefense.Tests
 
             GameContentPackDependencySummary dependencies = GameContentPackValidator.CollectDependencies(pack);
             Assert.AreEqual(1, dependencies.ContentSetCount);
-            Assert.AreEqual(3, dependencies.AttackCount);
-            Assert.AreEqual(3, dependencies.EnemyCount);
-            Assert.AreEqual(2, dependencies.WaveCount);
-            Assert.AreEqual(3, dependencies.WeaponCount);
-            Assert.AreEqual(4, dependencies.UpgradeCount);
+            Assert.AreEqual(4, dependencies.AttackCount);
+            Assert.AreEqual(4, dependencies.EnemyCount);
+            Assert.AreEqual(6, dependencies.WaveCount);
+            Assert.AreEqual(4, dependencies.WeaponCount);
+            Assert.AreEqual(6, dependencies.UpgradeCount);
+        }
+
+        [Test]
+        public void MossStarterRoundHasCompletePlaceholderPresentation()
+        {
+            GameContentSetAsset set = AssetDatabase.LoadAssetAtPath<GameContentSetAsset>(StarterSetPath);
+            Assert.IsNotNull(set);
+            Assert.IsNotNull(set.Icon);
+            Assert.IsNotNull(set.Banner);
+            Assert.AreEqual(4, set.AvailableWeapons.Count);
+            Assert.AreEqual(4, set.EnemyPool.Count);
+            Assert.AreEqual(6, set.WaveSet.Count);
+            Assert.AreEqual(6, set.UpgradePool.Count);
+
+            var attackModes = new HashSet<AttackRecipeDeliveryMode>();
+            for (int i = 0; i < set.AvailableWeapons.Count; i++)
+            {
+                WeaponDefinitionAsset weapon = set.AvailableWeapons[i];
+                Assert.IsNotNull(weapon, "Weapon entry " + i + " is missing.");
+                Assert.IsNotNull(weapon.Icon, weapon.Id + " should have an icon.");
+                Assert.IsNotNull(weapon.Presentation, weapon.Id + " should have presentation.");
+                Assert.IsNotNull(weapon.Presentation.Prefab, weapon.Id + " should have a placeholder prefab.");
+                Assert.IsNotNull(weapon.Presentation.PlacementAudio, weapon.Id + " should have placement audio.");
+                Assert.IsNotNull(weapon.Presentation.PlacementVfxPrefab, weapon.Id + " should have placement VFX.");
+                Assert.IsNotNull(weapon.Stats, weapon.Id + " should have stats.");
+                Assert.IsNotNull(weapon.Stats.Attack, weapon.Id + " should reference an authored attack.");
+                Assert.IsNotNull(weapon.Stats.Attack.Icon, weapon.Stats.Attack.Id + " should have an icon.");
+                Assert.IsNotNull(weapon.Stats.Attack.Presentation, weapon.Stats.Attack.Id + " should have presentation.");
+                Assert.That(weapon.Stats.Attack.Presentation.Events, Has.Some.Matches<AttackPresentationEventRecipe>(evt => evt != null && (evt.AudioClip != null || evt.VfxPrefab != null)));
+                attackModes.Add(weapon.Stats.Attack.Delivery.Mode);
+            }
+
+            Assert.That(attackModes, Does.Contain(AttackRecipeDeliveryMode.Projectile));
+            Assert.That(attackModes, Does.Contain(AttackRecipeDeliveryMode.Hitscan));
+            Assert.That(attackModes, Does.Contain(AttackRecipeDeliveryMode.Aura));
+
+            for (int i = 0; i < set.EnemyPool.Count; i++)
+            {
+                EnemyDefinitionAsset enemy = set.EnemyPool[i];
+                Assert.IsNotNull(enemy, "Enemy entry " + i + " is missing.");
+                Assert.IsNotNull(enemy.Icon, enemy.Id + " should have an icon.");
+                Assert.IsNotNull(enemy.Presentation, enemy.Id + " should have presentation.");
+                Assert.IsNotNull(enemy.Presentation.Prefab, enemy.Id + " should have a placeholder prefab.");
+                Assert.That(enemy.Presentation.Events, Has.Some.Matches<EnemyPresentationEventRecipe>(evt => evt != null && (evt.AudioClip != null || evt.VfxPrefab != null)));
+            }
+
+            for (int i = 0; i < set.UpgradePool.Count; i++)
+            {
+                RunUpgradeDefinitionAsset upgrade = set.UpgradePool[i];
+                Assert.IsNotNull(upgrade, "Upgrade entry " + i + " is missing.");
+                Assert.IsNotNull(upgrade.Icon, upgrade.Id + " should have an icon.");
+                Assert.IsNotNull(upgrade.Economy, upgrade.Id + " should have economy.");
+                Assert.IsNotNull(upgrade.Effects, upgrade.Id + " should have effects.");
+            }
         }
 
         [Test]

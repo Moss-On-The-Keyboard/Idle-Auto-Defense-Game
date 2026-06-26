@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3531ee9c59b94756ab9c7f02896330e0, type: 3}
   m_Name: attack.moss.spore-pop_AttackDefinition_Mechanics
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackMechanicsDefinitionAsset
-  _cooldownTicks: 16
-  _range: 4.8
-  _damageAmount: 8.25
+  _cooldownTicks: 10
+  _range: 6.5
+  _damageAmount: 12
   _damageTypeId: damage.moss.spores
 --- !u!114 &11400000
 MonoBehaviour:
@@ -30,7 +30,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackDefinitionAsset
   _id: attack.moss.spore-pop
   _displayName: Spore Pop
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: ea767b7e6469cdf46a8161b6c0e688ff, type: 3}
   _tags:
   - moss
   - area
@@ -41,7 +41,8 @@ MonoBehaviour:
   _statusEffects: {fileID: 8376386597485915594}
   _presentation: {fileID: 8887833115406407573}
   _upgradeHookId: attack.moss.spore-pop.upgrade-hook
-  _balancingNotes: Starter area pop tuned to clear small dust groups without erasing tougher crumbs.
+  _balancingNotes: Starter area pop tuned to clear small dust groups without erasing
+    tougher crumbs.
 --- !u!114 &6357491099917603585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,18 +55,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13c7e381e9749df98db17e92868760a, type: 3}
   m_Name: attack.moss.spore-pop_AttackDefinition_Delivery
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackDeliveryDefinitionAsset
-  _mode: 2
-  _projectileDefinitionId: projectile.example.basic
-  _projectileSpawnableId: projectile.example.basic
-  _projectilePrefab: {fileID: 0}
-  _projectileSpeed: 8
-  _projectileLifetimeTicks: 120
+  _mode: 0
+  _projectileDefinitionId: projectile.moss.spore-pop
+  _projectileSpawnableId: projectile.moss.spore-pop
+  _projectilePrefab: {fileID: 3994219980243651207, guid: cc82c6fcdd20c6144ba7ce447c2e95b2, type: 3}
+  _projectileSpeed: 7.25
+  _projectileLifetimeTicks: 130
   _homing: 0
   _homingTurnRate: 180
   _pierceCount: 0
-  _radius: 2.5
+  _radius: 1.35
   _beamVfxPrefab: {fileID: 0}
-  _impactVfxPrefab: {fileID: 0}
+  _impactVfxPrefab: {fileID: 2059122463926792515, guid: 6a0ee3c8c0a3c6349ad9965688d42643, type: 3}
   _maxHits: 7
   _tickIntervalSeconds: 0.5
 --- !u!114 &8376386597485915594
@@ -118,12 +119,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackPresentationDefinitionAsset
   _events:
   - _eventKind: 0
-    _audioClip: {fileID: 8300000, guid: 59ae8a1ba94253442b96d07abc06b454, type: 3}
-    _vfxPrefab: {fileID: 9168668805684798927, guid: fd23368956e857f4f8ae0e047f2b703c, type: 3}
+    _audioClip: {fileID: 8300000, guid: b220e6177fda3b6418080f29d93e20af, type: 3}
+    _vfxPrefab: {fileID: 69531563939888414, guid: e75352a70e1a69c40af4ec6cacdde87c, type: 3}
     _spawnPointRole: 0
     _attachToSpawnPoint: 0
+  - _eventKind: 1
+    _audioClip: {fileID: 8300000, guid: e74a3562443a7d340bb94ad50e613841, type: 3}
+    _vfxPrefab: {fileID: 69531563939888414, guid: e75352a70e1a69c40af4ec6cacdde87c, type: 3}
+    _spawnPointRole: 1
+    _attachToSpawnPoint: 0
   - _eventKind: 2
-    _audioClip: {fileID: 8300000, guid: 2fc967eb0737e2f42a73b8930c90c01b, type: 3}
-    _vfxPrefab: {fileID: 9168668805684798927, guid: fd23368956e857f4f8ae0e047f2b703c, type: 3}
+    _audioClip: {fileID: 8300000, guid: cf07bee3496b367478424d0d5aab97e3, type: 3}
+    _vfxPrefab: {fileID: 2059122463926792515, guid: 6a0ee3c8c0a3c6349ad9965688d42643, type: 3}
+    _spawnPointRole: 3
+    _attachToSpawnPoint: 0
+  - _eventKind: 3
+    _audioClip: {fileID: 8300000, guid: e74a3562443a7d340bb94ad50e613841, type: 3}
+    _vfxPrefab: {fileID: 2059122463926792515, guid: 6a0ee3c8c0a3c6349ad9965688d42643, type: 3}
+    _spawnPointRole: 2
+    _attachToSpawnPoint: 0
+  - _eventKind: 4
+    _audioClip: {fileID: 8300000, guid: cf07bee3496b367478424d0d5aab97e3, type: 3}
+    _vfxPrefab: {fileID: 2059122463926792515, guid: 6a0ee3c8c0a3c6349ad9965688d42643, type: 3}
     _spawnPointRole: 3
     _attachToSpawnPoint: 0

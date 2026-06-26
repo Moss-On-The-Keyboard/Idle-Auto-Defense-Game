@@ -30,7 +30,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeDefinitionAsset
   _id: upgrade.moss.longer-reach
   _displayName: Longer Reach
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 8d217aabcccc74b4d801c33f89f13aa7, type: 3}
   _description: Cursor Beam calibration keeps moss projectiles moving and gives the
     player a wider-feeling safety window.
   _tags:
