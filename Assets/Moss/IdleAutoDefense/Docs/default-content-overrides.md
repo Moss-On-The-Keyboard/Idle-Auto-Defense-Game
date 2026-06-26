@@ -6,11 +6,21 @@ Moss was bootstrapped from the Deucarian Idle Auto Defense template sample. The 
 Assets/Moss/IdleAutoDefense/Content
 ```
 
-The first Moss content pass now lives as authored ScriptableObject content under `Assets/GameContent/MossOnTheKeyboard`. Keep these JSON files as historical bootstrap/reference material unless a specific legacy-flow test still needs them.
+The first Moss content pass now lives as authored ScriptableObject content under `Assets/GameContent/MossOnTheKeyboard`. That authored content pack is the active playable recipe. Keep these JSON files as historical bootstrap/reference material unless a specific legacy-flow test still needs them.
 
-## Edit First
+## Edit Authored Assets First
 
-Start with:
+For the current game setup, start in:
+
+```text
+Assets/GameContent/MossOnTheKeyboard
+```
+
+Use `Tools/Deucarian/Game Content Authoring` > `Content Library` to inspect and validate the Moss starter pack after editing attacks, enemies, waves, weapons, or upgrades.
+
+## Legacy JSON Reference
+
+The old copied JSON flow starts with:
 
 ```text
 Assets/Moss/IdleAutoDefense/Content/moss-content-overrides.json

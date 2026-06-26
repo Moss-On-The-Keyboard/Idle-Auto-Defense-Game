@@ -10,7 +10,8 @@ The game is a normal Unity project, not a reusable UPM package. Deucarian packag
 2. Open `Assets/Moss/IdleAutoDefense/Scenes/MossIdleAutoDefense.unity`.
 3. Press Play.
 4. Open `Tools > Deucarian > Game Content Authoring` and inspect the Content Pack / Content Library providers.
-5. Use `Tools > Deucarian > Moss Idle Auto Defense > Reset Dev Save` to clear the local smoke-save file.
+5. In `Content Library`, validate `Moss On The Keyboard Starter Pack` and confirm it has zero warnings.
+6. Use `Tools > Deucarian > Moss Idle Auto Defense > Reset Dev Save` to clear the local smoke-save file.
 
 ## Project Layout
 
@@ -21,6 +22,20 @@ The game is a normal Unity project, not a reusable UPM package. Deucarian packag
 - `Assets/Moss/IdleAutoDefense/Content/Overrides` contains product-owned placeholder override files for the next content pass.
 - `Assets/Moss/IdleAutoDefense/Docs` documents the template flow contract and Moss override path.
 - `Assets/Moss/IdleAutoDefense/Tests` contains EditMode and PlayMode smoke tests.
+
+## Editing The Authored Game
+
+Use `Tools > Deucarian > Game Content Authoring` for authored content work. The active starter recipe is `Assets/GameContent/MossOnTheKeyboard/ContentPacks/contentpack.moss-on-the-keyboard.starter/contentpack.moss-on-the-keyboard.starter_ContentPack.asset`, which points at `Moss Starter Run`.
+
+To make a small asset-flip change, edit one asset under:
+
+- `Assets/GameContent/MossOnTheKeyboard/Attacks`
+- `Assets/GameContent/MossOnTheKeyboard/Enemies`
+- `Assets/GameContent/MossOnTheKeyboard/Waves`
+- `Assets/GameContent/MossOnTheKeyboard/Weapons`
+- `Assets/GameContent/MossOnTheKeyboard/Upgrades`
+
+Then return to `Content Library`, run validation, and press Play in `MossIdleAutoDefense.unity`. The scene should report that it is using the assigned Moss content pack and content set with no fallback warnings.
 
 ## Current Scope
 
