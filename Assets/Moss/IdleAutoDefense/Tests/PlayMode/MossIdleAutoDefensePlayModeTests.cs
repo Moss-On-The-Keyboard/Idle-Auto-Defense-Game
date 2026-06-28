@@ -11,6 +11,13 @@ namespace Moss.IdleAutoDefense.PlayModeTests
 {
     public sealed class MossIdleAutoDefensePlayModeTests
     {
+        private const string PresentationRootName = "Moss Gameplay Presentation";
+        private const string PresentationAudioName = "Moss Feedback Audio";
+        private const string CorePulseName = "Moss Core Upgrade Pulse";
+        private const string SpawnPulseName = "Moss Enemy Spawn Spores";
+        private const string KillPulseName = "Moss Kill Spore Burst";
+        private const string HitPulseName = "Moss Objective Damage Spores";
+
         [UnityTest]
         public IEnumerator MossBootstrapRunsDeterministicTemplateSmoke()
         {
@@ -69,6 +76,33 @@ namespace Moss.IdleAutoDefense.PlayModeTests
             Assert.AreEqual("Running", controller.RuntimeStateName, controller.StatusSummary);
             Assert.IsFalse(scene.isDirty, "Moss sample scene play smoke should not dirty the scene.");
 
+            MossIdleAutoDefenseSave.Reset();
+        }
+
+        [UnityTest]
+        public IEnumerator MossPresentationLayerCreatesReadableFeedbackObjects()
+        {
+            GameObject existing = GameObject.Find(PresentationRootName);
+            if (existing != null)
+                UnityEngine.Object.Destroy(existing);
+            yield return null;
+
+            GameObject host = new GameObject("moss-presentation-smoke");
+            host.AddComponent<MossIdleAutoDefenseGameBootstrap>();
+            yield return null;
+
+            GameObject presentation = GameObject.Find(PresentationRootName);
+            Assert.IsNotNull(presentation, "Moss runtime should stage a visible playfield, not only debug counters.");
+            Assert.IsNotNull(GameObject.Find(PresentationAudioName));
+            Assert.IsNotNull(GameObject.Find(SpawnPulseName));
+            Assert.IsNotNull(GameObject.Find(KillPulseName));
+            Assert.IsNotNull(GameObject.Find(CorePulseName));
+            Assert.IsNotNull(GameObject.Find(HitPulseName));
+            Assert.That(UnityEngine.Object.FindObjectsByType<ParticleSystem>(FindObjectsSortMode.None).Length, Is.GreaterThanOrEqualTo(4));
+            Assert.That(UnityEngine.Object.FindObjectsByType<AudioSource>(FindObjectsSortMode.None).Length, Is.GreaterThanOrEqualTo(1));
+
+            UnityEngine.Object.Destroy(host);
+            UnityEngine.Object.Destroy(presentation);
             MossIdleAutoDefenseSave.Reset();
         }
     }
