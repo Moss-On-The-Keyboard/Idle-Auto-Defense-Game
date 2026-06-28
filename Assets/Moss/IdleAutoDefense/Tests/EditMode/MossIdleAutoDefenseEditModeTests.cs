@@ -149,6 +149,52 @@ namespace Moss.IdleAutoDefense.Tests
         }
 
         [Test]
+        public void MossStarterAttacksUseSelectedContentPresentationWithoutExampleIds()
+        {
+            AttackDefinitionAsset sporePop = LoadAttack("attack.moss.spore-pop");
+            Assert.AreEqual(AttackRecipeDeliveryMode.Projectile, sporePop.Delivery.Mode);
+            Assert.AreEqual("projectile.moss.spore-pop", sporePop.Delivery.ProjectileDefinitionId);
+            Assert.AreEqual("projectile.moss.spore-pop", sporePop.Delivery.ProjectileSpawnableId);
+            Assert.IsNotNull(sporePop.Delivery.ProjectilePrefab, "Spore Pop should have a projectile prefab.");
+            Assert.IsNotNull(sporePop.Delivery.ImpactVfxPrefab, "Spore Pop should have impact VFX.");
+            AssertAttackEventHasAssets(sporePop, AttackPresentationEventKind.OnFire);
+            AssertAttackEventHasAssets(sporePop, AttackPresentationEventKind.OnImpact);
+            AssertNoStalePreviewTokens(sporePop);
+
+            AttackDefinitionAsset cursorRay = LoadAttack("attack.moss.cursor-ray");
+            Assert.AreEqual(AttackRecipeDeliveryMode.Hitscan, cursorRay.Delivery.Mode);
+            Assert.IsEmpty(cursorRay.Delivery.ProjectileDefinitionId);
+            Assert.IsEmpty(cursorRay.Delivery.ProjectileSpawnableId);
+            Assert.IsNotNull(cursorRay.Delivery.BeamVfxPrefab, "Cursor Ray should have beam/tracer VFX.");
+            Assert.IsNotNull(cursorRay.Delivery.ImpactVfxPrefab, "Cursor Ray should have impact VFX.");
+            AssertAttackEventHasAssets(cursorRay, AttackPresentationEventKind.OnFire);
+            AssertAttackEventHasAssets(cursorRay, AttackPresentationEventKind.OnImpact);
+            AssertNoStalePreviewTokens(cursorRay);
+
+            AttackDefinitionAsset seeker = LoadAttack("attack.moss.seeker");
+            Assert.AreEqual(AttackRecipeDeliveryMode.Projectile, seeker.Delivery.Mode);
+            Assert.AreEqual("projectile.moss.seeker", seeker.Delivery.ProjectileDefinitionId);
+            Assert.AreEqual("spawnable.moss.seeker", seeker.Delivery.ProjectileSpawnableId);
+            Assert.IsTrue(seeker.Delivery.Homing, "Moss Seeker should stay a homing projectile.");
+            Assert.IsNotNull(seeker.Delivery.ProjectilePrefab, "Moss Seeker should have a homing projectile prefab.");
+            Assert.IsNotNull(seeker.Delivery.ImpactVfxPrefab, "Moss Seeker should have impact/status VFX.");
+            AssertAttackEventHasAssets(seeker, AttackPresentationEventKind.OnFire);
+            AssertAttackEventHasAssets(seeker, AttackPresentationEventKind.OnImpact);
+            AssertNoStalePreviewTokens(seeker);
+
+            AttackDefinitionAsset stickyBloom = LoadAttack("attack.moss.sticky-bloom");
+            Assert.IsTrue(
+                stickyBloom.Delivery.Mode == AttackRecipeDeliveryMode.Area || stickyBloom.Delivery.Mode == AttackRecipeDeliveryMode.Aura,
+                "Sticky Bloom should remain an area/status style attack.");
+            Assert.IsEmpty(stickyBloom.Delivery.ProjectileDefinitionId);
+            Assert.IsEmpty(stickyBloom.Delivery.ProjectileSpawnableId);
+            Assert.IsNotNull(stickyBloom.Delivery.ImpactVfxPrefab, "Sticky Bloom should have area/status VFX.");
+            AssertAttackEventHasAssets(stickyBloom, AttackPresentationEventKind.OnTick);
+            AssertAttackEventHasAssets(stickyBloom, AttackPresentationEventKind.OnImpact);
+            AssertNoStalePreviewTokens(stickyBloom);
+        }
+
+        [Test]
         public void ContentLibraryMarksMossStarterPackReady()
         {
             GameContentLibraryReport report = GameContentLibraryService.Scan("Assets/GameContent");
@@ -326,6 +372,42 @@ namespace Moss.IdleAutoDefense.Tests
         {
             for (int i = 0; i < expected.Length; i++)
                 StringAssert.Contains(expected[i], actual);
+        }
+
+        private static AttackDefinitionAsset LoadAttack(string id)
+        {
+            string folderName = id;
+            string path = ContentRoot + "/Attacks/" + folderName + "/" + folderName + "_AttackDefinition.asset";
+            AttackDefinitionAsset attack = AssetDatabase.LoadAssetAtPath<AttackDefinitionAsset>(path);
+            Assert.IsNotNull(attack, "Expected attack asset at " + path);
+            Assert.AreEqual(id, attack.Id);
+            Assert.IsNotNull(attack.Delivery, id + " should have delivery.");
+            Assert.IsNotNull(attack.Presentation, id + " should have presentation.");
+            return attack;
+        }
+
+        private static void AssertAttackEventHasAssets(AttackDefinitionAsset attack, AttackPresentationEventKind eventKind)
+        {
+            Assert.IsTrue(attack.Presentation.TryGetEvent(eventKind, out AttackPresentationEventRecipe recipe), attack.Id + " should define " + eventKind + ".");
+            Assert.IsNotNull(recipe, attack.Id + " should define " + eventKind + ".");
+            Assert.IsNotNull(recipe.AudioClip, attack.Id + " " + eventKind + " should have audio.");
+            Assert.IsNotNull(recipe.VfxPrefab, attack.Id + " " + eventKind + " should have VFX.");
+        }
+
+        private static void AssertNoStalePreviewTokens(AttackDefinitionAsset attack)
+        {
+            string flattened = string.Join(
+                "\n",
+                attack.Id,
+                attack.DisplayName,
+                attack.UpgradeHookId,
+                attack.Delivery.ProjectileDefinitionId,
+                attack.Delivery.ProjectileSpawnableId,
+                attack.BalancingNotes);
+
+            StringAssert.DoesNotContain("attack.example", flattened);
+            StringAssert.DoesNotContain("projectile.example", flattened);
+            StringAssert.DoesNotContain("fire-orb", flattened);
         }
 
         private static void AssertContainsPlacement(string expectedId, MossMonetizationPlacement[] placements)
