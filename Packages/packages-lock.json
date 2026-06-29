@@ -9,7 +9,7 @@
         "com.deucarian.combat": "0.1.0",
         "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "8d12730fe614290255edf1131eafbf56378650eb"
+      "hash": "bb32e577e2aac410f1175c0b207a52f416bcb528"
     },
     "com.deucarian.auto-defense": {
       "version": "https://github.com/Deucarian/Auto-Defense.git#main",
@@ -104,7 +104,7 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.gameplay-foundation": "0.1.0"
       },
-      "hash": "ed0d1c4984e915c2c0ae50e8fcc1ad86b762d1f7"
+      "hash": "cb6dc774e4e228efed0ceaf09c568a462b0fc6c7"
     },
     "com.deucarian.gameplay-foundation": {
       "version": "https://github.com/Deucarian/Gameplay-Foundation.git#main",
