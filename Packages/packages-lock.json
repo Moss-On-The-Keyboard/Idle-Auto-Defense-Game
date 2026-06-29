@@ -7,9 +7,10 @@
       "dependencies": {
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.combat": "0.1.0",
-        "com.deucarian.game-content-authoring": "0.1.0"
+        "com.deucarian.game-content-authoring": "0.1.0",
+        "com.deucarian.editor": "1.0.0"
       },
-      "hash": "bb32e577e2aac410f1175c0b207a52f416bcb528"
+      "hash": "044608c544ab4d6b8c71fdddb62a25dda7520101"
     },
     "com.deucarian.auto-defense": {
       "version": "https://github.com/Deucarian/Auto-Defense.git#main",
@@ -84,7 +85,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "faadacf68bc46deac1bff6b21005cdbc53a58a96"
+      "hash": "8d03da82108ad05e47da5cb52f8e51ffe6e2d32b"
     },
     "com.deucarian.encounters": {
       "version": "https://github.com/Deucarian/Encounters.git#main",
@@ -104,7 +105,7 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.gameplay-foundation": "0.1.0"
       },
-      "hash": "cb6dc774e4e228efed0ceaf09c568a462b0fc6c7"
+      "hash": "6355cb09d8d1ddeeb685cae683b5efd7baaf0fe9"
     },
     "com.deucarian.gameplay-foundation": {
       "version": "https://github.com/Deucarian/Gameplay-Foundation.git#main",
@@ -147,7 +148,7 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.logging": "1.0.1"
       },
-      "hash": "7519f1601bf242a43a97d85cf8bcc890bafc2e65"
+      "hash": "1f75ed64959ffc2369bc9b2daab10f246058b72e"
     },
     "com.deucarian.persistence": {
       "version": "https://github.com/Deucarian/Persistence.git#main",
