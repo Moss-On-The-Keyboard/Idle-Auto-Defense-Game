@@ -219,10 +219,11 @@
       "dependencies": {
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.attacks": "0.1.0",
+        "com.deucarian.editor": "1.0.0",
         "com.deucarian.projectiles": "0.2.0",
         "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "8795337eccb0dcccc091f42b9b2c948464a66c37"
+      "hash": "8b038e305e7e3b679ed41d31d4972bc62c766e25"
     },
     "com.deucarian.world-navigation": {
       "version": "https://github.com/Deucarian/World-Navigation.git#develop",
