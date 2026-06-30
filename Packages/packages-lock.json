@@ -7,13 +7,13 @@
       "dependencies": {
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.combat": "0.1.0",
-        "com.deucarian.game-content-authoring": "0.1.0",
-        "com.deucarian.editor": "1.0.0"
+        "com.deucarian.editor": "1.0.0",
+        "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "a5512e86cc4c1bd4dc75d5b99aba000a39e28e04"
+      "hash": "f3ceaf6f58e087ef6238bdcf78bc1a644fbc50d9"
     },
     "com.deucarian.auto-defense": {
-      "version": "https://github.com/Deucarian/Auto-Defense.git#main",
+      "version": "https://github.com/Deucarian/Auto-Defense.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -30,7 +30,7 @@
       "hash": "a6a4416d4430f8b3793242502e912654f08b0d56"
     },
     "com.deucarian.auto-defense-suite": {
-      "version": "https://github.com/Deucarian/Auto-Defense-Suite.git#main",
+      "version": "https://github.com/Deucarian/Auto-Defense-Suite.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -52,7 +52,7 @@
       "hash": "fac0e4778cdadb2add865be55c47e988b4a78a95"
     },
     "com.deucarian.combat": {
-      "version": "https://github.com/Deucarian/Combat.git#main",
+      "version": "https://github.com/Deucarian/Combat.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -61,14 +61,14 @@
       "hash": "b1a04e4a67a3819a5f6e093d48443a2853084573"
     },
     "com.deucarian.common": {
-      "version": "https://github.com/Deucarian/Common.git#main",
+      "version": "https://github.com/Deucarian/Common.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "a39e9258a22d396b3d13400b0885635fd0f29acd"
     },
     "com.deucarian.defense-games": {
-      "version": "https://github.com/Deucarian/Defense-Games.git#main",
+      "version": "https://github.com/Deucarian/Defense-Games.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -88,7 +88,7 @@
       "hash": "8d03da82108ad05e47da5cb52f8e51ffe6e2d32b"
     },
     "com.deucarian.encounters": {
-      "version": "https://github.com/Deucarian/Encounters.git#main",
+      "version": "https://github.com/Deucarian/Encounters.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -105,17 +105,17 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.gameplay-foundation": "0.1.0"
       },
-      "hash": "fa9f82fb73d3cd3038949754a6d514581c72656c"
+      "hash": "821731f9cbd6406bef7fdd5ea213a78378ac6d9d"
     },
     "com.deucarian.gameplay-foundation": {
-      "version": "https://github.com/Deucarian/Gameplay-Foundation.git#main",
+      "version": "https://github.com/Deucarian/Gameplay-Foundation.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "dfdfd383129fbf5f528be439686fca89760993f3"
     },
     "com.deucarian.idle-progression": {
-      "version": "https://github.com/Deucarian/Idle-Progression.git#main",
+      "version": "https://github.com/Deucarian/Idle-Progression.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -125,16 +125,16 @@
       "hash": "4481256ab9de49a1205714f770527191a0a98ffd"
     },
     "com.deucarian.logging": {
-      "version": "https://github.com/Deucarian/Logging.git#main",
+      "version": "https://github.com/Deucarian/Logging.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.deucarian.editor": "1.0.0"
       },
-      "hash": "9a4e4ef2f0746e1bb4d7cf98453f498ba267b0c1"
+      "hash": "95b4131278d73e0b1c9ba9965e9a4496031056e3"
     },
     "com.deucarian.monetization": {
-      "version": "https://github.com/Deucarian/Monetization.git#main",
+      "version": "https://github.com/Deucarian/Monetization.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {},
@@ -151,7 +151,7 @@
       "hash": "1f75ed64959ffc2369bc9b2daab10f246058b72e"
     },
     "com.deucarian.persistence": {
-      "version": "https://github.com/Deucarian/Persistence.git#main",
+      "version": "https://github.com/Deucarian/Persistence.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -160,7 +160,7 @@
       "hash": "6d3e3a9f2d7a42acca7036af1165c4bcf4e34bb7"
     },
     "com.deucarian.progression": {
-      "version": "https://github.com/Deucarian/Progression.git#main",
+      "version": "https://github.com/Deucarian/Progression.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -169,7 +169,7 @@
       "hash": "b14ab3ddda813d25ee91af2aea0e253105dd7942"
     },
     "com.deucarian.projectiles": {
-      "version": "https://github.com/Deucarian/Projectiles.git#main",
+      "version": "https://github.com/Deucarian/Projectiles.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -203,10 +203,10 @@
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.monetization": "0.1.0"
       },
-      "hash": "b7ae49a095854a887709720ff8abe909602838c6"
+      "hash": "504756bb73925d30e56e6cfeda57416f97ca159a"
     },
     "com.deucarian.test-automation": {
-      "version": "https://github.com/Deucarian/Test-Automation.git#main",
+      "version": "https://github.com/Deucarian/Test-Automation.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {},
@@ -225,7 +225,7 @@
       "hash": "8795337eccb0dcccc091f42b9b2c948464a66c37"
     },
     "com.deucarian.world-navigation": {
-      "version": "https://github.com/Deucarian/World-Navigation.git#main",
+      "version": "https://github.com/Deucarian/World-Navigation.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
@@ -235,7 +235,7 @@
       "hash": "abdcbeab2451cf87541e88b229db4dfbd3cc30a1"
     },
     "com.deucarian.world-spawning": {
-      "version": "https://github.com/Deucarian/World-Spawning.git#main",
+      "version": "https://github.com/Deucarian/World-Spawning.git#develop",
       "depth": 0,
       "source": "git",
       "dependencies": {
