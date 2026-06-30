@@ -10,7 +10,7 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "f3ceaf6f58e087ef6238bdcf78bc1a644fbc50d9"
+      "hash": "8ccc8e8a0ddeace46b74c1fff9bd58b5a411d390"
     },
     "com.deucarian.auto-defense": {
       "version": "https://github.com/Deucarian/Auto-Defense.git#develop",
