@@ -148,7 +148,7 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.logging": "1.0.1"
       },
-      "hash": "1f75ed64959ffc2369bc9b2daab10f246058b72e"
+      "hash": "291dbbd38f7a2bc3c917a441dc38355d6ea3c6e6"
     },
     "com.deucarian.persistence": {
       "version": "https://github.com/Deucarian/Persistence.git#develop",
