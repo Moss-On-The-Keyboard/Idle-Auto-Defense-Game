@@ -189,9 +189,10 @@
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.attacks": "0.1.0",
         "com.deucarian.weapon-systems": "0.1.0",
+        "com.deucarian.editor": "1.0.0",
         "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "a8f53ce1ed40f5628e07f56e72b1b8f0edef8431"
+      "hash": "32c42b58bde6a78d847a68678c3845a5cb096237"
     },
     "com.deucarian.template.game.idle-auto-defense": {
       "version": "https://github.com/Deucarian/Template-Game-Idle-Auto-Defense.git#develop",
