@@ -1,0 +1,23 @@
+{
+  "name": "IdleAutoDefenseGame.PlayModeTests",
+  "rootNamespace": "IdleAutoDefenseGame.PlayModeTests",
+  "references": [
+    "IdleAutoDefenseGame",
+    "Deucarian.TemplateGameIdleAutoDefense",
+    "Deucarian.IdleProgression"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}

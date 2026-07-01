@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Moss/IdleAutoDefense/Scenes/MossIdleAutoDefense.unity
-    guid: da0ed3df1a18463449f5ec90bf19e8a8
+    path: Assets/IdleAutoDefense/Scenes/BasicIdleAutoDefense.unity
+    guid: 21f622c31f544a2c8eb7f6e498b0f9cc
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

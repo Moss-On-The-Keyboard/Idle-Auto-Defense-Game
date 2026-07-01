@@ -1,0 +1,24 @@
+{
+  "name": "IdleAutoDefenseGame.EditModeTests",
+  "rootNamespace": "IdleAutoDefenseGame.Tests",
+  "references": [
+    "IdleAutoDefenseGame",
+    "Deucarian.TemplateGameIdleAutoDefense"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}
