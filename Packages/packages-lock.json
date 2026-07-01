@@ -7,9 +7,10 @@
       "dependencies": {
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.combat": "0.1.0",
+        "com.deucarian.editor": "1.0.0",
         "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "7d20d3f746ee5707737b99956ce13d55dcd1daa5"
+      "hash": "9ed1e9b38f19d620df488bab7b6f66a9372270d5"
     },
     "com.deucarian.auto-defense": {
       "version": "https://github.com/Deucarian/Auto-Defense.git#main",
@@ -84,7 +85,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "3cae3bcbd02398e98f54b0607c2e539c99c93b7e"
+      "hash": "8f3c11483bd9a0b5a1c598758b97ba36fc0d5e7d"
     },
     "com.deucarian.encounters": {
       "version": "https://github.com/Deucarian/Encounters.git#main",
@@ -104,7 +105,7 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.gameplay-foundation": "0.1.0"
       },
-      "hash": "bea5fe97c5a93a55fe8316565ab8943c5d451452"
+      "hash": "5a02726702d187f8c1c08b7fcf8a3089436ffa42"
     },
     "com.deucarian.gameplay-foundation": {
       "version": "https://github.com/Deucarian/Gameplay-Foundation.git#main",
@@ -130,7 +131,7 @@
       "dependencies": {
         "com.deucarian.editor": "1.0.0"
       },
-      "hash": "9a4e4ef2f0746e1bb4d7cf98453f498ba267b0c1"
+      "hash": "2b9dc9d4ab1e9be4fa5e3c3f97c4ee53869091db"
     },
     "com.deucarian.monetization": {
       "version": "https://github.com/Deucarian/Monetization.git#main",
@@ -147,7 +148,7 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.logging": "1.0.1"
       },
-      "hash": "ec7e2dd79a167c24a35228d76d74c8055a2e79cd"
+      "hash": "0d9b7a1ae51b1a2851bd2b06ffa1d882cfd1df19"
     },
     "com.deucarian.persistence": {
       "version": "https://github.com/Deucarian/Persistence.git#main",
@@ -188,9 +189,10 @@
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.attacks": "0.1.0",
         "com.deucarian.weapon-systems": "0.1.0",
+        "com.deucarian.editor": "1.0.0",
         "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "10c78fd4dfda9a8a7658863dda17dc55c2f03ecf"
+      "hash": "1f489b5ff0142876d492d1f4bc9bacbdec744848"
     },
     "com.deucarian.template.game.idle-auto-defense": {
       "version": "https://github.com/Deucarian/Template-Game-Idle-Auto-Defense.git#main",
@@ -198,11 +200,12 @@
       "source": "git",
       "dependencies": {
         "com.deucarian.auto-defense-suite": "0.1.0",
+        "com.deucarian.editor": "1.0.0",
         "com.deucarian.game-content-authoring": "0.1.0",
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.monetization": "0.1.0"
       },
-      "hash": "b7ae49a095854a887709720ff8abe909602838c6"
+      "hash": "ea84026ee25a4037db9f833d750fcb2df2c2c518"
     },
     "com.deucarian.test-automation": {
       "version": "https://github.com/Deucarian/Test-Automation.git#main",
@@ -218,10 +221,11 @@
       "dependencies": {
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.attacks": "0.1.0",
+        "com.deucarian.editor": "1.0.0",
         "com.deucarian.projectiles": "0.2.0",
         "com.deucarian.game-content-authoring": "0.1.0"
       },
-      "hash": "ae5c6105297ec7cddb566734d2b66607c55bebed"
+      "hash": "fe2e34bf9da34d21a75828589cc1d0dd66cae219"
     },
     "com.deucarian.world-navigation": {
       "version": "https://github.com/Deucarian/World-Navigation.git#main",
