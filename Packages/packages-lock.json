@@ -105,7 +105,7 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.gameplay-foundation": "0.1.0"
       },
-      "hash": "821731f9cbd6406bef7fdd5ea213a78378ac6d9d"
+      "hash": "dd80e2c628cf20343ae6df05b146664f8549f3ee"
     },
     "com.deucarian.gameplay-foundation": {
       "version": "https://github.com/Deucarian/Gameplay-Foundation.git#develop",
@@ -205,7 +205,7 @@
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.monetization": "0.1.0"
       },
-      "hash": "e143d96cbe43dee9e2a1d74a3a6c0daf903e8b87"
+      "hash": "3406634e08031fabd77a13da83f195879cdf88d0"
     },
     "com.deucarian.test-automation": {
       "version": "https://github.com/Deucarian/Test-Automation.git#develop",
