@@ -200,11 +200,12 @@
       "source": "git",
       "dependencies": {
         "com.deucarian.auto-defense-suite": "0.1.0",
+        "com.deucarian.editor": "1.0.0",
         "com.deucarian.game-content-authoring": "0.1.0",
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.monetization": "0.1.0"
       },
-      "hash": "504756bb73925d30e56e6cfeda57416f97ca159a"
+      "hash": "948e3ed27bc17869186f67ff6148a067a36cb469"
     },
     "com.deucarian.test-automation": {
       "version": "https://github.com/Deucarian/Test-Automation.git#develop",
