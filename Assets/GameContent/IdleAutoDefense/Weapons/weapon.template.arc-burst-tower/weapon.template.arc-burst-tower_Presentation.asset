@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf2b621876344ef814eb57794522f31, type: 3}
   m_Name: weapon.template.arc-burst-tower_Presentation
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponPresentationDefinitionAsset
-  _prefab: {fileID: 1326943858262998879, guid: 6e5f3ceb3cd84698b5becbee50a611b3, type: 3}
-  _placementAudio: {fileID: 8300000, guid: f889f95062944dc5993da74d1390c563, type: 3}
-  _placementVfxPrefab: {fileID: 5703739830888076867, guid: e1982d973b4e4a878c8a8deac8602380, type: 3}
+  _prefab: {fileID: 1326943858262998879, guid: 008b30c79aaa41d9941c2886b7d6748f, type: 3}
+  _placementAudio: {fileID: 8300000, guid: 5402c699c3334d2fb112ffbab0c35bd9, type: 3}
+  _placementVfxPrefab: {fileID: 5703739830888076867, guid: fc7017963b0b484e929270f5ea0d6671, type: 3}

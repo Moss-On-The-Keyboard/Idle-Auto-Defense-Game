@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackDefinitionAsset
   _id: attack.template.pulse-cannon
   _displayName: Pulse Beam
-  _icon: {fileID: 21300000, guid: aaa3b0e1285e4fe486271ce1ac1aba8f, type: 3}
+  _icon: {fileID: 21300000, guid: d884e2863b8c47e88e5cb21a137b1fd0, type: 3}
   _tags:
   - template
-  _mechanics: {fileID: 11400000, guid: ab28ba116f8f470998cf27af0b066f55, type: 2}
-  _targeting: {fileID: 11400000, guid: be2e9f57a501459fb8033701b5a33b59, type: 2}
-  _delivery: {fileID: 11400000, guid: c8cc0713ec2a403d97bf97df96a072ef, type: 2}
-  _statusEffects: {fileID: 11400000, guid: 6bf653d74b0d4e5aae0d1ea0c4f20ecc, type: 2}
-  _presentation: {fileID: 11400000, guid: 8e57e8c0b1cd45728a94b6ff2d4b6e1e, type: 2}
+  _mechanics: {fileID: 11400000, guid: 83d87100f5354e77aeec8a46129e612c, type: 2}
+  _targeting: {fileID: 11400000, guid: b7fa7aaadb7f4798af6c615d32e8b4b1, type: 2}
+  _delivery: {fileID: 11400000, guid: 29add748a4664bd3bcdd1cbbd781c2ba, type: 2}
+  _statusEffects: {fileID: 11400000, guid: 89d9c62ff1ea4b678ac882c9fa98e927, type: 2}
+  _presentation: {fileID: 11400000, guid: abdf1477360042da8a861dacaa469fe7, type: 2}
   _upgradeHookId:
   _balancingNotes:

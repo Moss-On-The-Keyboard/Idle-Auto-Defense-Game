@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf2b621876344ef814eb57794522f31, type: 3}
   m_Name: weapon.template.shard-launcher_Presentation
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponPresentationDefinitionAsset
-  _prefab: {fileID: 5795815152930762106, guid: 06ada7dd23894566905dfe862b6a5c48, type: 3}
-  _placementAudio: {fileID: 8300000, guid: f889f95062944dc5993da74d1390c563, type: 3}
-  _placementVfxPrefab: {fileID: 5703739830888076867, guid: e1982d973b4e4a878c8a8deac8602380, type: 3}
+  _prefab: {fileID: 5795815152930762106, guid: 9b15ca07e0ae4009b95adc4ed8616871, type: 3}
+  _placementAudio: {fileID: 8300000, guid: 5402c699c3334d2fb112ffbab0c35bd9, type: 3}
+  _placementVfxPrefab: {fileID: 5703739830888076867, guid: fc7017963b0b484e929270f5ea0d6671, type: 3}

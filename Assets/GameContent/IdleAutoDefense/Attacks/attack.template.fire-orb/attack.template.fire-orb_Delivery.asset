@@ -15,7 +15,7 @@ MonoBehaviour:
   _mode: 0
   _projectileDefinitionId: projectile.template.shard
   _projectileSpawnableId: projectile.template.shard
-  _projectilePrefab: {fileID: 5225199999263018918, guid: 2ee669b14dce4b3e9c35e5e1da4a4fca, type: 3}
+  _projectilePrefab: {fileID: 5225199999263018918, guid: 423e6da80bab41abaf1c13a6a56b47c8, type: 3}
   _projectileSpeed: 8
   _projectileLifetimeTicks: 120
   _homing: 0
@@ -23,6 +23,6 @@ MonoBehaviour:
   _pierceCount: 0
   _radius: 0
   _beamVfxPrefab: {fileID: 0}
-  _impactVfxPrefab: {fileID: 3798696826337731743, guid: b846281d41944324bf803990c49e3ff6, type: 3}
+  _impactVfxPrefab: {fileID: 3798696826337731743, guid: 0514da634c6d4b79bb2aed4a285c9ee7, type: 3}
   _maxHits: 1
   _tickIntervalSeconds: 0.5

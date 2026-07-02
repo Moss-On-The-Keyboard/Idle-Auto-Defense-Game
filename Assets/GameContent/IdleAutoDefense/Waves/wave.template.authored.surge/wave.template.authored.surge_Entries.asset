@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: wave.template.authored.surge_Entries
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.WaveEntriesDefinitionAsset
   _entries:
-  - _enemy: {fileID: 11400000, guid: 2f6766ae631043d8a32c9de8876a64bd, type: 2}
+  - _enemy: {fileID: 11400000, guid: f52e9d2d0bb74bbd8642855c876e6655, type: 2}
     _count: 5
     _batchSize: 1
     _initialDelayTicks: 0
     _intervalTicks: 26
     _spawnChannelId: perimeter-north
     _scalingTier: 1
-  - _enemy: {fileID: 11400000, guid: 02643871bd81460fb78c0211784df306, type: 2}
+  - _enemy: {fileID: 11400000, guid: b1d6116bd7cc4be7bfcc46348f8c8722, type: 2}
     _count: 3
     _batchSize: 1
     _initialDelayTicks: 32
     _intervalTicks: 36
     _spawnChannelId: perimeter-south
     _scalingTier: 1
-  - _enemy: {fileID: 11400000, guid: 542c9b93c33a4f3199666ababdaea3c8, type: 2}
+  - _enemy: {fileID: 11400000, guid: d22d838c9fa542f89a2bb1791aed4a44, type: 2}
     _count: 2
     _batchSize: 1
     _initialDelayTicks: 68

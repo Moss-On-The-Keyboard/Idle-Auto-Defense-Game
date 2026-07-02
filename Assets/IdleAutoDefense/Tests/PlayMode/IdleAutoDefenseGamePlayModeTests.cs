@@ -33,6 +33,10 @@ namespace IdleAutoDefenseGame.PlayModeTests
 
             Assert.That(controller.SpawnedCount, Is.GreaterThanOrEqualTo(4));
             Assert.That(controller.ProjectileLaunchCount, Is.GreaterThan(0));
+            Assert.That(controller.ProjectileVisualSpawnCount, Is.GreaterThan(0), controller.StatusSummary);
+            Assert.That(controller.AttackVfxSpawnCount, Is.GreaterThan(0), controller.StatusSummary);
+            Assert.That(controller.AttackAudioPlayCount, Is.GreaterThan(0), controller.StatusSummary);
+            Assert.That(controller.EnemyPresentationEventCount, Is.GreaterThan(0), controller.StatusSummary);
             Assert.That(controller.DirectOrCombatKillCount + controller.ProjectileAdapterKillCount, Is.GreaterThan(0));
             Assert.That(controller.EncounterRewardCredits, Is.GreaterThan(0));
             Assert.That(controller.SelectedUpgradeCount, Is.GreaterThanOrEqualTo(4));
@@ -75,6 +79,10 @@ namespace IdleAutoDefenseGame.PlayModeTests
             Assert.AreEqual(0, controller.InvalidAssignedContentSetIssueCount);
             Assert.That(controller.SpawnedCount, Is.GreaterThan(0), controller.StatusSummary);
             Assert.That(controller.ProjectileLaunchCount, Is.GreaterThan(0), controller.StatusSummary);
+            Assert.That(controller.ProjectileVisualSpawnCount, Is.GreaterThan(0), controller.StatusSummary);
+            Assert.That(controller.AttackVfxSpawnCount, Is.GreaterThan(0), controller.StatusSummary);
+            Assert.That(controller.AttackAudioPlayCount, Is.GreaterThan(0), controller.StatusSummary);
+            Assert.That(controller.EnemyPresentationEventCount, Is.GreaterThan(0), controller.StatusSummary);
             Assert.AreEqual("Running", controller.RuntimeStateName, controller.StatusSummary);
             Assert.IsFalse(scene.isDirty, "Imported sample scene play smoke should not dirty the scene.");
 
@@ -103,6 +111,7 @@ namespace IdleAutoDefenseGame.PlayModeTests
 
             Assert.AreEqual(0, controller.SelectedUpgradeCount);
             Assert.IsFalse(controller.PulseBeamUnlocked);
+            Assert.That(controller.EnemyPresentationEventCount, Is.GreaterThan(0), controller.StatusSummary);
             Assert.That(controller.ObjectiveDamageEvents, Is.GreaterThan(0), controller.StatusSummary);
             Assert.True(controller.EncounterFailed, "No-upgrade sample run should be able to lose. " + controller.StatusSummary);
 

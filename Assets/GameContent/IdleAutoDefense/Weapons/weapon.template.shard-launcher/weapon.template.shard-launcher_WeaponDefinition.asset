@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponDefinitionAsset
   _id: weapon.template.shard-launcher
   _displayName: Shard Launcher
-  _icon: {fileID: 21300000, guid: 5ec12a4bc4484a30a6db63a368bc7302, type: 3}
+  _icon: {fileID: 21300000, guid: 9563f4c999a946c4bdbbe811a540fd2c, type: 3}
   _tags:
   - projectile
   - fire
   - tower
   _upgradeGroupId: upgrade.group.template.shard
-  _stats: {fileID: 11400000, guid: b9f8b08adf6a41fe96c7d2dfcc0b5589, type: 2}
-  _presentation: {fileID: 11400000, guid: 8386c33c6a54436b85369a83e5de4b91, type: 2}
+  _stats: {fileID: 11400000, guid: 9f13b97fd97847f4ab755699c7d1b68d, type: 2}
+  _presentation: {fileID: 11400000, guid: 94417a0a0ed74177995420ddd5f9c03f, type: 2}
   _balancingNotes:

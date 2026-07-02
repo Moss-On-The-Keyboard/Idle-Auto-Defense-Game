@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeDefinitionAsset
   _id: upgrade.template.authored.range-up
   _displayName: Range Boost
-  _icon: {fileID: 21300000, guid: 4bea84859e244ea79cbe0083bc754e5a, type: 3}
+  _icon: {fileID: 21300000, guid: ad215944a07f4cc0940c08f3c6313bf2, type: 3}
   _description: Increases tower threat range for the current run.
   _tags:
   - idle-auto-defense
   - starter
-  _economy: {fileID: 11400000, guid: 1dc24d176cfd4caabe186ba285f5b06d, type: 2}
-  _effects: {fileID: 11400000, guid: c176c28897b4434b81eaa0ab88e7e71e, type: 2}
+  _economy: {fileID: 11400000, guid: be3430f1874f4486b6d629d9bc8d7580, type: 2}
+  _effects: {fileID: 11400000, guid: be86998c870e42ca8cbd968777ac2d2c, type: 2}

@@ -23,6 +23,6 @@ MonoBehaviour:
   _pierceCount: 0
   _radius: 2.25
   _beamVfxPrefab: {fileID: 0}
-  _impactVfxPrefab: {fileID: 3798696826337731743, guid: b846281d41944324bf803990c49e3ff6, type: 3}
+  _impactVfxPrefab: {fileID: 3798696826337731743, guid: 0514da634c6d4b79bb2aed4a285c9ee7, type: 3}
   _maxHits: 8
   _tickIntervalSeconds: 0.5

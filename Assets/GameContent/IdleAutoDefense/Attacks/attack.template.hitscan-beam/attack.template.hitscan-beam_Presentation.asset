@@ -14,27 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackPresentationDefinitionAsset
   _events:
   - _eventKind: 0
-    _audioClip: {fileID: 8300000, guid: 18a08e1bd3d748e7b043814ab5af1a73, type: 3}
-    _vfxPrefab: {fileID: 7949990876258194118, guid: f3757d1bfb4f460f8c770b735289a9d4, type: 3}
+    _audioClip: {fileID: 8300000, guid: ad47a37c199b411fba8f3df32a9e0625, type: 3}
+    _vfxPrefab: {fileID: 7949990876258194118, guid: 8057d9a6efce49e4b10a9a4ec21c2fe6, type: 3}
     _spawnPointRole: 0
     _attachToSpawnPoint: 0
   - _eventKind: 1
-    _audioClip: {fileID: 8300000, guid: 71fba811bd484508bf033bce2a16cf35, type: 3}
-    _vfxPrefab: {fileID: 7949990876258194118, guid: f3757d1bfb4f460f8c770b735289a9d4, type: 3}
+    _audioClip: {fileID: 8300000, guid: 850867f590da441da36a34d5ad62382d, type: 3}
+    _vfxPrefab: {fileID: 7949990876258194118, guid: 8057d9a6efce49e4b10a9a4ec21c2fe6, type: 3}
     _spawnPointRole: 1
     _attachToSpawnPoint: 0
   - _eventKind: 2
-    _audioClip: {fileID: 8300000, guid: f4f756f2b2fc4356b21f21759d248cb8, type: 3}
-    _vfxPrefab: {fileID: 3798696826337731743, guid: b846281d41944324bf803990c49e3ff6, type: 3}
+    _audioClip: {fileID: 8300000, guid: cddccbbf04804254a63156ad618d2e69, type: 3}
+    _vfxPrefab: {fileID: 3798696826337731743, guid: 0514da634c6d4b79bb2aed4a285c9ee7, type: 3}
     _spawnPointRole: 3
     _attachToSpawnPoint: 0
   - _eventKind: 3
-    _audioClip: {fileID: 8300000, guid: 71fba811bd484508bf033bce2a16cf35, type: 3}
-    _vfxPrefab: {fileID: 3798696826337731743, guid: b846281d41944324bf803990c49e3ff6, type: 3}
+    _audioClip: {fileID: 8300000, guid: 850867f590da441da36a34d5ad62382d, type: 3}
+    _vfxPrefab: {fileID: 3798696826337731743, guid: 0514da634c6d4b79bb2aed4a285c9ee7, type: 3}
     _spawnPointRole: 2
     _attachToSpawnPoint: 0
   - _eventKind: 4
-    _audioClip: {fileID: 8300000, guid: f4f756f2b2fc4356b21f21759d248cb8, type: 3}
-    _vfxPrefab: {fileID: 3798696826337731743, guid: b846281d41944324bf803990c49e3ff6, type: 3}
+    _audioClip: {fileID: 8300000, guid: cddccbbf04804254a63156ad618d2e69, type: 3}
+    _vfxPrefab: {fileID: 3798696826337731743, guid: 0514da634c6d4b79bb2aed4a285c9ee7, type: 3}
     _spawnPointRole: 3
     _attachToSpawnPoint: 0

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyDefinitionAsset
   _id: enemy.template.runner
   _displayName: Runner
-  _icon: {fileID: 21300000, guid: ea0cc627c3b64958833f31c78efa117c, type: 3}
+  _icon: {fileID: 21300000, guid: 051d78ac6d04465997b2aef5131f41c3, type: 3}
   _role: 1
   _tags:
   - template
   - runner
-  _stats: {fileID: 11400000, guid: c2a0d4d27b0e45a6807c80364d2a2730, type: 2}
-  _presentation: {fileID: 11400000, guid: c2acfc716df943aca4eedcaf4fab595b, type: 2}
+  _stats: {fileID: 11400000, guid: 8b23ae64bfa94d1b8c57eb48b4d617db, type: 2}
+  _presentation: {fileID: 11400000, guid: f9596a30971b4b0490b1d73b3a78bee8, type: 2}
   _balancingNotes:

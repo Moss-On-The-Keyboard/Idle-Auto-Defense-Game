@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponDefinitionAsset
   _id: weapon.template.arc-burst-tower
   _displayName: Arc Burst Module
-  _icon: {fileID: 21300000, guid: 9841bdb1218e4d7f9cb582b76dc28387, type: 3}
+  _icon: {fileID: 21300000, guid: b8eff8a628084f2f82c4f72c871962b2, type: 3}
   _tags:
   - template
   - aoe
   - starter
   _upgradeGroupId: template-area
-  _stats: {fileID: 11400000, guid: de2105f5ce684572be58e91ec4c27b6e, type: 2}
-  _presentation: {fileID: 11400000, guid: c8f9572647084350b3c7c9a4dfa0c99f, type: 2}
+  _stats: {fileID: 11400000, guid: ebfc08f62ea34ea18c1fbf8d536d9eb1, type: 2}
+  _presentation: {fileID: 11400000, guid: 43d30bfa74844b57aca13fbbb92dde4c, type: 2}
   _balancingNotes: Generated placeholder starter-round weapon.

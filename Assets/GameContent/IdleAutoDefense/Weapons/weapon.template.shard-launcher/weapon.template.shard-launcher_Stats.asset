@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: weapon.template.shard-launcher_Stats
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponStatsDefinitionAsset
   _fireMode: 1
-  _attack: {fileID: 11400000, guid: 6158af9d7549403c89bbcdf78ac14e54, type: 2}
+  _attack: {fileID: 11400000, guid: 4b2b1ecf41b84290b2285485d6f77fb6, type: 2}
   _projectileDefinitionId: projectile.template.shard
   _cooldownTicks: 13
   _range: 5.25

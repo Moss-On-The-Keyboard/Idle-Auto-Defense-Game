@@ -17,7 +17,7 @@ MonoBehaviour:
     _modifierType: 0
     _amount: 1
     _attack: {fileID: 0}
-    _weapon: {fileID: 11400000, guid: 17d1c670285348979ea8516d5c787962, type: 2}
+    _weapon: {fileID: 11400000, guid: 12a1e2130e274d9ab4b877dfc2948cf9, type: 2}
     _enemy: {fileID: 0}
     _targetIdOverride: weapon.template.shard-launcher
     _effectIdOverride:

@@ -148,7 +148,7 @@
         "com.deucarian.editor": "1.0.0",
         "com.deucarian.logging": "1.0.1"
       },
-      "hash": "5e9f73e196449276128fcceb003361b3a6094325"
+      "hash": "70daa91813ca3759609699a158bfcf3f9118d470"
     },
     "com.deucarian.persistence": {
       "version": "https://github.com/Deucarian/Persistence.git#develop",
@@ -205,7 +205,7 @@
         "com.deucarian.gameplay-foundation": "0.1.0",
         "com.deucarian.monetization": "0.1.0"
       },
-      "hash": "e1c9a172f23cba8deb0b65e8c724edfd25b13d8d"
+      "hash": "c30e171fab6e255ee5f6918454deaaa699e8b27b"
     },
     "com.deucarian.test-automation": {
       "version": "https://github.com/Deucarian/Test-Automation.git#develop",

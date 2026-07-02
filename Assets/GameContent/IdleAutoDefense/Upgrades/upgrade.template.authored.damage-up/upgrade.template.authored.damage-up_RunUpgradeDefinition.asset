@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeDefinitionAsset
   _id: upgrade.template.authored.damage-up
   _displayName: Damage Boost
-  _icon: {fileID: 21300000, guid: 6df9ab359d1645b2b6c8078e2fe840a0, type: 3}
+  _icon: {fileID: 21300000, guid: cbe2eb1039e34990b8a407a43c4702ea, type: 3}
   _description: Increases tower damage for the current run.
   _tags:
   - idle-auto-defense
   - starter
-  _economy: {fileID: 11400000, guid: e8659dfdf9044318b06ae9ca26bb3e67, type: 2}
-  _effects: {fileID: 11400000, guid: a62db93729234e448aef2a62ef6952ca, type: 2}
+  _economy: {fileID: 11400000, guid: 612006785f3a415fbf5512467a3d8b2d, type: 2}
+  _effects: {fileID: 11400000, guid: a5ac046c5d8744c6a1aab2e74c88ffd3, type: 2}

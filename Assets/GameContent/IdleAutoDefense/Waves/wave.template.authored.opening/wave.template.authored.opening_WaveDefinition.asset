@@ -17,6 +17,6 @@ MonoBehaviour:
   _tags:
   - idle-auto-defense
   - starter
-  _schedule: {fileID: 11400000, guid: 3e3588104aeb42f18025eedfa0884873, type: 2}
-  _entries: {fileID: 11400000, guid: 5d22ccbfdc674c9596b505d814afd07f, type: 2}
+  _schedule: {fileID: 11400000, guid: 85a103ed468748a4b5298cc7679d5fab, type: 2}
+  _entries: {fileID: 11400000, guid: 6aea9b6dc8ab43f3b2c1360323e81ca1, type: 2}
   _balancingNotes:

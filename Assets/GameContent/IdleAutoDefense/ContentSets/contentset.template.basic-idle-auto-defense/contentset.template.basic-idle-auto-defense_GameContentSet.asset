@@ -17,32 +17,32 @@ MonoBehaviour:
   _description: Playable generated-game starter round with four generic attacks,
     four enemies, five spawn profiles, six upgrades, and starter placeholder VFX,
     icons, and audio.
-  _icon: {fileID: 21300000, guid: e0a0bda710e24210ae4aeed0b5db92be, type: 3}
-  _banner: {fileID: 2800000, guid: 8e16484d3658488c9d8eb6262c16ad79, type: 3}
-  _startingWeapon: {fileID: 11400000, guid: 17d1c670285348979ea8516d5c787962, type: 2}
+  _icon: {fileID: 21300000, guid: 76e26ee7f7574109a57731e467673b38, type: 3}
+  _banner: {fileID: 2800000, guid: 2fef02da14b742638344ca9a8f47ae60, type: 3}
+  _startingWeapon: {fileID: 11400000, guid: 12a1e2130e274d9ab4b877dfc2948cf9, type: 2}
   _availableWeapons:
-  - {fileID: 11400000, guid: 17d1c670285348979ea8516d5c787962, type: 2}
-  - {fileID: 11400000, guid: 95edf9b456e14d979ef478d0e386d22d, type: 2}
-  - {fileID: 11400000, guid: 98d9970b3f3842628a052df26d9bb691, type: 2}
-  - {fileID: 11400000, guid: 14f7fc8b31ee475ca843c92e022701c1, type: 2}
+  - {fileID: 11400000, guid: 12a1e2130e274d9ab4b877dfc2948cf9, type: 2}
+  - {fileID: 11400000, guid: ed2991631ff244a18b905b1c82930887, type: 2}
+  - {fileID: 11400000, guid: 31fa4de97ba84ee18e00a7ac65a19f5e, type: 2}
+  - {fileID: 11400000, guid: 73b250af8fd34357b8455233a10b5c19, type: 2}
   _enemyPool:
-  - {fileID: 11400000, guid: 2f6766ae631043d8a32c9de8876a64bd, type: 2}
-  - {fileID: 11400000, guid: 02643871bd81460fb78c0211784df306, type: 2}
-  - {fileID: 11400000, guid: 95b3368393c4433d8c046fcba4a2fd6a, type: 2}
-  - {fileID: 11400000, guid: 542c9b93c33a4f3199666ababdaea3c8, type: 2}
+  - {fileID: 11400000, guid: f52e9d2d0bb74bbd8642855c876e6655, type: 2}
+  - {fileID: 11400000, guid: b1d6116bd7cc4be7bfcc46348f8c8722, type: 2}
+  - {fileID: 11400000, guid: 35a2e2f97a3a4b6092f0fa53903c2bfc, type: 2}
+  - {fileID: 11400000, guid: d22d838c9fa542f89a2bb1791aed4a44, type: 2}
   _waveSet:
-  - {fileID: 11400000, guid: 3df08325bd324b53bbb75c6a7acadf01, type: 2}
-  - {fileID: 11400000, guid: 7cab90735c0e479a8466c9f2e5e8c8b5, type: 2}
-  - {fileID: 11400000, guid: dca27466b38c4505be76e4d68e161012, type: 2}
-  - {fileID: 11400000, guid: cc25bedae8d942bf92dc4b4dbda6fabc, type: 2}
-  - {fileID: 11400000, guid: 600748eab0b14d0dae0785aba1785d2c, type: 2}
+  - {fileID: 11400000, guid: 2e2e92c6cc1d4e268393d7b5291fcd87, type: 2}
+  - {fileID: 11400000, guid: 35e727315ca14ac2a775a9c9cc10a933, type: 2}
+  - {fileID: 11400000, guid: 04a280f3e13049dba13da2e6dd2e3f27, type: 2}
+  - {fileID: 11400000, guid: 54ae945811c142c6b007b2cad95c6bba, type: 2}
+  - {fileID: 11400000, guid: 139681fa75e34cd39f6ee97155cbede5, type: 2}
   _upgradePool:
-  - {fileID: 11400000, guid: 99344948d501450d9a39605360814eac, type: 2}
-  - {fileID: 11400000, guid: db7e42e0a0ed4991ae68bdeb96e43cf6, type: 2}
-  - {fileID: 11400000, guid: 0bfa56500751431e9007700fd9572903, type: 2}
-  - {fileID: 11400000, guid: c38a48d162ed479b9d2744d2d387288d, type: 2}
-  - {fileID: 11400000, guid: facf36290c6949edafc6e1d53b83640e, type: 2}
-  - {fileID: 11400000, guid: 31a28a81e7234afbaeb228a22999890b, type: 2}
+  - {fileID: 11400000, guid: 8369163b7d2e45d8ae4d4442ecfef538, type: 2}
+  - {fileID: 11400000, guid: cbafdae76ffd48988d0b75424a15cfa2, type: 2}
+  - {fileID: 11400000, guid: 1b7fc4f8b332473cb347e2b2175e005c, type: 2}
+  - {fileID: 11400000, guid: bd97ac03e8d748da93d1e66d0096f6c9, type: 2}
+  - {fileID: 11400000, guid: be84b3d6781b4510ba3d7f6faa0fbbd5, type: 2}
+  - {fileID: 11400000, guid: d5bc943219584019a4ad81a8b3bddea2, type: 2}
   _startingCredits: 45
   _startingParts: 1
   _rewardMultiplier: 1.1

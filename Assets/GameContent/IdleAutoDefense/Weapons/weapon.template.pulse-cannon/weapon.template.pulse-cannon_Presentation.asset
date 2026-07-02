@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf2b621876344ef814eb57794522f31, type: 3}
   m_Name: weapon.template.pulse-cannon_Presentation
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponPresentationDefinitionAsset
-  _prefab: {fileID: 7306765029041701914, guid: aebf56551c1c4a689bf05cef5b75926c, type: 3}
-  _placementAudio: {fileID: 8300000, guid: f889f95062944dc5993da74d1390c563, type: 3}
-  _placementVfxPrefab: {fileID: 5703739830888076867, guid: e1982d973b4e4a878c8a8deac8602380, type: 3}
+  _prefab: {fileID: 7306765029041701914, guid: 834e9617b0e14e759a1799c5881af7c2, type: 3}
+  _placementAudio: {fileID: 8300000, guid: 5402c699c3334d2fb112ffbab0c35bd9, type: 3}
+  _placementVfxPrefab: {fileID: 5703739830888076867, guid: fc7017963b0b484e929270f5ea0d6671, type: 3}

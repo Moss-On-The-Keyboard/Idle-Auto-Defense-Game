@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeDefinitionAsset
   _id: upgrade.template.authored.credit-reward
   _displayName: Credit Reward
-  _icon: {fileID: 21300000, guid: 6df9ab359d1645b2b6c8078e2fe840a0, type: 3}
+  _icon: {fileID: 21300000, guid: cbe2eb1039e34990b8a407a43c4702ea, type: 3}
   _description: Increases currency rewards for the current run.
   _tags:
   - idle-auto-defense
   - starter
-  _economy: {fileID: 11400000, guid: eacbc3bc4d52470ba06f3404ce811a10, type: 2}
-  _effects: {fileID: 11400000, guid: 13b4828716e2455db0238991daa796a7, type: 2}
+  _economy: {fileID: 11400000, guid: 81c7896ee4ca4ebb9ef080756ba2513b, type: 2}
+  _effects: {fileID: 11400000, guid: 10ac632cbc014772a97939bc0b885656, type: 2}

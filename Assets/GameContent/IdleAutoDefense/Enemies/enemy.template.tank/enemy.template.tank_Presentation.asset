@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c225f16410054f9d9d60394d24bc3412, type: 3}
   m_Name: enemy.template.tank_Presentation
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyPresentationDefinitionAsset
-  _prefab: {fileID: 7986550066026033189, guid: 7c912aae0e8c4ccd8a074d8776cc4f14, type: 3}
+  _prefab: {fileID: 7986550066026033189, guid: 82d15b1f3bcc4bb68fbd1f2ec4fa6583, type: 3}
   _events:
   - _eventKind: 0
-    _audioClip: {fileID: 8300000, guid: 5b3347f810334c2c9c9e05c7b6f9facd, type: 3}
-    _vfxPrefab: {fileID: 3671418203937200600, guid: 2435c2c1589a4579b45f862886bd300e, type: 3}
+    _audioClip: {fileID: 8300000, guid: ce77a14c80364f59adc0b292b386cdf4, type: 3}
+    _vfxPrefab: {fileID: 3671418203937200600, guid: 293e7993460c4d27a701d855e2059d58, type: 3}
   - _eventKind: 1
-    _audioClip: {fileID: 8300000, guid: 3fb7ab6ffaac4b56b9d0cae06aaf3cb3, type: 3}
-    _vfxPrefab: {fileID: 3469668123542397021, guid: 9ac28556f24444fc920ecca16ac34015, type: 3}
+    _audioClip: {fileID: 8300000, guid: 4b54750d631d49f4ae8ee97dbde72a66, type: 3}
+    _vfxPrefab: {fileID: 3469668123542397021, guid: ab10e719e56445219852e44bb23308d8, type: 3}
   - _eventKind: 2
-    _audioClip: {fileID: 8300000, guid: f1321767f28a47619e740d266573ca2b, type: 3}
-    _vfxPrefab: {fileID: 5384275611144787685, guid: ddef73c64d544078a22348f8a4a3a537, type: 3}
+    _audioClip: {fileID: 8300000, guid: b11430cf689a4aecbce06eaf8c27d070, type: 3}
+    _vfxPrefab: {fileID: 5384275611144787685, guid: cef1a00630654a47b44ac699dc4cb53b, type: 3}

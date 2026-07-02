@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeDefinitionAsset
   _id: upgrade.template.authored.projectile-speed-up
   _displayName: Projectile Speed
-  _icon: {fileID: 21300000, guid: 34b9584c4a6243c098d1de8812651eb0, type: 3}
+  _icon: {fileID: 21300000, guid: f640ccbef8094554bdfaca7060b79a27, type: 3}
   _description: Increases projectile speed for the current run.
   _tags:
   - idle-auto-defense
   - starter
-  _economy: {fileID: 11400000, guid: 34dbc02b035549faa1a226cbafbd9589, type: 2}
-  _effects: {fileID: 11400000, guid: f603a3b925eb4a3195380aaeeae9c158, type: 2}
+  _economy: {fileID: 11400000, guid: 3cc3fcc6478149ad8dcf99591bce610b, type: 2}
+  _effects: {fileID: 11400000, guid: a678e2be12ca4c1f932da604deab041e, type: 2}
