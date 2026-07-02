@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyDefinitionAsset
   _id: enemy.template.tank
   _displayName: Tank
-  _icon: {fileID: 21300000, guid: 96386f24d345cb74682f9b491917e7d4, type: 3}
+  _icon: {fileID: 21300000, guid: 37af5eb40f1e487bb600d9b3439f7f4f, type: 3}
   _role: 2
   _tags:
   - template
   - tank
-  _stats: {fileID: 11400000, guid: 424c605bdceb404a9d6f2e421e32351d, type: 2}
-  _presentation: {fileID: 11400000, guid: 8837f31baa31479da3f01441fc74cb28, type: 2}
+  _stats: {fileID: 11400000, guid: 002472f4a5914af491544c2adc0b9bd0, type: 2}
+  _presentation: {fileID: 11400000, guid: 69a2dd6054e14ca59672e00416602e2d, type: 2}
   _balancingNotes:

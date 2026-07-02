@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: weapon.template.arc-burst-tower_Stats
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponStatsDefinitionAsset
   _fireMode: 0
-  _attack: {fileID: 11400000, guid: 412209349022438dba9965d689eeb771, type: 2}
+  _attack: {fileID: 11400000, guid: 04e5b4b87b364a6b8cde2b5263c3ac6c, type: 2}
   _projectileDefinitionId:
   _cooldownTicks: 24
   _range: 3.75

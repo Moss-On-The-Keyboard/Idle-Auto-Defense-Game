@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponDefinitionAsset
   _id: weapon.template.homing-spire
   _displayName: Homing Pulse Module
-  _icon: {fileID: 21300000, guid: aa13e559c81280a419d9d215b19f1074, type: 3}
+  _icon: {fileID: 21300000, guid: 7c99715c38f04cfca8c65ea2994ede09, type: 3}
   _tags:
   - template
   - homing
   - starter
   _upgradeGroupId: template-homing
-  _stats: {fileID: 11400000, guid: 0b878905b6114cad8c3b97ff42fb877d, type: 2}
-  _presentation: {fileID: 11400000, guid: 08ee10ebe7764345974679275f9a74a5, type: 2}
+  _stats: {fileID: 11400000, guid: df40b3d4e2304a559236760bd1c2b8bf, type: 2}
+  _presentation: {fileID: 11400000, guid: fee565eda0284fa4a97f2ba9b5d36f0e, type: 2}
   _balancingNotes: Generated placeholder starter-round weapon.

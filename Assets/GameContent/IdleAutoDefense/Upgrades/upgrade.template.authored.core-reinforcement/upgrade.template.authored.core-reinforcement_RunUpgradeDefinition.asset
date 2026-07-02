@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.RunUpgrades.Authoring::Deucarian.RunUpgrades.Authoring.RunUpgradeDefinitionAsset
   _id: upgrade.template.authored.core-reinforcement
   _displayName: Core Reinforcement
-  _icon: {fileID: 21300000, guid: 2d432c8b209d89d4b841dbe31a1b03c2, type: 3}
+  _icon: {fileID: 21300000, guid: 6df9ab359d1645b2b6c8078e2fe840a0, type: 3}
   _description: Increases maximum tower HP for the current run.
   _tags:
   - idle-auto-defense
   - starter
-  _economy: {fileID: 11400000, guid: 45de19e0d4794ed4abadafd7ce5f06d3, type: 2}
-  _effects: {fileID: 11400000, guid: 914cd5ea67214c8aa5cc4c221714e480, type: 2}
+  _economy: {fileID: 11400000, guid: 881574d2ba4a4b57a77465a6084f5008, type: 2}
+  _effects: {fileID: 11400000, guid: 26663e2783ab4cb7a2bd308385b1c1e7, type: 2}

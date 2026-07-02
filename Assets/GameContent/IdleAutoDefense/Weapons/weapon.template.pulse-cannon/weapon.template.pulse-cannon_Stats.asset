@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: weapon.template.pulse-cannon_Stats
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponStatsDefinitionAsset
   _fireMode: 0
-  _attack: {fileID: 11400000, guid: d99564b495484c27921edf5286b6a8e8, type: 2}
+  _attack: {fileID: 11400000, guid: c49c526631f24d5587ead40644b3084f, type: 2}
   _projectileDefinitionId:
   _cooldownTicks: 7
   _range: 4.75

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: weapon.template.homing-spire_Stats
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponStatsDefinitionAsset
   _fireMode: 1
-  _attack: {fileID: 11400000, guid: 02d7c0469a144c1b83cbe76ac23c02f1, type: 2}
+  _attack: {fileID: 11400000, guid: d9856fe6c3d2402b86b547b528355bea, type: 2}
   _projectileDefinitionId: projectile.template.homing-pulse
   _cooldownTicks: 15
   _range: 4.5

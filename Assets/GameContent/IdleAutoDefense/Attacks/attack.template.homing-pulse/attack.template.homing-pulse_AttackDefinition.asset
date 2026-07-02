@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackDefinitionAsset
   _id: attack.template.homing-pulse
   _displayName: Homing Pulse
-  _icon: {fileID: 21300000, guid: aa13e559c81280a419d9d215b19f1074, type: 3}
+  _icon: {fileID: 21300000, guid: 7c99715c38f04cfca8c65ea2994ede09, type: 3}
   _tags:
   - template
-  _mechanics: {fileID: 11400000, guid: fa5fcd361bb843d2811c8fd0f36406f4, type: 2}
-  _targeting: {fileID: 11400000, guid: c39965b849d3436aab9e686ae6bc345d, type: 2}
-  _delivery: {fileID: 11400000, guid: c1d5f10e620f460ab92c5f699287ba4a, type: 2}
-  _statusEffects: {fileID: 11400000, guid: db69cfa3834146b9b2de9c1ba314152c, type: 2}
-  _presentation: {fileID: 11400000, guid: 43bd96fabae242748132d972d0f687e5, type: 2}
+  _mechanics: {fileID: 11400000, guid: 3c2cff1dd06d4db4aba41c31958a8580, type: 2}
+  _targeting: {fileID: 11400000, guid: ed8edd9e5d2448279d5619b478a47878, type: 2}
+  _delivery: {fileID: 11400000, guid: ebdb2ab2660d47c8ac2d335f630edfbe, type: 2}
+  _statusEffects: {fileID: 11400000, guid: c9817581a0bc4af08219152e67ac3373, type: 2}
+  _presentation: {fileID: 11400000, guid: 036a95828c004ab2aecad41694f883f9, type: 2}
   _upgradeHookId:
   _balancingNotes:

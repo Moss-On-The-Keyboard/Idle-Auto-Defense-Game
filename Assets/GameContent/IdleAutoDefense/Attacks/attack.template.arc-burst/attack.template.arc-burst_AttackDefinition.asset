@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackDefinitionAsset
   _id: attack.template.arc-burst
   _displayName: Arc Burst
-  _icon: {fileID: 21300000, guid: 995cca69f65020a4e89cf38b12720a0c, type: 3}
+  _icon: {fileID: 21300000, guid: 9841bdb1218e4d7f9cb582b76dc28387, type: 3}
   _tags:
   - starter
   - placeholder
-  _mechanics: {fileID: 11400000, guid: 680c6015201e40419e0a9a61d9f35d73, type: 2}
-  _targeting: {fileID: 11400000, guid: f06b346ec70e41ec9d74da461224dcfa, type: 2}
-  _delivery: {fileID: 11400000, guid: 6bdb206170ed45408ab375b9d0b3d3db, type: 2}
-  _statusEffects: {fileID: 11400000, guid: 558b3750c04343b3b0c73c07cf114ef5, type: 2}
-  _presentation: {fileID: 11400000, guid: d4ac8979e84a4c5baf6563a980473953, type: 2}
+  _mechanics: {fileID: 11400000, guid: d097e93f67ef4c81821366aa8c9433ef, type: 2}
+  _targeting: {fileID: 11400000, guid: c79c9f8aaac14f0ebe5ed1001cbf2350, type: 2}
+  _delivery: {fileID: 11400000, guid: bf266d28fcc9495d9e9ff063e4ca16ab, type: 2}
+  _statusEffects: {fileID: 11400000, guid: 95725681af10497f9133c9dd895b805b, type: 2}
+  _presentation: {fileID: 11400000, guid: 1fd4890634ae45149e6717ce8595c19c, type: 2}
   _upgradeHookId: attack.template.arc-burst.upgrade-hook
   _balancingNotes: Generated placeholder starter-round attack.

@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.AttackDefinitionAsset
   _id: attack.template.shard-launcher
   _displayName: Shard Projectile
-  _icon: {fileID: 21300000, guid: e96cfdad6ad196a4f80477db2025bee8, type: 3}
+  _icon: {fileID: 21300000, guid: 5ec12a4bc4484a30a6db63a368bc7302, type: 3}
   _tags:
   - template
-  _mechanics: {fileID: 11400000, guid: 04023e1a05c944d69f7f20ff324e57b2, type: 2}
-  _targeting: {fileID: 11400000, guid: b3d01d651eae42d288006dfbad30e8c2, type: 2}
-  _delivery: {fileID: 11400000, guid: 9426d1bb271d453c9b379eaa56b0f35b, type: 2}
-  _statusEffects: {fileID: 11400000, guid: 959518aa492141478235f43d0e9ba055, type: 2}
-  _presentation: {fileID: 11400000, guid: 31ef665530ff41e8ab288ecd170aeaa0, type: 2}
+  _mechanics: {fileID: 11400000, guid: 8310777bbfd14a2a8013b82119341354, type: 2}
+  _targeting: {fileID: 11400000, guid: 564ca9229d55482593acbd870920c34a, type: 2}
+  _delivery: {fileID: 11400000, guid: b99deadbc7b94f9eb99224de72199ade, type: 2}
+  _statusEffects: {fileID: 11400000, guid: 811ccbcfe8f64060b47f39fe644ac89a, type: 2}
+  _presentation: {fileID: 11400000, guid: 7fb9188403e3462da55c51e1f4d2f1a9, type: 2}
   _upgradeHookId:
   _balancingNotes:

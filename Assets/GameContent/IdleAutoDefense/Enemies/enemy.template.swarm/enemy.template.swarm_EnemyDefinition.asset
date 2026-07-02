@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.Attacks.Authoring::Deucarian.Attacks.Authoring.EnemyDefinitionAsset
   _id: enemy.template.swarm
   _displayName: Swarm
-  _icon: {fileID: 21300000, guid: 286eecbf49ec4c14b99d91edbf7015df, type: 3}
+  _icon: {fileID: 21300000, guid: 37af5eb40f1e487bb600d9b3439f7f4f, type: 3}
   _role: 3
   _tags:
   - template
   - swarm
-  _stats: {fileID: 11400000, guid: bcebd21adea241aabce742adfa12a31e, type: 2}
-  _presentation: {fileID: 11400000, guid: 92b4b3f50ab247fb8670d903e0fdb704, type: 2}
+  _stats: {fileID: 11400000, guid: 6d808b8e95a348fb9694055cc5f5d3f3, type: 2}
+  _presentation: {fileID: 11400000, guid: 517bc0cbe7434cdeba568914fe09fca0, type: 2}
   _balancingNotes:

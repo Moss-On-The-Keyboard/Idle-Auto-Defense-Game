@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Deucarian.WeaponSystems.Authoring::Deucarian.WeaponSystems.Authoring.WeaponDefinitionAsset
   _id: weapon.template.pulse-cannon
   _displayName: Pulse Beam
-  _icon: {fileID: 21300000, guid: e1293abb881c09b45b45dff5d9a061d9, type: 3}
+  _icon: {fileID: 21300000, guid: aaa3b0e1285e4fe486271ce1ac1aba8f, type: 3}
   _tags:
   - hitscan
   - beam
   - tower
   _upgradeGroupId: upgrade.group.template.pulse
-  _stats: {fileID: 11400000, guid: 6896a56a4cc245d0a4c515d82d261385, type: 2}
-  _presentation: {fileID: 11400000, guid: 226cf734e7a94ea28ddf39e7d55739cb, type: 2}
+  _stats: {fileID: 11400000, guid: f353999165774d2b804f4137598a8458, type: 2}
+  _presentation: {fileID: 11400000, guid: e176b531f15b43d1a90aee2931d782a8, type: 2}
   _balancingNotes:
