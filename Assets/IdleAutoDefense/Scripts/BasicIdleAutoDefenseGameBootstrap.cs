@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.IO;
 using Deucarian.TemplateGameIdleAutoDefense;
 using UnityEngine;
@@ -7,43 +8,74 @@ namespace IdleAutoDefenseGame
 {
     public sealed class BasicIdleAutoDefenseGameBootstrap : IdleAutoDefenseTemplateController
     {
-        private string _lastSaveMessage = "Sample save has not been written yet.";
-
-        private void Start()
-        {
-            WriteSampleSnapshot("play-started");
-        }
+        private const float HudWidth = 360f;
+        private string _lastSaveMessage = "No snapshot saved";
 
         private void OnGUI()
         {
-            GUILayout.BeginArea(new Rect(12f, 12f, 380f, 214f), GUI.skin.box);
-            GUILayout.Label("Basic Idle Auto Defense");
-            GUILayout.Label(StatusSummary);
-            GUILayout.Label("Credits: " + (OfflineRewardCredits + EncounterRewardCredits) + "  Parts: " + (OfflineRewardParts + EncounterRewardParts));
-            GUILayout.Label("Save: " + _lastSaveMessage);
-
-            GUILayout.BeginHorizontal();
-            if (GUILayout.Button("Save Snapshot"))
-                WriteSampleSnapshot("manual");
-            if (GUILayout.Button("Reset Save"))
-                ResetSampleSave();
-            GUILayout.EndHorizontal();
-
-            GUILayout.Label("Edit first: Content/starter-content.json and Scripts/BasicIdleAutoDefenseGameBootstrap.cs");
+            GUILayout.BeginArea(new Rect(12f, 12f, HudWidth, 500f), GUI.skin.box);
+            GUILayout.Label("Idle Auto Defense");
+            GUILayout.Label("State: " + RuntimeStateName);
+            GUILayout.Label("Tower HP: " + ObjectiveHealthText + "  Lives: " + ObjectiveLivesRemaining);
+            GUILayout.Label("Runtime Credits: " + RuntimeCurrency);
+            GUILayout.Label("Progression Credits: " + EncounterRewardCredits + "  Parts: " + EncounterRewardParts);
+            GUILayout.Label("Time: " + SurvivalSeconds.ToString("0", CultureInfo.InvariantCulture) + "s");
+            GUILayout.Label("Spawn Profile: " + CurrentSpawnProfileName);
+            GUILayout.Label("Enemies: " + ActiveEnemyCount + " active / " + SpawnedCount + " spawned");
+            GUILayout.Label("Kills: " + (DirectOrCombatKillCount + ProjectileAdapterKillCount) + "  Projectiles: " + ProjectileLaunchCount);
+            GUILayout.Label("Purchases: " + SelectedUpgradeCount + "  Modules: " + UnlockedModuleCount + "/4  Objective Hits: " + ObjectiveDamageEvents);
+            GUILayout.Space(4f);
+            GUILayout.Label("Upgrades");
+            DrawUpgradeButton("Damage", DamageUpgradeRank, DamageUpgradeCost, CanPurchaseDamageUpgrade, TryPurchaseDamageUpgrade);
+            DrawUpgradeButton("Attack Speed", AttackSpeedUpgradeRank, AttackSpeedUpgradeCost, CanPurchaseAttackSpeedUpgrade, TryPurchaseAttackSpeedUpgrade);
+            DrawUpgradeButton("Range", RangeUpgradeRank, RangeUpgradeCost, CanPurchaseRangeUpgrade, TryPurchaseRangeUpgrade);
+            DrawUpgradeButton("Repair / Max HP", RepairUpgradeRank, RepairUpgradeCost, CanPurchaseRepairUpgrade, TryPurchaseRepairUpgrade);
+            GUILayout.Space(4f);
+            GUILayout.Label("Modules");
+            DrawModuleButton("Pulse Beam", PulseBeamUnlocked, PulseBeamUnlockCost, CanPurchasePulseBeamModule, TryPurchasePulseBeamModule);
+            DrawModuleButton("Arc Burst", ArcBurstUnlocked, ArcBurstUnlockCost, CanPurchaseArcBurstModule, TryPurchaseArcBurstModule);
+            DrawModuleButton("Homing Pulse", HomingPulseUnlocked, HomingPulseUnlockCost, CanPurchaseHomingPulseModule, TryPurchaseHomingPulseModule);
+            GUILayout.Space(4f);
+            GUILayout.Label("Save: " + _lastSaveMessage + (BasicIdleAutoDefenseSave.HasSave ? " (file present)" : string.Empty));
+            if (GUILayout.Button("Save Snapshot")) WriteSampleSnapshot("manual");
+            if (GUILayout.Button("Reset Save")) ResetSampleSave();
+            GUILayout.Space(4f);
+            if (EncounterCompleted) GUILayout.Label("Run complete");
+            else if (EncounterFailed) GUILayout.Label("Tower destroyed");
+            if ((EncounterCompleted || EncounterFailed) && GUILayout.Button("Restart Run")) RestartRun();
             GUILayout.EndArea();
         }
 
         private void WriteSampleSnapshot(string reason)
         {
             BasicIdleAutoDefenseSave.WriteSnapshot(reason, this);
-            _lastSaveMessage = "written to " + BasicIdleAutoDefenseSave.SaveFilePath;
+            _lastSaveMessage = "Saved " + DateTime.Now.ToString("HH:mm:ss", CultureInfo.InvariantCulture);
         }
 
         private void ResetSampleSave()
         {
             bool deleted = BasicIdleAutoDefenseSave.Reset();
             _lastSaveMessage = deleted ? "reset complete" : "nothing to reset";
-            Debug.Log("[Idle Auto Defense Template] " + _lastSaveMessage + ".");
+            Debug.Log("[Idle Auto Defense] " + _lastSaveMessage + ".");
+        }
+
+        private static void DrawUpgradeButton(string label, int rank, int cost, bool enabled, Func<bool> purchase)
+        {
+            bool wasEnabled = GUI.enabled;
+            GUI.enabled = enabled;
+            if (GUILayout.Button(label + "  Lv " + rank.ToString(CultureInfo.InvariantCulture) + "  " + cost.ToString(CultureInfo.InvariantCulture)))
+                purchase?.Invoke();
+            GUI.enabled = wasEnabled;
+        }
+
+        private static void DrawModuleButton(string label, bool unlocked, int cost, bool enabled, Func<bool> purchase)
+        {
+            bool wasEnabled = GUI.enabled;
+            GUI.enabled = enabled;
+            string state = unlocked ? "Unlocked" : cost.ToString(CultureInfo.InvariantCulture);
+            if (GUILayout.Button(label + "  " + state))
+                purchase?.Invoke();
+            GUI.enabled = wasEnabled;
         }
     }
 

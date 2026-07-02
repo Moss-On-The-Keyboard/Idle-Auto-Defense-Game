@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using Deucarian.GameContentAuthoring.Editor;
 using Deucarian.TemplateGameIdleAutoDefense;
 using NUnit.Framework;
 using UnityEditor;
@@ -13,7 +14,7 @@ namespace IdleAutoDefenseGame.Tests
     public sealed class IdleAutoDefenseGameEditModeTests
     {
         private const string ScenePath = "Assets/IdleAutoDefense/Scenes/BasicIdleAutoDefense.unity";
-        private const string ContentRoot = "Assets/IdleAutoDefense/Content";
+        private const string ContentRoot = "Assets/GameContent/IdleAutoDefense";
         private const string PackPath = ContentRoot + "/ContentPacks/contentpack.template.basic-idle-auto-defense/contentpack.template.basic-idle-auto-defense_ContentPack.asset";
         private const string SetPath = ContentRoot + "/ContentSets/contentset.template.basic-idle-auto-defense/contentset.template.basic-idle-auto-defense_GameContentSet.asset";
 
@@ -43,13 +44,26 @@ namespace IdleAutoDefenseGame.Tests
         }
 
         [Test]
-        public void ImportedSceneAndTemplateContentArePresent()
+        public void BuildSettingsUseOnlyCanonicalScene()
+        {
+            EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
+            Assert.AreEqual(1, scenes.Length);
+            Assert.IsTrue(scenes[0].enabled);
+            Assert.AreEqual(ScenePath, scenes[0].path);
+        }
+
+        [Test]
+        public void ImportedSceneAndAuthoredGameContentArePresent()
         {
             Assert.IsTrue(File.Exists(ScenePath));
             Assert.IsTrue(File.Exists(PackPath));
             Assert.IsTrue(File.Exists(SetPath));
+            Assert.IsTrue(AssetDatabase.IsValidFolder(ContentRoot));
             Assert.IsTrue(Directory.Exists("Assets/IdleAutoDefense/Prefabs"));
             Assert.IsTrue(Directory.Exists("Assets/IdleAutoDefense/Visuals"));
+            Assert.IsFalse(Directory.Exists("Assets/IdleAutoDefense/Content"));
+            Assert.IsFalse(Directory.Exists("Assets/Games"));
+            Assert.IsFalse(Directory.Exists("Assets/Samples"));
         }
 
         [Test]
@@ -70,11 +84,43 @@ namespace IdleAutoDefenseGame.Tests
 
             GameContentPackDependencySummary dependencies = GameContentPackValidator.CollectDependencies(pack);
             Assert.AreEqual(1, dependencies.ContentSetCount);
-            Assert.That(dependencies.AttackCount, Is.GreaterThanOrEqualTo(2));
-            Assert.That(dependencies.EnemyCount, Is.GreaterThanOrEqualTo(6));
-            Assert.That(dependencies.WaveCount, Is.GreaterThanOrEqualTo(2));
-            Assert.That(dependencies.WeaponCount, Is.GreaterThanOrEqualTo(2));
-            Assert.That(dependencies.UpgradeCount, Is.GreaterThanOrEqualTo(4));
+            Assert.AreEqual(4, dependencies.AttackCount);
+            Assert.AreEqual(4, dependencies.EnemyCount);
+            Assert.AreEqual(5, dependencies.WaveCount);
+            Assert.AreEqual(4, dependencies.WeaponCount);
+            Assert.AreEqual(6, dependencies.UpgradeCount);
+        }
+
+        [Test]
+        public void GameContentAuthoringLibrarySeesReadyAuthoredContent()
+        {
+            GameContentLibraryReport report = GameContentLibraryService.Scan("Assets/GameContent");
+
+            Assert.AreEqual(0, report.BlockerCount, FormatLibraryIssues(report));
+            Assert.AreEqual(1, report.ReadyContentPackCount, FormatLibraryIssues(report));
+            Assert.AreEqual(1, report.ReadyContentSetCount, FormatLibraryIssues(report));
+            Assert.AreEqual(4, CountKind(report, GameContentLibraryKind.Attack));
+            Assert.AreEqual(4, CountKind(report, GameContentLibraryKind.Enemy));
+            Assert.AreEqual(5, CountKind(report, GameContentLibraryKind.Wave));
+            Assert.AreEqual(4, CountKind(report, GameContentLibraryKind.Weapon));
+            Assert.AreEqual(6, CountKind(report, GameContentLibraryKind.Upgrade));
+            Assert.AreEqual(1, CountKind(report, GameContentLibraryKind.ContentSet));
+            Assert.AreEqual(1, CountKind(report, GameContentLibraryKind.ContentPack));
+
+            GameContentLibraryContentSetSummary setSummary = report.ContentSetSummaries.Single();
+            Assert.IsTrue(setSummary.Ready, setSummary.Message);
+            Assert.AreEqual(4, setSummary.WeaponCount);
+            Assert.AreEqual(4, setSummary.EnemyCount);
+            Assert.AreEqual(5, setSummary.WaveCount);
+            Assert.AreEqual(6, setSummary.UpgradeCount);
+
+            GameContentLibraryContentPackSummary packSummary = report.ContentPackSummaries.Single();
+            Assert.IsTrue(packSummary.Ready, packSummary.Message);
+            Assert.AreEqual(1, packSummary.ContentSetCount);
+            Assert.AreEqual(4, packSummary.WeaponCount);
+            Assert.AreEqual(4, packSummary.EnemyCount);
+            Assert.AreEqual(5, packSummary.WaveCount);
+            Assert.AreEqual(6, packSummary.UpgradeCount);
         }
 
         [Test]
@@ -142,6 +188,16 @@ namespace IdleAutoDefenseGame.Tests
         private static string FormatSetIssues(GameContentSetValidationReport report)
         {
             return string.Join(Environment.NewLine, report.Issues.Select(issue => issue.Path + ": " + issue.Message));
+        }
+
+        private static int CountKind(GameContentLibraryReport report, GameContentLibraryKind kind)
+        {
+            return report.Items.Count(item => item.Kind == kind);
+        }
+
+        private static string FormatLibraryIssues(GameContentLibraryReport report)
+        {
+            return string.Join(Environment.NewLine, report.AllIssues.Select(issue => issue.Path + ": " + issue.Message));
         }
     }
 }

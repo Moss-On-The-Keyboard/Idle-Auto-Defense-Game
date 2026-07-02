@@ -7,18 +7,18 @@ This Unity project is a clean consumer of the Deucarian Idle Auto Defense templa
 1. Open the project in Unity `6000.3.5f1`.
 2. Open `Assets/IdleAutoDefense/Scenes/BasicIdleAutoDefense.unity`.
 3. Press Play.
-4. Confirm the starter loop spawns enemies, fires the direct and projectile weapons, drafts upgrades, and writes/reset the sample save.
+4. Confirm the starter loop spawns enemies, fires visible projectiles, earns runtime currency, buys live upgrades/modules, and writes/resets the sample save.
 
 ## Project Layout
 
 - `Assets/IdleAutoDefense/Scenes` contains the neutral playable starter scene.
 - `Assets/IdleAutoDefense/Scripts` contains the thin project bootstrap and sample save helper.
-- `Assets/IdleAutoDefense/Content` contains the imported template content pack, content set, authored assets, default tuning data, progression data, and mock monetization placeholders.
+- `Assets/GameContent/IdleAutoDefense` contains the editable authored content pack, content set, attacks, enemies, waves, weapons, upgrades, and starter balance.
 - `Assets/IdleAutoDefense/Prefabs`, `Audio`, and `Visuals` contain placeholder presentation assets copied from the template sample.
 - `Assets/IdleAutoDefense/Tests` contains EditMode and PlayMode smoke coverage for the imported starter game.
 
 ## Customization Rules
 
-Start by editing project-owned content, prefabs, scene composition, and balance data under `Assets/IdleAutoDefense`. Keep reusable runtime behavior, package source, gameplay frameworks, and integration abstractions in Deucarian packages.
+Start by editing authored gameplay data under `Assets/GameContent/IdleAutoDefense`, and edit project-owned prefabs, scene composition, scripts, and visuals under `Assets/IdleAutoDefense`. Keep reusable runtime behavior, package source, gameplay frameworks, and integration abstractions in Deucarian packages.
 
-Use `Tools > Deucarian > Game Content Authoring` to inspect and validate the imported content pack/set before making content changes.
+Use `Tools > Deucarian > Game Content Authoring` to inspect and validate the authored content pack/set before making content changes.

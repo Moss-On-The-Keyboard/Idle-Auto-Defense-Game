@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d92df05ddc0479bae41dcc268702e34, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  _contentPack: {fileID: 11400000, guid: c0c3d7d8e8a64c829d12784c18ce4f6a, type: 2}
-  _contentSet: {fileID: 11400000, guid: e23c4ffed08248c48d7a71f169ad48d2, type: 2}
+  _contentPack: {fileID: 11400000, guid: f9139e07b59c45b1baf86296b42e25f1, type: 2}
+  _contentSet: {fileID: 11400000, guid: ea9fbe088a1e41d89d850bffc7d63759, type: 2}
   _attackRecipes:
   - {fileID: 11400000, guid: 1ac4fa836181e64468d5bcce56a73bb6, type: 2}
   - {fileID: 11400000, guid: 16f0c102ac4c82a46b5b4094f71e156a, type: 2}

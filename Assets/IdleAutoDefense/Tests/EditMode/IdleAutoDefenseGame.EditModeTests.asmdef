@@ -3,7 +3,8 @@
   "rootNamespace": "IdleAutoDefenseGame.Tests",
   "references": [
     "IdleAutoDefenseGame",
-    "Deucarian.TemplateGameIdleAutoDefense"
+    "Deucarian.TemplateGameIdleAutoDefense",
+    "Deucarian.GameContentAuthoring.Editor"
   ],
   "includePlatforms": [
     "Editor"
